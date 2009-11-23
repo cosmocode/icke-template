@@ -4,9 +4,10 @@
 #icke__page .content blockquote,
 #icke__page table,
 #icke__page pre {
-/*    font-size: 1.2em;*/
-    font-size: 13px;
+/*    font-size: 1.2em;
     line-height: 1.4em;
+*/
+    font-size: 13px;
     margin: 0 0 1em;
 }
 
@@ -35,17 +36,17 @@
 
 #icke__page .content h3 {
     font-size: 1.5em;
-    margin-left: 30px;
+    margin-left: 28px;
 }
 
 #icke__page .content h4 {
     font-size: 1.3em;
-    margin-left: 43px;
+    margin-left: 40px;
 }
 
 #icke__page .content h5 {
     font-size: 1.1em;
-    margin-left: 55px;
+    margin-left: 50px;
 }
 
 #icke__page .content .level2 {
@@ -53,15 +54,15 @@
 }
 
 #icke__page .content .level3 {
-    margin-left: 30px;
+    margin-left: 28px;
 }
 
 #icke__page .content .level4 {
-    margin-left: 43px;
+    margin-left: 40px;
 }
 
 #icke__page .content .level5 {
-    margin-left: 55px;
+    margin-left: 50px;
 }
 
 #icke__page .content pre {
