@@ -1,0 +1,71 @@
+/* toolbar */
+
+button.toolbutton {
+  background-color: __background__;
+  padding: 0px;
+  margin: 0 1px 0 0;
+  border: 1px solid __border__;
+  cursor: pointer;
+}
+
+/* nice alphatransparency background except for IE <7 */
+html>body button.toolbutton {
+  background:  __background__ url(images/buttonshadow.png) repeat-x bottom;
+}
+
+div.picker {
+  width: 250px;
+  border: 1px solid __border__;
+  background-color: __background_alt__;
+}
+
+div.pk_hl {
+  width: 125px;
+}
+
+button.pickerbutton {
+  padding: 0px;
+  margin: 0 1px 1px 0;
+  border: 0;
+  background-color: transparent;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+
+/* edit form */
+div.dokuwiki div.toolbar,
+div.dokuwiki div#wiki__editbar {
+   margin: 2px 0;
+   text-align: left;
+}
+div.dokuwiki div#size__ctl {
+   float: right;
+   width: 60px;
+   height: 2.7em;
+}
+div.dokuwiki #size__ctl img {
+   cursor: pointer;
+}
+div.dokuwiki div#wiki__editbar div.editButtons {
+   float: left;
+   padding: 0 1.0em 0.7em 0;
+}
+div.dokuwiki div#wiki__editbar div.summary {
+   float: left;
+}
+div.dokuwiki .nowrap {
+   white-space: nowrap;
+}
+div.dokuwiki div#draft__status {
+  float: right;
+  color: __text_alt__;
+}
+
+div.dokuwiki form#dw__editform div.license {
+  clear: left;
+  font-size: 90%;
+  padding: 1em;
+  text-align: center;
+}
+

@@ -1,0 +1,55 @@
+/* General Styles
+   Author: Florian Purchess
+   ----------------------------------------------------*/
+
+
+/* =GENERAL CLASSES
+   ----------------------------------------------------*/
+
+/* floating and position */
+.left {float: left;}
+.right {float: right;}
+.center {margin: 0 auto;}
+
+/* clearing */
+.clear,
+.clear-both {clear: both;}
+.clear-left {clear: left;}
+.clear-right {clear: right;}
+
+/* text-align */
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+/* display */
+.show {display: block;}
+.hide {display: none;}
+
+/* sizing */
+.mute {font-size: small;}
+.loud {font-size: big;}
+
+/* =CLEARFIX
+   ----------------------------------------------------*/
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}

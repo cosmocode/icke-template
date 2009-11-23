@@ -1,0 +1,22 @@
+div.dokuwiki table {
+  font-size: 100%;
+}
+
+/* inline tables */
+div.dokuwiki table.inline {
+  background-color: __background__;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+div.dokuwiki table.inline th {
+  padding: 3px;
+  border: 1px solid __border__;
+  background-color: __background_alt__;
+}
+
+div.dokuwiki table.inline td {
+  padding: 3px;
+  border: 1px solid __border__;
+}
+

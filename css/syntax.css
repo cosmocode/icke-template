@@ -1,0 +1,98 @@
+/* Wiki-Syntax Styles
+   Author: Florian Purchess
+   ----------------------------------------------------*/
+
+
+/* =HEADLINES
+   ----------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-style: normal;
+    font-weight: normal;
+    vertical-align: baseline;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#icke__page .dokuwiki h1 {
+    font-size: 2.5em;
+    margin: 2em 0 1em;
+}
+#icke__page .dokuwiki h2 {
+    font-size: 1.8em;
+    margin: 1.25em 0 0.75em;
+}
+#icke__page .dokuwiki h3 {
+    font-size: 1.25em;
+    margin: 1.25em 0 0;
+}
+#icke__page .dokuwiki h4 {
+    font-size: 1.1em;
+}
+#icke__page .dokuwiki h5 {
+    font-size: 1em;
+}
+#icke__page .dokuwiki h6 {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-size: 1em;
+    text-decoration: none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    text-decoration: none;
+}
+
+/* =PARAGRAPHS
+   ----------------------------------------------------*/
+
+/* reset */
+p, b, strong, i, em, strong, b, code, samp, dnf, abbr, acronym, ins, del, big, small, sup, sub {
+    line-height: 1em;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#icke__page .dokuwiki p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin: 0.75em 0 1.25em;
+}
+
+/* =TEXTLOGIC
+   ----------------------------------------------------*/
+
+b, strong {font-weight: bold;}
+i, em {font-style: italic;}
+code, samp {font-size: 0.9em; }
+dfn {font-size: 1.125em; font-style: italic;}
+abbr {font-size: 0.9em;}
+acronym {font-size: 1.125em;}
+ins {text-decoration: underline;}
+del {text-decoration: linethrough;}
+big {font-size: 1.2em;}
+small {font-size: 0.7em;}
+sup, sub {font-size: 0.8em;}
+sup {vertical-align: super;}
+sub {vertical-align: sub;}
+
+/* =LISTS
+   ----------------------------------------------------*/
+
+#icke__page .dokuwiki ul,
+#icke__page .dokuwiki ol {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 1em 2em;
+}
+
+#icke__page .dokuwiki ul {list-style-type: disc;}
+#icke__page .dokuwiki ol {list-style-type: decimal;}

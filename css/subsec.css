@@ -1,0 +1,14 @@
+div.dokuwiki div.secedit input.button {
+    background: transparent url(images/icons/edit.png) no-repeat top left;
+    border: none;
+    text-indent: -9999px;
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin-top: -32px;
+    cursor: pointer;
+}
+
+.section_highlight {
+    background-color: #efefef;
+}

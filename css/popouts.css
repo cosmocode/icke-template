@@ -1,0 +1,36 @@
+/* second-level navigation */
+#icke__quicknav li:hover div.sec_level {display: block;}
+
+#icke__quicknav li a,
+#icke__quicknav li a:hover {
+    color: #efefef;
+}
+
+#icke__quicknav li div.sec_level {
+    background: rgba(84,84,84,0.9);
+    color: #efefef;
+    border: 1px solid #ccc;
+    display: none;
+    left: 60px;
+    position: absolute;
+    top: 10px;
+    width: 120px;
+    z-index: 2;
+}
+
+#icke__quicknav li div.sec_level li {
+    margin: 0;
+    padding: 0.5em 1em;
+    width: auto;
+}
+
+#icke__quicknav li div.sec_level li:hover {
+    background-color: #333;
+}
+
+#icke__quicknav li div.sec_level li a,
+#icke__quicknav li div.sec_level li a:hover {
+    display: block;
+    text-decoration: none;
+}
+
