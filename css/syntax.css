@@ -89,7 +89,7 @@ sub {vertical-align: sub;}
 
 #icke__page .dokuwiki ul,
 #icke__page .dokuwiki ol {
-    font-size: 1.2em;
+/*    font-size: 1.2em;*/
     line-height: 1.5em;
     margin: 1em 2em;
 }

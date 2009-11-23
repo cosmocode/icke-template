@@ -1,0 +1,131 @@
+/* content format */
+
+#icke__page .content p,
+#icke__page .content blockquote,
+#icke__page table,
+#icke__page pre {
+/*    font-size: 1.2em;*/
+    font-size: 13px;
+    line-height: 1.4em;
+    margin: 0 0 1em;
+}
+
+#icke__page .content p p,
+#icke__page .content blockquote blockquote,
+#icke__page table table,
+#icke__page pre pre {
+    font-size: 1em;
+    line-height: 1em;
+}
+
+#icke__page .content h1,
+#icke__page .content h2,
+#icke__page .content h3,
+#icke__page .content h4,
+#icke__page .content h5 {
+    clear: left;
+    font-weight: bold;
+    margin: 0 0 1em;
+    padding: 0.5em 0 0;
+}
+
+#icke__page .content h2{
+    margin-left: 15px;
+}
+
+#icke__page .content h3 {
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+
+#icke__page .content h4 {
+    font-size: 1.3em;
+    margin-left: 43px;
+}
+
+#icke__page .content h5 {
+    font-size: 1.1em;
+    margin-left: 55px;
+}
+
+#icke__page .content .level2 {
+    margin-left: 15px;
+}
+
+#icke__page .content .level3 {
+    margin-left: 30px;
+}
+
+#icke__page .content .level4 {
+    margin-left: 43px;
+}
+
+#icke__page .content .level5 {
+    margin-left: 55px;
+}
+
+#icke__page .content pre {
+    border: 1px dashed #8CACBB;
+    color: #000000;
+    font-size: 150%;
+    overflow: auto;
+    padding: 0.5em;
+}
+
+#icke__page .content pre.file {
+    background-color: #DEE7EC;
+}
+
+#icke__page .content code,
+#icke__page .content samp {
+    font-size: 1.2em;
+}
+
+#icke__page .content pre.code {
+    background-color: #F7F9FA;
+}
+
+#icke__page .content a {
+    color: #2D65B2;
+}
+
+#icke__page .content a:visited {
+    color: #4A6791;
+}
+
+#icke__page .content ul,
+#icke__page .content ol {
+    line-height: 1.5em;
+    font-size: 1.2em;
+    list-style-image: none;
+    margin: 0 0 1em 3.5em;
+}
+
+#icke__page .content ul{
+    list-style-type: square;
+}
+
+#icke__page .content ol ol {
+    list-style-type: upper-roman; 
+}
+
+#icke__page .content li ul,
+#icke__page .content li ol {
+    font-size: 1em;
+    margin-left: 15px;
+}
+
+#icke__page .content blockquote {
+    border-left: 2px solid #8CACBB;
+    padding-left: 3px;
+}
+
+#icke__page .content div.footnotes {
+    border-top: 1px solid #8CACBB;
+    clear: both;
+    margin-top: 2em;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    font-style: italic;
+    line-height: 1.4em;
+}
