@@ -1,0 +1,19 @@
+div.dokuwiki #tagging_tagcloud {
+    font-size: 110%;
+}
+
+div.dokuwiki #tagging_tagcloud li a {
+    text-decoration: none;
+}
+
+div.dokuwiki #tagging_tagcloud li.tagging_owntag a {
+    color: #2d65b2;
+}
+
+#pte_tags_edit_start {
+    text-align: left;
+}
+
+#pte_tags_edit_start input.pte_tags_edit_field {
+    display: block;
+}
