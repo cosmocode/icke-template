@@ -110,9 +110,19 @@
             <div id="icke__page">
                 <div id="icke__drophead" class="closed clearfix">
                     <?php
+                    if($INFO['subscribed']){
+                        $sub = '<img src="'.DOKU_TPL.'images/mail-yes.png" width="24" height="24" alt="" align="right" title="'.$lang['btn_subscribe'].'" />';
+                    }else{
+                        $sub = '<img src="'.DOKU_TPL.'images/mail-no.png" width="24" height="24" alt="" align="right" title="'.$lang['btn_subscribe'].'" />';
+                    }
+
+                    tpl_actionlink('subscribe','','',$sub);
+
+
                     //Quality Control
                     $qc = plugin_load('helper','qc');
                     $qc->tpl();
+
                     ?>
                 </div>
                 <div class="content dokuwiki clearfix">
