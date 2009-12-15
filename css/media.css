@@ -5,13 +5,13 @@
 #media__manager {
     height: 100%;
     overflow: hidden;
+    font-size: 1.2em;
 }
 
 #media__left {
     width: 30%;
-    border-right: solid 1px __border__;
 
-    height: 100%;
+  /*  height: 100%;*/
     overflow: auto;
     position: absolute;
     left: 0;
@@ -19,8 +19,7 @@
 
 #media__right {
     width: 69.7%;
-
-    height: 100%;
+/*    height: 100%;*/
     overflow: auto;
     position: absolute;
     right: 0;
@@ -33,6 +32,10 @@
 }
 
 /* --- Tree formatting --- */
+
+#media__tree {
+	line-height: 1.5em;
+}
 
 #media__tree img {
     float: left;
@@ -79,6 +82,7 @@ it's dirty, so any "real" fixes are welcome */
     float: left;
     margin-left: 20px;
     margin-bottom: 4px;
+    line-height: 20px;
 }
 *+html #media__opts label,
 * html #media__opts label {
@@ -91,6 +95,11 @@ it's dirty, so any "real" fixes are welcome */
 
 /* --- file list --- */
 
+#media__content {
+    border-left: 1px solid #545454;
+    padding-left: 5px;
+}
+
 #media__content img.load {
     margin: 1em auto;
 }
@@ -100,7 +109,8 @@ it's dirty, so any "real" fixes are welcome */
 }
 
 #media__content .odd {
-    background-color: __background_other__;
+/*    background-color: __background_other__;*/
+    border: 1px inset;
     padding: 0.4em;
 }
 
@@ -144,7 +154,6 @@ it's dirty, so any "real" fixes are welcome */
 #media__content form#dw__upload,
 #media__content div#dw__flashupload {
     display: block;
-    border-bottom: solid 1px __border__;
     padding: 0 0.5em 1em 0.5em;
 }
 #media__content form#dw__upload fieldset {
@@ -163,6 +172,10 @@ it's dirty, so any "real" fixes are welcome */
     float: none;
     width: auto;
     margin-left: 11.5em;
+}
+
+#media__content form#dw__upload input {
+    margin-right: 0px;
 }
 
 /* --- meta edit form --- */

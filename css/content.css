@@ -4,15 +4,14 @@
 #icke__page .content blockquote,
 #icke__page table,
 #icke__page pre {
-/*    font-size: 1.2em;
+    font-size: 1.2em;
     line-height: 1.4em;
-*/
-    font-size: 13px;
     margin: 0 0 1em;
 }
 
 #icke__page .content p p,
 #icke__page .content blockquote blockquote,
+#icke__page .content table blockquote,
 #icke__page table table,
 #icke__page pre pre {
     font-size: 1em;
@@ -130,3 +129,9 @@
     font-style: italic;
     line-height: 1.4em;
 }
+
+* html #icke__page .content pre.code {
+    overflow: scroll;
+    width: 70%;
+}
+
