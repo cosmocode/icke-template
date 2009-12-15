@@ -45,7 +45,9 @@
 
 <!--            <li><a href="<?php echo wl('mitarbeiter')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal.png" alt="Personal" /></a></li> -->
 
-            <li><a href="<?php echo wl('kunden')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers.png" alt="Kunden" title="Kunden" /></a></li>
+            <li><a href="<?php echo wl('kunden')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers.png" alt="Kunden" title="Kunden" /></a>
+                <?php icke_tplPopupPage('kunden_quick') ?>
+            </li>
 
             <li class="separator"><a href=""><img src="<?php echo DOKU_TPL?>images/icons/qn_settings.png" alt="Settings" /></a>
                 <div class="sec_level">
