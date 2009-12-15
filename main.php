@@ -23,14 +23,30 @@
     </div><!-- END icke__header -->
     <div id="icke__wrapper" class="dokuwiki">
         <ul id="icke__quicknav">
-            <li>
-                <a href="<?php echo wl('dashboard')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_dashboard.png" alt="Dashboard" /></a>
+            <li><a href="<?php echo wl('dashboard')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_dashboard.png" alt="Dashboard" title="Dashboard" /></a>
+                <?php icke_tplPopupPage('dashboard_quick') ?>
             </li>
-            <li class="separator"><a href="<?php echo wl('projekte')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_projects.png" alt="Projects" /></a>
+
+            <li class="separator"><a href="<?php echo wl('fachwissen')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_fachwissen.png" alt="Fachwissen" title="Fachwissen" /></a>
+                <?php icke_tplPopupPage('fachwissen_quick') ?>
+            </li>
+
+            <li><a href="<?php echo wl('allgemeines')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_allgemein.png" alt="Allgemeines" title="Allgemeines" /></a>
+                <?php icke_tplPopupPage('allgemeines_quick') ?>
+            </li>
+
+            <li><a href="<?php echo wl('projekte')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_projects.png" alt="Projekte" title="Projekte" /></a>
                 <?php icke_tplPopupPage('projekte_quick') ?>
             </li>
-            <li><a href="<?php echo wl('mitarbeiter')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal.png" alt="Personal" /></a></li>
-            <li><a href="<?php echo wl('kunden')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers.png" alt="Customers" /></a></li>
+
+            <li><a href="<?php echo wl('produkte')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_products.png" alt="Produkte" title="Produkte" /></a>
+                <?php icke_tplPopupPage('produkte_quick') ?>
+            </li>
+
+<!--            <li><a href="<?php echo wl('mitarbeiter')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal.png" alt="Personal" /></a></li> -->
+
+            <li><a href="<?php echo wl('kunden')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers.png" alt="Kunden" title="Kunden" /></a></li>
+
             <li class="separator"><a href=""><img src="<?php echo DOKU_TPL?>images/icons/qn_settings.png" alt="Settings" /></a>
                 <div class="sec_level">
                     <ul>
@@ -110,14 +126,6 @@
             <div id="icke__page">
                 <div id="icke__drophead" class="closed clearfix">
                     <?php
-                    if($INFO['subscribed']){
-                        $sub = '<img src="'.DOKU_TPL.'images/mail-yes.png" width="24" height="24" alt="" align="right" title="'.$lang['btn_subscribe'].'" />';
-                    }else{
-                        $sub = '<img src="'.DOKU_TPL.'images/mail-no.png" width="24" height="24" alt="" align="right" title="'.$lang['btn_subscribe'].'" />';
-                    }
-
-                    tpl_actionlink('subscribe','','',$sub);
-
 
                     //Quality Control
                     $qc = plugin_load('helper','qc');
@@ -153,8 +161,25 @@
                         <?php tpl_actionlink('edit')?>
                     </div>
                     <div class="footer_toolbar">
-                        <p><?php tpl_youarehere() ?></p>
-                        <p class="copy">&copy; Copyright 2009 ICKE <a href="#">Kontakt</a> <a href="#">Support</a></p>
+                        <p>
+                            <?php
+                                if($ACT == 'show'){
+                                    $starred =& plugin_load('action','starred');
+                                    $starred->tpl_starred();
+                                }
+
+                                echo '&nbsp;&nbsp;&nbsp;';
+
+                                if($INFO['subscribed']){
+                                    $sub = '<img src="'.DOKU_TPL.'images/mail-yes.png" width="16" height="16" alt="" title="'.$lang['btn_subscribe'].'" />';
+                                }else{
+                                    $sub = '<img src="'.DOKU_TPL.'images/mail-no.png" width="16" height="16" alt="" title="'.$lang['btn_subscribe'].'" />';
+                                }
+                                tpl_actionlink('subscribe','','',$sub);
+                            ?>
+
+                        </p>
+                        <p class="copy">&copy; Copyright 2009 <a href="<?php echo wl('icke')?>">ICKE</a></p>
                     </div>
                 </div><!-- END icke__footer -->
             </div><!-- END icke__page -->
