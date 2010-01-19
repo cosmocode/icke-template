@@ -106,21 +106,9 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
                     ?>
 
                 </li>
-<!--
-                <li class="sideclip">
-                    <h2>N&auml;chste Termine</h2>
-                    <table>
-                        <tr><th colspan="2">heute</th></tr>
-                        <tr><td>11:00</td><td>Marketing-Sitzung</td></tr>
-                        <tr><td>15:00</td><td>Kickoff-Meeting ICKE</td></tr>
-                        <tr><th colspan="2">morgen</th></tr>
-                        <tr><td>10:00</td><td>Vorstellungsgespr&auml;ch</td></tr>
-                        <tr><td>15:00</td><td>Lorem Ipsum</td></tr>
-                        <tr><td>17:00</td><td>Doloris sitz abends</td></tr>
-                        <tr><td>20:00</td><td>Elternabend</td></tr>
-                    </table>
-                </li>
--->
+
+                <?php icke_tplProjectSteps()?>;
+
             </ul><!-- END icke__sidebar -->
             <div id="icke__page">
                 <div id="icke__drophead" class="closed clearfix">
