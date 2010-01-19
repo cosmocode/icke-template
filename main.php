@@ -23,31 +23,28 @@
     </div><!-- END icke__header -->
     <div id="icke__wrapper" class="dokuwiki">
         <ul id="icke__quicknav">
-            <li><a href="<?php echo wl('dashboard')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_dashboard.png" alt="Dashboard" title="Dashboard" /></a>
-                <?php icke_tplPopupPage('dashboard_quick') ?>
-            </li>
-
-            <li class="separator"><a href="<?php echo wl('fachwissen')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_fachwissen.png" alt="Fachwissen" title="Fachwissen" /></a>
-                <?php icke_tplPopupPage('fachwissen_quick') ?>
-            </li>
-
-            <li><a href="<?php echo wl('allgemeines')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_allgemein.png" alt="Allgemeines" title="Allgemeines" /></a>
-                <?php icke_tplPopupPage('allgemeines_quick') ?>
-            </li>
-
-            <li><a href="<?php echo wl('projekte')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_projects.png" alt="Projekte" title="Projekte" /></a>
-                <?php icke_tplPopupPage('projekte_quick') ?>
-            </li>
-
-            <li><a href="<?php echo wl('produkte')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_products.png" alt="Produkte" title="Produkte" /></a>
-                <?php icke_tplPopupPage('produkte_quick') ?>
-            </li>
+<?php
+foreach (array('dashboard'        => array('txt' => 'Dashboard'),
+               'fachwissen:start' => array('txt' => 'Fachwissen', 'img' => 'fachwissen', 'sep' => true),
+               'allgemeines:start'=> array('txt' => 'Allgemeines', 'img' => 'allgemein'),
+               'projekt:start'    => array('txt' => 'Projekte', 'img' => 'projects'),
+               'produkt:start'    => array('txt' => 'Produkte', 'img' => 'products'),
+               'kunde:start'      => array('txt' => 'Kunden', 'img' => 'customers')) as $id => $data) {
+    if (!isset($data['img'])) {
+        $data['img'] = $id;
+    }
+    if (!isset($data['quick'])) {
+        $data['quick'] = strpos($id, ':') !== false ? str_replace('start', 'quick', $id) : $id . '_quick';
+    }
+    echo '<li' . (isset($data['sep']) && $data['sep'] ? ' class="separator"' : '') .
+         '><a href="' . wl($id) . '"><img src="' . DOKU_TPL . 'images/icons/qn_' . $data['img'] . '.png"' .
+         'alt="' . $data['txt'] . '" title="' . $data['txt'] . '" /></a>';
+    icke_tplPopupPage($data['quick']);
+    echo '</li>';
+}
+?>
 
 <!--            <li><a href="<?php echo wl('mitarbeiter')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal.png" alt="Personal" /></a></li> -->
-
-            <li><a href="<?php echo wl('kunden')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers.png" alt="Kunden" title="Kunden" /></a>
-                <?php icke_tplPopupPage('kunden_quick') ?>
-            </li>
 
             <li class="separator"><a href=""><img src="<?php echo DOKU_TPL?>images/icons/qn_settings.png" alt="Settings" /></a>
                 <div class="sec_level">
