@@ -49,12 +49,12 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
             <li class="separator"><a href=""><img src="<?php echo DOKU_TPL?>images/icons/qn_settings.png" alt="Settings" /></a>
                 <div class="sec_level">
                     <ul>
-                    <?php tpl_actionlink('history','<li>','</li>'); ?>
-                    <?php tpl_actionlink('recent','<li>','</li>'); ?>
-                    <?php tpl_actionlink('index','<li>','</li>'); ?>
-                    <?php tpl_actionlink('backlink','<li>','</li>'); ?>
-                    <?php tpl_actionlink('subscribe','<li>','</li>'); ?>
-                    <?php tpl_actionlink('admin','<li>','</li>'); ?>
+                    <li><?php tpl_actionlink('history'); ?></li>
+                    <li><?php tpl_actionlink('recent'); ?></li>
+                    <li><?php tpl_actionlink('index'); ?></li>
+                    <li><?php tpl_actionlink('backlink'); ?></li>
+                    <li><?php tpl_actionlink('subscribe'); ?></li>
+                    <li><?php tpl_actionlink('admin'); ?></li>
                     </ul>
                 </div>
 
@@ -107,7 +107,7 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
 
                 </li>
 
-                <?php icke_tplProjectSteps()?>;
+                <?php icke_tplProjectSteps(); ?>
 
             </ul><!-- END icke__sidebar -->
             <div id="icke__page">
