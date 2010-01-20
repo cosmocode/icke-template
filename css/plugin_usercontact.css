@@ -1,0 +1,32 @@
+#icke__page div.insitu-footnote {
+    background-color: #fff;
+    border: 1px solid #8CACBB;
+    font-size: 90%;
+}
+
+#icke__page div.usercontact_overlay {
+    opacity: 0.8;
+    position: absolute;
+    padding: 0.5em;
+    margin-top: 0;
+}
+
+
+#icke__page div.usercontact_overlay ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+#icke__page div.usercontact_overlay ul li {
+    margin-left: 2em;
+}
+
+#icke__page div.usercontact_overlay ul li.userov_name {
+    margin-left: 0;
+    margin-bottom: 0.3em;
+}
+
+#icke__page div.usercontact_overlay ul li.userov_name div {
+    font-weight: bold;
+}
+
