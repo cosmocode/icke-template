@@ -130,14 +130,12 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
                                 echo strftime('%e. %B %Y',$INFO['lastmod']);
                             }
                         ?>
-                        </span><br />
+                        </span>
                         <?php if($INFO['user']): ?>
                             <a class="author" href="<?php echo wl('user:'.$INFO['user'])?>"><?php echo hsc($INFO['editor'])?></a>
                         <?php else: ?>
                             <span class="author"><?php echo hsc($INFO['editor'])?></span>
                         <?php endif ?>
-
-                            <br />
 
                             <?php
                                 if($ACT == 'show'){
