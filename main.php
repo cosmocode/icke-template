@@ -45,6 +45,7 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
 
             <li class="separator"><a class="einstellungen" href="">Einstellungen</a>
                 <div class="sec_level">
+                    <h1></h1>
                     <ul>
                     <li><?php tpl_actionlink('history'); ?></li>
                     <li><?php tpl_actionlink('recent'); ?></li>
@@ -53,6 +54,7 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
                     <li><?php tpl_actionlink('subscribe'); ?></li>
                     <li><?php tpl_actionlink('admin'); ?></li>
                     </ul>
+                    <div class="sec_level_bottom"></div>
                 </div>
 
             </li>

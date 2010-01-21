@@ -5,7 +5,7 @@ function icke_tplPopupPage($id){
     if($page) {
         echo '<div class="sec_level">';
         echo $page;
-        echo '<div class="sec_level_bottom" />';
+        echo '<div class="sec_level_bottom"></div>';
         echo '</div>';
     }
 }
