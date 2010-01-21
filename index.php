@@ -22,21 +22,38 @@
     <div id="icke__wrapper">
         <ul id="icke__quicknav">
             <li>
-                <a href=""><img src="images/icons/qn_dashboard.png" alt="Dashboard" /></a>
-                <ul class="sec_level">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Listenpunkt</a></li>
-                    <li><a href="">Navigations</a></li>
-                    <li><a href="">Ele-mentos</a></li>
-                    <li><a href="">Listenpunkt</a></li>
-                    <li><a href="">Navigations</a></li>
-                    <li><a href="">Ele-mentos</a></li>
-                </ul>
+                <a class="dashboard" href="">Dashboard</a>
+                <div class="sec_level">
+                    <ul class="sec_level">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Listenpunkt</a></li>
+                        <li><a href="">Navigations</a></li>
+                        <li><a href="">Ele-mentos</a></li>
+                        <li><a href="">Listenpunkt</a></li>
+                        <li><a href="">Navigations</a></li>
+                        <li><a href="">Ele-mentos</a></li>
+                    </ul>
+                    <div class="sec_level_bottom" />
+                </div>
             </li>
-            <li class="separator"><a href=""><img src="images/icons/qn_projects.png" alt="Projects" /></a></li>
-            <li><a href=""><img src="images/icons/qn_personal.png" alt="Personal" /></a></li>
-            <li><a href=""><img src="images/icons/qn_customers.png" alt="Customers" /></a></li>
-            <li class="separator"><a href=""><img src="images/icons/qn_settings.png" alt="Settings" /></a></li>
+            <li class="separator"><a class="projekte" href="">Projects</a></li>
+            <li>
+                <a class="produkte" href="">Personal</a>
+                <div class="sec_level">
+                    <ul class="sec_level">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Listenpunkt</a></li>
+                        <li><a href="">Navigations</a></li>
+                        <li><a href="">Ele-mentos</a></li>
+                        <li><a href="">Listenpunkt</a></li>
+                        <li><a href="">Navigations</a></li>
+                        <li><a href="">Ele-mentos</a></li>
+                    </ul>
+                    <div class="sec_level_bottom" />
+                </div>
+            </li>
+            <li><a class="kunden" href="">Customers</a></li>
+            <li class="separator"><a class="einstellungen" href="">Settings</a></li>
         </ul><!-- END icke__quicknav -->
         <div class="wrap">
             <ul id="icke__sidebar">

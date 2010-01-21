@@ -12,7 +12,7 @@ addInitEvent(function(){
     });
     jQuery("#icke__sidebar .search #ns_custom:not(.closed) li").live("click", function(){
         jQuery("#icke__sidebar .search .namespace").val(jQuery(this).attr("class"));
-        jQuery(this).parent().animate({'top': (jQuery(this).prevAll().size()*-25) + 'px' },"slow");
+        jQuery(this).parent().animate({'top': (jQuery(this).prevAll().size()*-30) + 'px' },"slow");
         jQuery(this).parent().parent().addClass("closed");
     });
 

@@ -23,33 +23,33 @@
     </div><!-- END icke__header -->
     <div id="icke__wrapper" class="dokuwiki">
         <ul id="icke__quicknav">
-            <li><a href="<?php echo wl('dashboard')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_dashboard.png" alt="Dashboard" title="Dashboard" /></a>
+            <li><a class="dashboard" href="<?php echo wl('dashboard')?>">Dashboard</a>
                 <?php icke_tplPopupPage('dashboard_quick') ?>
             </li>
 
-            <li class="separator"><a href="<?php echo wl('fachwissen')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_fachwissen.png" alt="Fachwissen" title="Fachwissen" /></a>
+            <li class="separator"><a class="fachwissen" href="<?php echo wl('fachwissen')?>">Fachwissen</a>
                 <?php icke_tplPopupPage('fachwissen_quick') ?>
             </li>
 
-            <li><a href="<?php echo wl('allgemeines')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_allgemein.png" alt="Allgemeines" title="Allgemeines" /></a>
+            <li><a class="allgemeines" href="<?php echo wl('allgemeines')?>">Allgemeines</a>
                 <?php icke_tplPopupPage('allgemeines_quick') ?>
             </li>
 
-            <li><a href="<?php echo wl('projekte')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_projects.png" alt="Projekte" title="Projekte" /></a>
+            <li><a class="projekte" href="<?php echo wl('projekte')?>">Projekte</a>
                 <?php icke_tplPopupPage('projekte_quick') ?>
             </li>
 
-            <li><a href="<?php echo wl('produkte')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_products.png" alt="Produkte" title="Produkte" /></a>
+            <li><a class="produkte" href="<?php echo wl('produkte')?>">Produkte</a>
                 <?php icke_tplPopupPage('produkte_quick') ?>
             </li>
 
 <!--            <li><a href="<?php echo wl('mitarbeiter')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal.png" alt="Personal" /></a></li> -->
 
-            <li><a href="<?php echo wl('kunden')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers.png" alt="Kunden" title="Kunden" /></a>
+            <li><a class="kunden" href="<?php echo wl('kunden')?>">Kunden</a>
                 <?php icke_tplPopupPage('kunden_quick') ?>
             </li>
 
-            <li class="separator"><a href=""><img src="<?php echo DOKU_TPL?>images/icons/qn_settings.png" alt="Settings" /></a>
+            <li class="separator"><a class="einstellungen" href="">Einstellungen</a>
                 <div class="sec_level">
                     <ul>
                     <?php tpl_actionlink('history','<li>','</li>'); ?>
@@ -78,16 +78,20 @@
                     <form method="post" action="" accept-charset="utf-8">
                         <select class="namespace" name="namespace">
                             <option value="">All</option>
-                            <option value="projekt">Projects</option>
-                            <option value="user">Personal</option>
-                            <option value="kunde">Customers</option>
+                            <option value="Fachwissen">Fachwissen</option>
+                            <option value="Allgemeines">Allgemeines</option>
+                            <option value="Projekte">Projekte</option>
+                            <option value="Produkte">Produkte</option>
+                            <option value="Kunden">Kunden</option>
                         </select>
                         <div id="ns_custom" class="closed" style="display: none;">
                             <ul>
-                                <li class=""><img src="<?php echo DOKU_TPL?>images/icons/qn_dashboard_small.png" alt="Dashboard" /></li>
-                                <li class="projects"><img src="<?php echo DOKU_TPL?>images/icons/qn_projects_small.png" alt="Projects" /></li>
-                                <li class="personal"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal_small.png" alt="Personal" /></li>
-                                <li class="customers"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers_small.png" alt="Customers" /></li>
+                                <li class=""><img src="<?php echo DOKU_TPL?>images/icons/30x30/icke.png" alt="Alles" /></li>
+                                <li class="Fachwissen"><img src="<?php echo DOKU_TPL?>images/icons/30x30/fachwissen_aktiv.png" alt="Fachwissen" /></li>
+                                <li class="Allgemeines"><img src="<?php echo DOKU_TPL?>images/icons/30x30/allgemein_aktiv.png" alt="Allgemeines" /></li>
+                                <li class="Projekte"><img src="<?php echo DOKU_TPL?>images/icons/30x30/projekte_aktiv.png" alt="Projekte" /></li>
+                                <li class="Produkte"><img src="<?php echo DOKU_TPL?>images/icons/30x30/produkte_aktiv.png" alt="Produkte" /></li>
+                                <li class="Kunden"><img src="<?php echo DOKU_TPL?>images/icons/30x30/kunden_aktiv.png" alt="Kunden" /></li>
                             </ul>
                         </div>
                         <input type="hidden" name="do" value="search" />

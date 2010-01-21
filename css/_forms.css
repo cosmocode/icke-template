@@ -120,3 +120,45 @@ html>body div.dokuwiki button.button {
     width: 8em;
 }
 
+/* ----------------- new project form  ------------------*/
+
+div.dokuwiki form.bureaucracy__plugin fieldset {
+    width: auto;
+    border: none;
+}
+
+div.dokuwiki form.bureaucracy__plugin fieldset legend {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+div.dokuwiki form.bureaucracy__plugin label {
+    margin-left: 0;
+
+}
+
+div.dokuwiki form.bureaucracy__plugin label span {
+    text-align: left;
+    font-size: 13px;
+    width: 15%;
+    line-height: 16px;
+}
+
+div.dokuwiki form.bureaucracy__plugin label textarea.edit, div.dokuwiki form.bureaucracy__plugin label input.edit {
+    width: 80%;
+    background: none;
+}
+
+p.meta span.lastmod:after {
+    content: "  -  ";
+}
+
+html > body div.dokuwiki input.button, html > body div.dokuwiki button.button {
+    background: #3E80C0 url(/lib/tpl/icke/images/buttonbshadow.png) repeat-x scroll center bottom;
+    color: #eee;
+    float: right;
+    margin-right: 4%;
+    font-weight: bold;
+}

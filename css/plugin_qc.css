@@ -2,6 +2,7 @@
 div#plugin__qc__wrapper {
     background-color: transparent;
     border: none;
+    width: auto;
 }
 
 div#plugin__qc__out {
@@ -9,6 +10,15 @@ div#plugin__qc__out {
     line-height: 1.4em;
 }
 
+div#plugin__qc__out h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:0.5em;
+}
+
+div#plugin__qc__out h2{
+    font-size: 13px;
+}
 div#plugin__qc__out h2,
 div#plugin__qc__out h3 {
     margin-top: 1em;
@@ -18,3 +28,18 @@ div#plugin__qc__out h3 {
     font-weight: bold;
     margin-bottom: 0.5em;
 }
+
+div#plugin__qc__out div,
+div#plugin__qc__out p {
+    margin-left: 0;
+}
+
+div#plugin__qc__out img {
+    margin-left: 5px;
+}
+
+div#plugin__qc__out {
+    font-size: 13px;
+    line-height: 1.2em;
+}
+
