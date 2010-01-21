@@ -18,12 +18,22 @@
     background: transparent url(images/layout/bubble_unten.png) no-repeat;
 }
 
+#icke__quicknav div.sec_level h1,
 #icke__quicknav div.sec_level ul {
-    z-index: 1;
-    padding-left: 18px;
-    margin-top: 5px;
     background: transparent url(images/layout/bubble_mitte.png) repeat-y;
     width: 145px;
+}
+
+#icke__quicknav div.sec_level ul {
+    padding-left: 18px;
+    padding-top: 5px;
+}
+
+#icke__quicknav div.sec_level h1 {
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 #icke__quicknav div.sec_level ul.inline {
