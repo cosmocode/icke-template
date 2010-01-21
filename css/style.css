@@ -7,7 +7,7 @@
    ----------------------------------------------------*/
 
 body {
-    background: #7e7070;
+    background: #b5b5b5;
     position: relative;
 }
 
@@ -18,31 +18,35 @@ a:hover {text-decoration: none;}
    ----------------------------------------------------*/
 
 #icke__header {
-    background-color: #e0e0e0;
+    background: #e0e0e0 url(images/layout/head_gradient.jpg) top left repeat-x;
+    height: 126px;
     overflow: hidden;
     padding: 0 1em;
+    position: relative;
 }
 
 #icke__header .logo {
+	border-right: 1px solid #dcdcdc;
     float: left;
+    height: 126px;
     width: 100px;
-    padding: 1em 0 0;
 }
 
 #icke__header h5 {
-    color: #333;
-    font-size: 3em;
+    color: #2772b6;
+    font-size: 28px;
     font-weight: bold;
     float: left;
+    left: 135px;
     line-height: 1.3em;
-    padding: 0.5em 0.5em 0.5em 0.75em;
-    width: 50%;
+    position: absolute;
+    top: 30px;
 }
 
 #icke__header h5 span {
-    color: #474747;
-    font-size: 0.5em;
-    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
     line-height: 1.15em;
 }
 
@@ -87,12 +91,47 @@ a:hover {text-decoration: none;}
     padding-top: 0.5em;
 }
 
+#icke__quicknav a.dashboard,
+#icke__quicknav a.fachwissen,
+#icke__quicknav a.allgemeines,
+#icke__quicknav a.projekte,
+#icke__quicknav a.produkte,
+#icke__quicknav a.kunden,
+#icke__quicknav a.einstellungen {
+    background: transparent top left no-repeat;
+	display: block;
+	height: 60px;
+	text-indent: -9999px;
+	width: 60px;
+}
+
+#icke__quicknav a.dashboard {background-image: url(images/icons/60x60/dashboard_inaktiv.png);}
+#icke__quicknav li:hover a.dashboard {background-image: url(images/icons/60x60/dashboard_aktiv.png);}
+
+#icke__quicknav a.fachwissen {background-image: url(images/icons/60x60/fachwissen_inaktiv.png);}
+#icke__quicknav li:hover a.fachwissen {background-image: url(images/icons/60x60/fachwissen_aktiv.png);}
+
+#icke__quicknav a.allgemeines {background-image: url(images/icons/60x60/allgemein_inaktiv.png);}
+#icke__quicknav li:hover a.allgemeines {background-image: url(images/icons/60x60/allgemein_aktiv.png);}
+
+#icke__quicknav a.projekte {background-image: url(images/icons/60x60/projekte_inaktiv.png);}
+#icke__quicknav li:hover a.projekte {background-image: url(images/icons/60x60/projekte_aktiv.png);}
+
+#icke__quicknav a.produkte {background-image: url(images/icons/60x60/produkte_inaktiv.png);}
+#icke__quicknav li:hover a.produkte {background-image: url(images/icons/60x60/produkte_aktiv.png);}
+
+#icke__quicknav a.kunden {background-image: url(images/icons/60x60/kunden_inaktiv.png);}
+#icke__quicknav li:hover a.kunden {background-image: url(images/icons/60x60/kunden_aktiv.png);}
+
+#icke__quicknav a.einstellungen {background-image: url(images/icons/60x60/setting_inaktiv.png);}
+#icke__quicknav li:hover a.einstellungen {background-image: url(images/icons/60x60/setting_aktiv.png);}
+
 /* =PAGE
    ----------------------------------------------------*/
 
 #icke__wrapper .wrap {
     background: transparent url(images/layout/wrap_shadow_y_left.png) top left repeat-y;
-    margin: 0 0 0 10em;
+    margin: 0 0 0 9.7em;
     padding: 0 0 0 14px;
 }
 
@@ -104,20 +143,16 @@ a:hover {text-decoration: none;}
 
 /* drophead */
 #icke__page #icke__drophead {
-    background: #545454 url(images/layout/wrap_shadow_x_top.png) top left repeat-x;
-    color: #fefefe;
+    background: #2772B6 url(images/layout/wrap_shadow_x_top.png) top left repeat-x;
+    color: #fff;
     overflow: hidden;
     padding: 0.5em 2.5em 0.5em 2em;
 }
 
-
-
-
 /* document-meta */
 #icke__page p.meta {
-    float: right;
-    text-align: right;
     line-height: 1em;
+    margin: 0;
 }
 
 #icke__page p.meta .lastmod {
@@ -138,7 +173,7 @@ a:hover {text-decoration: none;}
 /* document-content */
 #icke__page .content {
     background-color: #fefefe;
-    padding: 1em 2.5em 2em 2em;
+    padding: 10px 120px 20px 30px;
     font-size: 1.1em;
 }
 
@@ -147,7 +182,6 @@ a:hover {text-decoration: none;}
    ----------------------------------------------------*/
 
 #icke__footer {
-    background: #545454;
     color: #fefefe;
 }
 
@@ -155,11 +189,24 @@ a:hover {text-decoration: none;}
     background: #fefefe;
     border-top: 1px solid #545454;
     color: #fefefe;
+    height: 45px;
     padding: 0.25em 2.5em 0.25em 2em;
 }
 
+#icke__footer .admin_toolbar a.edit {
+	background: transparent url(images/icons/stift_gross.png) top right no-repeat;
+	color: #5f5f5f;
+	display: block;
+	float: right;
+	font-size: 1.1em;
+	height: 20px;
+	padding: 16px 40px 0 0;
+}
+
 #icke__footer .footer_toolbar {
-    padding: 0.5em 2.5em 0.5em 2em;
+	background: #545454 url(images/layout/footer_gradient.jpg) top left repeat-x;
+	height: 17px;
+    padding: 6px 2.5em 0 2em;
 }
 
 #icke__footer .footer_toolbar p {
@@ -269,7 +316,7 @@ a:hover {text-decoration: none;}
     float: left;
     height: 25px;
     position: relative;
-    width: 35px;
+    width: 45px;
 }
 #icke__sidebar .search #ns_custom.closed {
     overflow: hidden;
@@ -292,7 +339,7 @@ a:hover {text-decoration: none;}
 }
 
 #icke__sidebar .search #ns_custom ul li {
-    height: 25px;
+    height: 30px;
     overflow: hidden;
 }
 

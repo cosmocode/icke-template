@@ -25,28 +25,25 @@
         <ul id="icke__quicknav">
 <?php
 foreach (array('dashboard'        => array('txt' => 'Dashboard'),
-               'fachwissen:start' => array('txt' => 'Fachwissen', 'img' => 'fachwissen', 'sep' => true),
-               'allgemeines:start'=> array('txt' => 'Allgemeines', 'img' => 'allgemein'),
-               'projekt:start'    => array('txt' => 'Projekte', 'img' => 'projects'),
-               'produkt:start'    => array('txt' => 'Produkte', 'img' => 'products'),
-               'kunde:start'      => array('txt' => 'Kunden', 'img' => 'customers')) as $id => $data) {
-    if (!isset($data['img'])) {
-        $data['img'] = $id;
+               'fachwissen:start' => array('txt' => 'Fachwissen', 'class' => 'fachwissen', 'sep' => true),
+               'allgemeines:start'=> array('txt' => 'Allgemeines', 'class' => 'allgemeines'),
+               'projekt:start'    => array('txt' => 'Projekte', 'class' => 'projekte'),
+               'produkt:start'    => array('txt' => 'Produkte', 'class' => 'produkte'),
+               'kunde:start'      => array('txt' => 'Kunden', 'class' => 'kunden')) as $id => $data) {
+    if (!isset($data['class'])) {
+        $data['class'] = $id;
     }
     if (!isset($data['quick'])) {
         $data['quick'] = strpos($id, ':') !== false ? str_replace('start', 'quick', $id) : $id . '_quick';
     }
     echo '<li' . (isset($data['sep']) && $data['sep'] ? ' class="separator"' : '') .
-         '><a href="' . wl($id) . '"><img src="' . DOKU_TPL . 'images/icons/qn_' . $data['img'] . '.png"' .
-         'alt="' . $data['txt'] . '" title="' . $data['txt'] . '" /></a>';
+         '><a class="' . $data['class'] . '" href="' . wl($id) . '">' . $data['txt'] . '</a>';
     icke_tplPopupPage($data['quick']);
     echo '</li>';
 }
 ?>
 
-<!--            <li><a href="<?php echo wl('mitarbeiter')?>"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal.png" alt="Personal" /></a></li> -->
-
-            <li class="separator"><a href=""><img src="<?php echo DOKU_TPL?>images/icons/qn_settings.png" alt="Settings" /></a>
+            <li class="separator"><a class="einstellungen" href="">Einstellungen</a>
                 <div class="sec_level">
                     <ul>
                     <li><?php tpl_actionlink('history'); ?></li>
@@ -75,16 +72,20 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
                     <form method="post" action="" accept-charset="utf-8">
                         <select class="namespace" name="namespace">
                             <option value="">All</option>
-                            <option value="projekt">Projects</option>
-                            <option value="user">Personal</option>
-                            <option value="kunde">Customers</option>
+                            <option value="Fachwissen">Fachwissen</option>
+                            <option value="Allgemeines">Allgemeines</option>
+                            <option value="Projekte">Projekte</option>
+                            <option value="Produkte">Produkte</option>
+                            <option value="Kunden">Kunden</option>
                         </select>
                         <div id="ns_custom" class="closed" style="display: none;">
                             <ul>
-                                <li class=""><img src="<?php echo DOKU_TPL?>images/icons/qn_dashboard_small.png" alt="Dashboard" /></li>
-                                <li class="projects"><img src="<?php echo DOKU_TPL?>images/icons/qn_projects_small.png" alt="Projects" /></li>
-                                <li class="personal"><img src="<?php echo DOKU_TPL?>images/icons/qn_personal_small.png" alt="Personal" /></li>
-                                <li class="customers"><img src="<?php echo DOKU_TPL?>images/icons/qn_customers_small.png" alt="Customers" /></li>
+                                <li class=""><img src="<?php echo DOKU_TPL?>images/icons/30x30/icke.png" alt="Alles" /></li>
+                                <li class="Fachwissen"><img src="<?php echo DOKU_TPL?>images/icons/30x30/fachwissen_aktiv.png" alt="Fachwissen" /></li>
+                                <li class="Allgemeines"><img src="<?php echo DOKU_TPL?>images/icons/30x30/allgemein_aktiv.png" alt="Allgemeines" /></li>
+                                <li class="Projekte"><img src="<?php echo DOKU_TPL?>images/icons/30x30/projekte_aktiv.png" alt="Projekte" /></li>
+                                <li class="Produkte"><img src="<?php echo DOKU_TPL?>images/icons/30x30/produkte_aktiv.png" alt="Produkte" /></li>
+                                <li class="Kunden"><img src="<?php echo DOKU_TPL?>images/icons/30x30/kunden_aktiv.png" alt="Kunden" /></li>
                             </ul>
                         </div>
                         <input type="hidden" name="do" value="search" />

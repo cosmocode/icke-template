@@ -1,37 +1,48 @@
 /* second-level navigation */
+
 #icke__quicknav li:hover div.sec_level {display: block;}
 
-#icke__quicknav li a,
-#icke__quicknav li a:hover {
-    color: #efefef;
-}
-
-#icke__quicknav li div.sec_level {
-    background: rgba(84,84,84,0.9);
-    color: #efefef;
-    border: 1px solid #ccc;
+#icke__quicknav div.sec_level {
     display: none;
-    left: 60px;
+    background: transparent url(images/layout/bubble_oben.png) no-repeat;
     position: absolute;
+    z-index: 1;
+    left: 50px;
     top: 10px;
-    width: 120px;
-    z-index: 2;
+    width: 160px;
+    height: 40px;
+
+}
+#icke__quicknav div.sec_level_bottom {
+    height: 13px;
+    background: transparent url(images/layout/bubble_unten.png) no-repeat;
 }
 
-#icke__quicknav li div.sec_level li {
+#icke__quicknav div.sec_level ul {
+    z-index: 1;
+    padding-left: 18px;
+    margin-top: 5px;
+    background: transparent url(images/layout/bubble_mitte.png) repeat-y;
+    width: 145px;
+}
+
+#icke__quicknav div.sec_level ul.inline {
+    margin-top: 0;
+}
+
+#icke__quicknav div.sec_level ul li {
     margin: 0;
     padding: 0;
-    width: auto;
+    width: 132px;
 }
 
-#icke__quicknav li div.sec_level li:hover {
-    background-color: #333;
-}
-
-#icke__quicknav li div.sec_level li a,
-#icke__quicknav li div.sec_level li a:hover {
-    display: block;
-    padding: 0.5em 1em;
+#icke__quicknav div.sec_level ul li a {
+    font-size: 12px;
     text-decoration: none;
+    display: block;
+    padding: 5px 5px 5px 13px;
 }
 
+#icke__quicknav div.sec_level ul li a:hover {
+    background-color: #e5e5e5;
+}

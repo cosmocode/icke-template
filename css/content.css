@@ -1,5 +1,9 @@
 /* content format */
 
+#icke__page .content .page {
+    color: #333;
+}
+
 #icke__page .content p,
 #icke__page .content blockquote,
 #icke__page table,
@@ -25,12 +29,20 @@
 #icke__page .content h5 {
     clear: left;
     font-weight: bold;
-    margin: 0 0 1em;
-    padding: 0.5em 0 0;
+    margin: 0;
+    padding: 0.5em 0 0.2em;
 }
 
-#icke__page .content h2{
-    margin-left: 15px;
+#icke__page .content h1 {
+    font-size: 2.2em;
+}
+
+#icke__page .content h2 {
+    font-size: 1.7em;
+}
+
+#icke__page .content h2 a {
+    color: #333;
 }
 
 #icke__page .content h3 {
@@ -70,7 +82,7 @@
 }
 
 #icke__page .content a {
-    color: #2D65B2;
+    color: #2772b6;
 }
 
 #icke__page .content a:visited {
