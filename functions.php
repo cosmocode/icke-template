@@ -14,8 +14,8 @@ function icke_tplProjectSteps(){
     $ns = $ID;
     do {
         $ns = getNS($ns);
-        if(page_exists("$ns:steps")){
-            $steps = "$ns:steps";
+        if(page_exists("$ns:steps:")){
+            $steps = "$ns:steps:";
             break;
         }
     }while($ns);

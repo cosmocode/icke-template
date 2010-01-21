@@ -65,7 +65,7 @@ foreach (array('dashboard'        => array('txt' => 'Dashboard'),
                 <li class="logon">
                     <?php
                         if($_SERVER['REMOTE_USER']){
-                            echo '<a class="profile" href="'.wl('user:'.$_SERVER['REMOTE_USER']).'">'.hsc($INFO['userinfo']['name']).'<a>';
+                            echo '<a class="profile" href="'.wl('user:'.$_SERVER['REMOTE_USER']).'">'.hsc($INFO['userinfo']['name']).'</a>';
                         }
                         tpl_actionlink('login');
                     ?>
