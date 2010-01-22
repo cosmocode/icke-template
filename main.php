@@ -24,19 +24,21 @@
     <div id="icke__wrapper" class="dokuwiki">
         <ul id="icke__quicknav">
 <?php
-foreach (array('dashboard'        => array('txt' => 'Dashboard'),
-               'fachwissen:start' => array('txt' => 'Fachwissen', 'class' => 'fachwissen', 'sep' => true),
-               'allgemeines:start'=> array('txt' => 'Allgemeines', 'class' => 'allgemeines'),
-               'projekt:start'    => array('txt' => 'Projekte', 'class' => 'projekte'),
-               'produkt:start'    => array('txt' => 'Produkte', 'class' => 'produkte'),
-               'kunde:start'      => array('txt' => 'Kunden', 'class' => 'kunden')) as $id => $data) {
+foreach (array('dashboard'    => array('txt' => 'Dashboard'),
+               'fachwissen:'  => array('txt' => 'Fachwissen', 'class' => 'fachwissen', 'liclass' => 'separator'),
+               'allgemeines:' => array('txt' => 'Allgemeines', 'class' => 'allgemeines'),
+               'projekt:'     => array('txt' => 'Projekte', 'class' => 'projekte'),
+               'produkt:'     => array('txt' => 'Produkte', 'class' => 'produkte'),
+               'kunde:'       => array('txt' => 'Kunden', 'class' => 'kunden')) as $id => $data) {
     if (!isset($data['class'])) {
         $data['class'] = $id;
     }
     if (!isset($data['quick'])) {
         $data['quick'] = strpos($id, ':') !== false ? str_replace('start', 'quick', $id) : $id . '_quick';
     }
-    echo '<li' . (isset($data['sep']) && $data['sep'] ? ' class="separator"' : '') .
+    if(strpos($ID,$id) === 0) $data['liclass'] .= ' active';
+
+    echo '<li' . ($data['liclass'] ? ' class="'.$data['liclass'].'"' : '') .
          '><a class="' . $data['class'] . '" href="' . wl($id) . '">' . $data['txt'] . '</a>';
     icke_tplPopupPage($data['quick']);
     echo '</li>';

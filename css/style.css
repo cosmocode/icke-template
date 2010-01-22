@@ -106,24 +106,31 @@ a:hover {text-decoration: none;}
 }
 
 #icke__quicknav a.dashboard {background-image: url(images/icons/60x60/dashboard_inaktiv.png);}
+#icke__quicknav li.active a.dashboard,
 #icke__quicknav li:hover a.dashboard {background-image: url(images/icons/60x60/dashboard_aktiv.png);}
 
 #icke__quicknav a.fachwissen {background-image: url(images/icons/60x60/fachwissen_inaktiv.png);}
+#icke__quicknav li.active a.fachwissen,
 #icke__quicknav li:hover a.fachwissen {background-image: url(images/icons/60x60/fachwissen_aktiv.png);}
 
 #icke__quicknav a.allgemeines {background-image: url(images/icons/60x60/allgemein_inaktiv.png);}
+#icke__quicknav li.active a.allgemeines,
 #icke__quicknav li:hover a.allgemeines {background-image: url(images/icons/60x60/allgemein_aktiv.png);}
 
 #icke__quicknav a.projekte {background-image: url(images/icons/60x60/projekte_inaktiv.png);}
+#icke__quicknav li.active a.projekte,
 #icke__quicknav li:hover a.projekte {background-image: url(images/icons/60x60/projekte_aktiv.png);}
 
 #icke__quicknav a.produkte {background-image: url(images/icons/60x60/produkte_inaktiv.png);}
+#icke__quicknav li.active a.produkte,
 #icke__quicknav li:hover a.produkte {background-image: url(images/icons/60x60/produkte_aktiv.png);}
 
 #icke__quicknav a.kunden {background-image: url(images/icons/60x60/kunden_inaktiv.png);}
+#icke__quicknav li.active a.kunden,
 #icke__quicknav li:hover a.kunden {background-image: url(images/icons/60x60/kunden_aktiv.png);}
 
 #icke__quicknav a.einstellungen {background-image: url(images/icons/60x60/setting_inaktiv.png);}
+#icke__quicknav li.active a.einstellungen,
 #icke__quicknav li:hover a.einstellungen {background-image: url(images/icons/60x60/setting_aktiv.png);}
 
 /* =PAGE
