@@ -34,7 +34,7 @@ foreach (array('dashboard'    => array('txt' => 'Dashboard'),
         $data['class'] = $id;
     }
     if (!isset($data['quick'])) {
-        $data['quick'] = strpos($id, ':') !== false ? str_replace('start', 'quick', $id) : $id . '_quick';
+        $data['quick'] = $id . (strpos($id, ':') !== false ? 'quick' : '_quick');
     }
     if(strpos($ID,$id) === 0) $data['liclass'] .= ' active';
 
