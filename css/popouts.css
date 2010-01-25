@@ -34,6 +34,7 @@
     font-size: 14px;
     font-weight: bold;
     margin-top: 5px;
+    padding-bottom: 5px;
 }
 
 #icke__quicknav div.sec_level ul.inline {
@@ -51,6 +52,7 @@
     text-decoration: none;
     display: block;
     padding: 5px 5px 5px 13px;
+    overflow: hidden;
 }
 
 #icke__quicknav div.sec_level ul li a:hover {

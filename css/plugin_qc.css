@@ -6,8 +6,11 @@ div#plugin__qc__wrapper {
 }
 
 div#plugin__qc__out {
-    font-size: 120%;
-    line-height: 1.4em;
+    font-size: 13px;
+    line-height: 1.2em;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #b5b5b5;
 }
 
 div#plugin__qc__out h1 {
@@ -37,9 +40,3 @@ div#plugin__qc__out p {
 div#plugin__qc__out img {
     margin-left: 5px;
 }
-
-div#plugin__qc__out {
-    font-size: 13px;
-    line-height: 1.2em;
-}
-

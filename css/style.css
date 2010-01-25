@@ -71,10 +71,10 @@ a:hover {text-decoration: none;}
 
 #icke__quicknav {
     float: left;
-    margin: 3em 0;
-    position: fixed;
+    margin: 2em 0;
     left: 0;
     width: 10em;
+    position: absolute;
 }
 
 /* first-level navigation */
@@ -177,11 +177,22 @@ a:hover {text-decoration: none;}
     border-bottom: 1px dotted #7f7f7f;
 }
 
+#icke__page p.meta .subscribe {
+        position: absolute;
+        right: 230px;
+}
+
+#icke__page p.meta #plugin__starred {
+        position: absolute;
+        right: 250px;
+}
+
 /* document-content */
 #icke__page .content {
     background-color: #fefefe;
     padding: 10px 120px 20px 30px;
     font-size: 1.1em;
+    min-height: 500px; 
 }
 
 
@@ -323,7 +334,7 @@ a:hover {text-decoration: none;}
     float: left;
     height: 25px;
     position: relative;
-    width: 45px;
+    width: 27%;
 }
 #icke__sidebar .search #ns_custom.closed {
     overflow: hidden;
@@ -356,7 +367,7 @@ a:hover {text-decoration: none;}
     float: left;
     margin: 0.25em 0.25em 0 0.5em;
     padding: 0 2px;
-    width: 6.66em;
+    width: 52%;
 }
 
 #icke__sidebar .search .submit {
@@ -366,7 +377,7 @@ a:hover {text-decoration: none;}
     margin: 0 0 0.25em;
     padding: 0;
     text-indent: -9999px;
-    width: 20px;
+    width: 10%;
 }
 
 /* table of contents */
@@ -382,17 +393,14 @@ a:hover {text-decoration: none;}
 }
 
 #icke__sidebar .table_of_contents div.tocheader,
+#icke__sidebar .sideclip h1,
+#icke__sidebar .sideclip h3,
 #icke__sidebar .table_of_contents h2,
 #icke__sidebar .table_of_contents h3 {
     border-bottom: 1px solid #333;
     font-size: 1.3em;
     font-weight: bold;
-    margin: 0 0 0.75em;
-}
-
-#icke__sidebar .table_of_contents h3 {
-    font-size: 1.2em;
-    margin-top: 1em;
+    margin: 0.8em 0 0.55em;
 }
 
 #toc__toggle {
@@ -400,11 +408,18 @@ a:hover {text-decoration: none;}
 }
 
 /* table of contents - toc */
+#icke__sidebar .sideclip ul li a,
 #icke__sidebar .table_of_contents ul.toc li a {
     color: #333;
-    font-size: 1.4em;
+    font-size: 1.3em;
     line-height: 1.5em;
     text-decoration: none;
+}
+
+#icke__sidebar .sideclip ul li a:hover,
+#icke__sidebar .table_of_contents ul.toc li a:hover {
+    color: #111;
+    text-decoration: underline;
 }
 
 #icke__sidebar .table_of_contents ul.toc li .edit {
@@ -418,6 +433,39 @@ a:hover {text-decoration: none;}
 #icke__sidebar .table_of_contents ul.toc li:hover .edit {
     display: block;
     float: right;
+}
+
+#icke__sidebar .sideclip .pte_edit a {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    background: transparent url(/lib/tpl/icke/images/icons/stift_klein.png) no-repeat scroll right top;
+    padding-top: 13px;
+    padding-right: 33px;
+}
+
+#icke__sidebar .sideclip .pte_tags_edit {
+        width: 180px;
+}
+
+#icke__sidebar .sideclip .pte_tags_edit input {
+        font-size: 1.2em;
+}
+
+#icke__sidebar .sideclip .pte_tags_edit input.pte_tags_edit_field {
+        width: 170px;
+}
+
+#icke__sidebar .sideclip p .wikilink1 {
+    line-height: 1.4em; 
+    font-size: 1.2em; 
+}
+
+#icke__page .content a.wikilink2 {
+    color: #f00;
+}
+
+#icke__page .content a.wikilink2:visited {
+    color: #f00;
 }
 
 /* table of contents - tags */

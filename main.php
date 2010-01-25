@@ -25,8 +25,8 @@
         <ul id="icke__quicknav">
 <?php
 foreach (array('dashboard'    => array('txt' => 'Dashboard'),
-               'fachwissen:'  => array('txt' => 'Fachwissen', 'class' => 'fachwissen', 'liclass' => 'separator'),
-               'allgemeines:' => array('txt' => 'Allgemeines', 'class' => 'allgemeines'),
+               'allgemeines:' => array('txt' => 'Allgemeines', 'class' => 'allgemeines', 'liclass' => 'separator'),
+               'fachwissen:'  => array('txt' => 'Fachwissen', 'class' => 'fachwissen'),
                'projekt:'     => array('txt' => 'Projekte', 'class' => 'projekte'),
                'produkt:'     => array('txt' => 'Produkte', 'class' => 'produkte'),
                'kunde:'       => array('txt' => 'Kunden', 'class' => 'kunden')) as $id => $data) {
