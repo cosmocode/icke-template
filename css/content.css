@@ -1,7 +1,7 @@
 /* content format */
 
 #icke__page .content .page {
-    color: #333;
+    color: __mediumgray__;
 }
 
 #icke__page .content p,
@@ -42,7 +42,7 @@
 }
 
 #icke__page .content h2 a {
-    color: #333;
+    color: __mediumgray__;
 }
 
 #icke__page .content h3 {
@@ -61,15 +61,15 @@
 }
 
 #icke__page .content pre {
-    border: 1px dashed #8CACBB;
-    color: #000000;
+    border: 1px dashed __border__;
+    color: __text__;
     font-size: 150%;
     overflow: auto;
     padding: 0.5em;
 }
 
 #icke__page .content pre.file {
-    background-color: #DEE7EC;
+    background-color: __background_alt__;
 }
 
 #icke__page .content code,
@@ -78,15 +78,15 @@
 }
 
 #icke__page .content pre.code {
-    background-color: #F7F9FA;
+    background-color: __background_other__;
 }
 
 #icke__page .content a {
-    color: #2772b6;
+    color: __link__;
 }
 
 #icke__page .content a:visited {
-    color: #4A6791;
+    color: __link_visited__;
 }
 
 #icke__page .content ul,
@@ -112,12 +112,12 @@
 }
 
 #icke__page .content blockquote {
-    border-left: 2px solid #8CACBB;
+    border-left: 2px solid __border__;
     padding-left: 3px;
 }
 
 #icke__page .content div.footnotes {
-    border-top: 1px solid #8CACBB;
+    border-top: 1px solid __border__;
     clear: both;
     margin-top: 2em;
     padding-top: 0.5em;

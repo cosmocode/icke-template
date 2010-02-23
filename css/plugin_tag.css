@@ -7,7 +7,7 @@ div.dokuwiki #tagging_tagcloud li a {
 }
 
 div.dokuwiki #tagging_tagcloud li.tagging_owntag a {
-    color: #2d65b2;
+    color: __color_tag__;
 }
 
 #pte_tags_edit_start {

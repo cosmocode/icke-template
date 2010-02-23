@@ -7,18 +7,18 @@
    ----------------------------------------------------*/
 
 body {
-    background: #b5b5b5;
+    background: __bg_all__;
     position: relative;
 }
 
-a,a:hover {color: #000;}
+a,a:hover {color: __text__;}
 a:hover {text-decoration: none;}
 
 /* =HEADER
    ----------------------------------------------------*/
 
 #icke__header {
-    background: #e0e0e0 url(images/layout/head_gradient.jpg) top left repeat-x;
+    background: __bg_header__ url(images/layout/head_gradient.jpg) top left repeat-x;
     height: 126px;
     overflow: hidden;
     padding: 0 1em;
@@ -26,14 +26,14 @@ a:hover {text-decoration: none;}
 }
 
 #icke__header .logo {
-	border-right: 1px solid #dcdcdc;
+    border-right: 1px solid __logo_border__;
     float: left;
     height: 126px;
     width: 100px;
 }
 
 #icke__header h5 {
-    color: #2772b6;
+    color: __link__;
     font-size: 28px;
     font-weight: bold;
     float: left;
@@ -44,14 +44,14 @@ a:hover {text-decoration: none;}
 }
 
 #icke__header h5 span {
-    color: #333;
+    color: __text__;
     font-size: 18px;
     font-weight: normal;
     line-height: 1.15em;
 }
 
 #icke__header .branding {
-    background: #fff url(images/logos/icke_logo.jpg) center center no-repeat;
+    background: __background__ url(images/logos/icke_logo.jpg) center center no-repeat;
     width: 180px;
     height: 125px;
     text-indent: -9999px;
@@ -86,52 +86,10 @@ a:hover {text-decoration: none;}
 }
 
 #icke__quicknav li.separator {
-    border-top: 1px solid #5f5b5b;
+    border-top: 1px solid __nav_seperator__;
     margin-top: 0.5em;
     padding-top: 0.5em;
 }
-
-#icke__quicknav a.dashboard,
-#icke__quicknav a.fachwissen,
-#icke__quicknav a.allgemeines,
-#icke__quicknav a.projekte,
-#icke__quicknav a.produkte,
-#icke__quicknav a.kunden,
-#icke__quicknav a.einstellungen {
-    background: transparent top left no-repeat;
-	display: block;
-	height: 60px;
-	text-indent: -9999px;
-	width: 60px;
-}
-
-#icke__quicknav a.dashboard {background-image: url(images/icons/60x60/dashboard_inaktiv.png);}
-#icke__quicknav li.active a.dashboard,
-#icke__quicknav li:hover a.dashboard {background-image: url(images/icons/60x60/dashboard_aktiv.png);}
-
-#icke__quicknav a.fachwissen {background-image: url(images/icons/60x60/fachwissen_inaktiv.png);}
-#icke__quicknav li.active a.fachwissen,
-#icke__quicknav li:hover a.fachwissen {background-image: url(images/icons/60x60/fachwissen_aktiv.png);}
-
-#icke__quicknav a.allgemeines {background-image: url(images/icons/60x60/allgemein_inaktiv.png);}
-#icke__quicknav li.active a.allgemeines,
-#icke__quicknav li:hover a.allgemeines {background-image: url(images/icons/60x60/allgemein_aktiv.png);}
-
-#icke__quicknav a.projekte {background-image: url(images/icons/60x60/projekte_inaktiv.png);}
-#icke__quicknav li.active a.projekte,
-#icke__quicknav li:hover a.projekte {background-image: url(images/icons/60x60/projekte_aktiv.png);}
-
-#icke__quicknav a.produkte {background-image: url(images/icons/60x60/produkte_inaktiv.png);}
-#icke__quicknav li.active a.produkte,
-#icke__quicknav li:hover a.produkte {background-image: url(images/icons/60x60/produkte_aktiv.png);}
-
-#icke__quicknav a.kunden {background-image: url(images/icons/60x60/kunden_inaktiv.png);}
-#icke__quicknav li.active a.kunden,
-#icke__quicknav li:hover a.kunden {background-image: url(images/icons/60x60/kunden_aktiv.png);}
-
-#icke__quicknav a.einstellungen {background-image: url(images/icons/60x60/setting_inaktiv.png);}
-#icke__quicknav li.active a.einstellungen,
-#icke__quicknav li:hover a.einstellungen {background-image: url(images/icons/60x60/setting_aktiv.png);}
 
 /* =PAGE
    ----------------------------------------------------*/
@@ -150,8 +108,8 @@ a:hover {text-decoration: none;}
 
 /* drophead */
 #icke__page #icke__drophead {
-    background: #2772B6 url(images/layout/wrap_shadow_x_top.png) top left repeat-x;
-    color: #fff;
+    background: __link__ url(images/layout/wrap_shadow_x_top.png) top left repeat-x;
+    color: __background__;
     overflow: hidden;
     padding: 0.5em 2.5em 0.5em 2em;
 }
@@ -164,17 +122,17 @@ a:hover {text-decoration: none;}
 
 #icke__page p.meta .lastmod {
     font-size: 0.9em;
-    color: #333;
+    color: __mediumgray__;
 }
 
 #icke__page p.meta .author {
-    color: #7f7f7f;
+    color: __meta_text__;
     font-size: 0.8em;
     text-decoration: none;
 }
 
 #icke__page p.meta .author:hover {
-    border-bottom: 1px dotted #7f7f7f;
+    border-bottom: 1px dotted __meta_text__;
 }
 
 #icke__page p.meta .subscribe {
@@ -189,7 +147,7 @@ a:hover {text-decoration: none;}
 
 /* document-content */
 #icke__page .content {
-    background-color: #fefefe;
+    background-color: __content_bg__;
     padding: 10px 120px 20px 30px;
     font-size: 1.1em;
     min-height: 500px; 
@@ -200,20 +158,20 @@ a:hover {text-decoration: none;}
    ----------------------------------------------------*/
 
 #icke__footer {
-    color: #fefefe;
+    color: __content_bg__;
 }
 
 #icke__footer .admin_toolbar {
-    background: #fefefe;
-    border-top: 1px solid #545454;
-    color: #fefefe;
+    background: __content_bg__;
+    border-top: 1px solid __border_alt__;
+    color: __content_bg__;
     height: 45px;
     padding: 0.25em 2.5em 0.25em 2em;
 }
 
 #icke__footer .admin_toolbar a.edit {
 	background: transparent url(images/icons/stift_gross.png) top right no-repeat;
-	color: #5f5f5f;
+	color: __edit_lnk__;
 	display: block;
 	float: right;
 	font-size: 1.1em;
@@ -222,7 +180,7 @@ a:hover {text-decoration: none;}
 }
 
 #icke__footer .footer_toolbar {
-	background: #545454 url(images/layout/footer_gradient.jpg) top left repeat-x;
+	background: __border_alt__ url(images/layout/footer_gradient.jpg) top left repeat-x;
 	height: 17px;
     padding: 6px 2.5em 0 2em;
 }
@@ -233,13 +191,13 @@ a:hover {text-decoration: none;}
 }
 
 #icke__footer .footer_toolbar a {
-    color: #eee;
+    color: __lighter_gray__;
     margin: 0 0.25em;
     text-decoration: none;
 }
 
 #icke__footer .footer_toolbar a:hover {
-    border-bottom: 1px dotted #fefefe;
+    border-bottom: 1px dotted __content_bg__;
 }
 
 #icke__footer .footer_toolbar .copy {
@@ -259,15 +217,19 @@ a:hover {text-decoration: none;}
 /* default sideclip */
 #icke__sidebar .sideclip {
     -moz-border-radius-topright: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px; 
     -moz-border-radius-bottomright: 10px;
-    background: #fefefe url(images/layout/wrap_shadow_y_right.png) top left repeat-y;
+    -webkit-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    background: __content_bg__ url(images/layout/wrap_shadow_y_right.png) top left repeat-y;
     margin: 2em 0;
     padding: 1em;
 }
 
 #icke__sidebar h2,
 #icke__sidebar h3 {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid __mediumgray__;
     font-size: 1.3em;
     font-weight: bold;
     margin: 0 0 0.75em;
@@ -295,16 +257,20 @@ a:hover {text-decoration: none;}
 
 /* logon */
 #icke__sidebar .logon {
-    background: #fff url(images/layout/wrap_shadow_x_top.png) top left repeat-x;
+    background: __background__ url(images/layout/wrap_shadow_x_top.png) top left repeat-x;
     -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
     -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
     margin: 0 0 0 1em;
     padding: 0.5em 1em 0;
     height: 2em;
 }
 
 #icke__sidebar .logon .profile {
-    color: #333;
+    color: __mediumgray__;
     display: block;
     float: left;
     font-size: 1.2em;
@@ -325,7 +291,9 @@ a:hover {text-decoration: none;}
 /* search */
 #icke__sidebar .search {
     -moz-border-radius: 10px;
-    background-color: #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: __background__;
     margin: 5em 0 1em 1em;
     padding: 0.5em 0.5em 0;
 }
@@ -338,17 +306,21 @@ a:hover {text-decoration: none;}
 }
 #icke__sidebar .search #ns_custom.closed {
     overflow: hidden;
+    cursor: pointer;
 }
 
 #icke__sidebar .search #ns_custom ul {
     -moz-border-radius: 5px;
-    background: #fefefe;
-    border: 1px solid #333;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: __content_bg__;
+    border: 1px solid __mediumgray__;
     left: 0px;
     padding: 0 1px;
     position: absolute;
     top: 0px;
     z-index: 2;
+        cursor: pointer;
 }
 
 #icke__sidebar .search #ns_custom.closed ul {
@@ -362,8 +334,8 @@ a:hover {text-decoration: none;}
 }
 
 #icke__sidebar .search .query {
-    border: 1px solid #ccc;
-    color: #999;
+    border: 1px solid __text_other__;
+    color: __sidebar_qry__;
     float: left;
     margin: 0.25em 0.25em 0 0.5em;
     padding: 0 2px;
@@ -378,13 +350,18 @@ a:hover {text-decoration: none;}
     padding: 0;
     text-indent: -9999px;
     width: 10%;
+        cursor: pointer;
 }
 
 /* table of contents */
 #icke__sidebar .table_of_contents {
     -moz-border-radius-topright: 10px;
     -moz-border-radius-bottomright: 10px;
-    background: #fefefe none;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: __content_bg__ none;
     margin: 2em 0 3em;
 }
 
@@ -397,7 +374,7 @@ a:hover {text-decoration: none;}
 #icke__sidebar .sideclip h3,
 #icke__sidebar .table_of_contents h2,
 #icke__sidebar .table_of_contents h3 {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid __mediumgray__;
     font-size: 1.3em;
     font-weight: bold;
     margin: 0.8em 0 0.55em;
@@ -410,7 +387,7 @@ a:hover {text-decoration: none;}
 /* table of contents - toc */
 #icke__sidebar .sideclip ul li a,
 #icke__sidebar .table_of_contents ul.toc li a {
-    color: #333;
+    color: __mediumgray__;
     font-size: 1.3em;
     line-height: 1.5em;
     text-decoration: none;
@@ -418,7 +395,7 @@ a:hover {text-decoration: none;}
 
 #icke__sidebar .sideclip ul li a:hover,
 #icke__sidebar .table_of_contents ul.toc li a:hover {
-    color: #111;
+    color: __toc_hover__;
     text-decoration: underline;
 }
 
@@ -435,37 +412,54 @@ a:hover {text-decoration: none;}
     float: right;
 }
 
-#icke__sidebar .sideclip .pte_edit a {
-    font-size: 1.1em;
-    line-height: 1.3em;
-    background: transparent url(/lib/tpl/icke/images/icons/stift_klein.png) no-repeat scroll right top;
-    padding-top: 13px;
-    padding-right: 33px;
-}
-
-#icke__sidebar .sideclip .pte_tags_edit {
-        width: 180px;
-}
-
-#icke__sidebar .sideclip .pte_tags_edit input {
-        font-size: 1.2em;
-}
-
-#icke__sidebar .sideclip .pte_tags_edit input.pte_tags_edit_field {
-        width: 170px;
-}
-
 #icke__sidebar .sideclip p .wikilink1 {
     line-height: 1.4em; 
     font-size: 1.2em; 
 }
 
 #icke__page .content a.wikilink2 {
-    color: #f00;
+    color: __wiki_lnk__;
 }
 
 #icke__page .content a.wikilink2:visited {
-    color: #f00;
+    color: __wiki_lnk__;
+}
+
+#icke__page .content sup a {
+        font-size: 9px;
+        padding-left: 2px;
+        text-decoration: none;
+}
+
+#icke__page .content sup a p {
+        font-size: 9px;
+        padding-left: 2px;
+}
+
+#icke__page .footnotes sup {
+        vertical-align: baseline;
+}
+
+#icke__page .footnotes sup a {
+        font-size: 12px;
+}
+
+#icke__page .footnotes .fn {
+        font-size: 13px;
+        font-style: normal;
+}
+
+div.insitu-footnote {
+        -moz-border-radius: 5px; 
+        -webkit-border-radius: 5px; 
+        border-radius: 5px; 
+        background-color:__background_other__;
+        border:1px solid __border__;
+        line-height:1.2em;
+        max-width:40%;
+        padding:6px;
+        text-align:left;
+        font-size: 1.2em;
 }
 
 /* table of contents - tags */
@@ -486,4 +480,14 @@ a:hover {text-decoration: none;}
 }
 #icke__sidebar .table_of_contents ul.tags .tag_1 {
     font-size: 1.0em;
+}
+
+div.success, div.error, div.info {
+        line-height: 22px;
+        background-position: 10em center;
+        font-family: verdana, sans-serif;
+        border: none;
+        padding: 3px 0px 3px 12em;
+        font-size: 12px;
+        border: none;
 }

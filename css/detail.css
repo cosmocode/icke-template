@@ -1,0 +1,37 @@
+
+#detail__page {
+        margin:1em 3em;
+}
+
+#detail__page p.back {
+        margin-bottom:2em;
+}
+
+#detail__page h1 {
+       margin-bottom:0.2em; 
+}
+
+#detail__page img {
+        margin-bottom:1em;
+        background-color:__background__;
+}
+
+#detail__page .img_big img {
+        padding:2em;
+        border:1px solid __text__;
+}
+
+#detail__page dl.img_tags {
+        font-size:1.2em;
+        line-height:1.4em;
+}
+
+#detail__page dl.img_tags dt {
+        font-weight:bold;
+        float:left;
+        width:10em;
+        display:block;
+}
+
+#detail__page dl.img_tags dd {
+}

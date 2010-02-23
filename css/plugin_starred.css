@@ -1,0 +1,7 @@
+#icke__page p.plugin_starred,
+#icke__page ul.plugin_starred {
+        margin-left: 0;
+        padding: 0.8em 0 0 3.5em;
+        background: transparent url(images/icons/star.png) no-repeat scroll 4px top;
+        min-height: 2em;
+}

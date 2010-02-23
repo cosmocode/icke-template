@@ -10,7 +10,7 @@ div#plugin__qc__out {
     line-height: 1.2em;
     margin-top: 10px;
     padding-top: 10px;
-    border-top: 1px solid #b5b5b5;
+    border-top: 1px solid __bg_all__;
 }
 
 div#plugin__qc__out h1 {

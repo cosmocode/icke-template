@@ -1,0 +1,41 @@
+div.dataplugin_entry dl {
+        font-size: 1.2em;
+        line-height: 1.3em;
+        width: auto;
+        background: __background__;
+}
+
+div.dataplugin_entry {
+        padding: 1px 0 0 1px;
+        background: transparent url(images/icons/datatable_cog.png) top left no-repeat;
+}
+
+div.dataplugin_entry dl dt {
+        text-align: left;
+        width: auto;
+}
+
+#icke__page table.dataplugin_table, 
+#icke__page table.dataplugin_list {
+        border-collapse: separate;
+        padding: 11px 0 0 17px; border: 0;
+        background: transparent url(images/icons/datatable_link.png) top left no-repeat;
+}
+
+#icke__page ul.dataplugin_table,
+#icke__page ul.dataplugin_list {
+        margin-left: 0;
+        padding: 0.8em 0 0 3.5em;
+        background: transparent url(images/icons/datatable_link.png) no-repeat scroll 10px top;
+        min-height: 2em;
+}
+
+#icke__page table.dataplugin_table th,
+#icke__page table.dataplugin_table td,
+#icke__page table.dataplugin_list th,
+#icke__page table.dataplugin_list td {
+        padding: 5px;
+        border: 0;
+        border: 1px solid __border_alt2__;
+}
+

@@ -8,9 +8,10 @@
 }
 
 .search_result .search_snippet {
-	color: #7E7070;
+	color: __search_snip__;
 	font-size: 12px;
 	margin-left: 20px;
+        margin-top:5px;
 }
 
 .search_result strong.search_hit {
@@ -18,18 +19,44 @@
 }
 
 .search_result .search_hit {
-	background-color: #FFFF99;
-	color: #000000;
+	background-color: __search_hit__;
+	color: __text__;
 }
 
 ul.search_quickhits {
-	clear: both;
+/*	clear: both;*/
 	padding-bottom: 10px;
+
 }
 
 ul.search_quickhits li {
 	float: left;
 	min-width: 10em;
-	width: auto;
+	width: 30%;
 	padding-bottom: 6px;
+        list-style-type: none;
+        background:url(images/bullet.png) 4px 9px no-repeat;
+        padding-left:14px;
+}
+.search_quickresult {
+        border-bottom:1px dashed __text__;
+        margin-bottom:1em;
+}
+
+div.ajax_qsearch {
+        font-size: 12px;
+        line-height: 16px;
+}
+
+div.ajax_qsearch ul li a.wikilink1 {
+        text-decoration: none;
+}
+
+div.ajax_qsearch ul li:hover a {
+        color: __background__;
+}
+
+div.ajax_qsearch ul li:hover {
+        background-color: __color_tag__;
+        font-weight: bold;
 }

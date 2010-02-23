@@ -20,3 +20,25 @@ div.dokuwiki table.inline td {
   border: 1px solid __border__;
 }
 
+div.dokuwiki div.editbutton_table form input.button:hover {
+        color: __mediumgray__;
+}
+
+div.dokuwiki div.editbutton_table form input.button {
+        background-color:__background__;
+        border:1px solid __border__;
+        background:transparent url(/lib/tpl/icke/images/icons/stift_klein.png) no-repeat scroll right top;
+        border-top: none;
+        cursor:pointer;
+        display:inline;
+        font-size:10px;
+        margin:0;
+        padding:0;
+        padding-right: 28px;
+        text-decoration:none;
+        vertical-align:middle;
+}
+
+div.dokuwiki div.editbutton_table {
+        margin-top: -1.2em;
+}

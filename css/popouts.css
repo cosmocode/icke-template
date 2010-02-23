@@ -1,5 +1,6 @@
 /* second-level navigation */
 
+#icke__quicknav li.hover div.sec_level, 
 #icke__quicknav li:hover div.sec_level {display: block;}
 
 #icke__quicknav div.sec_level {
@@ -19,6 +20,7 @@
 }
 
 #icke__quicknav div.sec_level h1,
+#icke__quicknav div.sec_level h5,
 #icke__quicknav div.sec_level ul {
     background: transparent url(images/layout/bubble_mitte.png) repeat-y;
     width: 145px;
@@ -29,12 +31,19 @@
     padding-top: 5px;
 }
 
+#icke__quicknav div.sec_level h5,
 #icke__quicknav div.sec_level h1 {
     padding-left: 30px;
     font-size: 14px;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 6px;
+    padding-top: 5px;
     padding-bottom: 5px;
+}
+
+#icke__quicknav div.sec_level h5 {
+        padding-top: 0;
+        padding-bottom: 0;
 }
 
 #icke__quicknav div.sec_level ul.inline {
@@ -51,10 +60,11 @@
     font-size: 12px;
     text-decoration: none;
     display: block;
-    padding: 5px 5px 5px 13px;
+    padding: 5px 5px 5px 12px;
     overflow: hidden;
+    margin-left: 1px;
 }
 
 #icke__quicknav div.sec_level ul li a:hover {
-    background-color: #e5e5e5;
+    background-color: __nav_hover__;
 }

@@ -49,8 +49,8 @@ div.dokuwiki #size__ctl img {
 }
 div.dokuwiki div#wiki__editbar div.editButtons {
    float: left;
-   padding: 0 1.0em 0.7em 0;
-   width: 28%;
+   padding: 0 0.8em 0.7em 0;
+   width: 280px;
 }
 
 div.dokuwiki div#wiki__editbar div.editButtons input {
@@ -60,6 +60,11 @@ div.dokuwiki div#wiki__editbar div.editButtons input {
 div.dokuwiki div#wiki__editbar div.summary {
    float: left;
 }
+
+div.dokuwiki input.edit, div.dokuwiki select.edit {
+       width: 59%; 
+}
+
 div.dokuwiki .nowrap {
    white-space: nowrap;
 }

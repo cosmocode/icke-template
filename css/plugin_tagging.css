@@ -1,0 +1,48 @@
+.pte_edit a {
+background: transparent url(images/icons/stift_gross.png) top right no-repeat;
+color: __edit_lnk__;
+display: block;
+float: right;
+font-size: 1.1em;
+height: 20px;
+padding: 16px 40px 0 0;
+Font-family: Arial, sans-serif;
+}
+
+#icke__sidebar .sideclip .pte_edit a {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    background: transparent url(/lib/tpl/icke/images/icons/stift_klein.png) no-repeat scroll right top;
+    padding-top: 5px;
+    padding-right: 33px;
+}
+
+#icke__sidebar .sideclip .pte_tags_edit {
+        width: 180px;
+}
+
+#icke__sidebar .sideclip .pte_tags_edit input {
+        font-size: 1.2em;
+        font-family: Arial, sans-serif;
+}
+
+#icke__sidebar .sideclip .pte_tags_edit input.pte_tags_edit_field {
+        width: 160px;
+        float: left;
+}
+
+#icke__sidebar .sideclip .pte_edit_wrapper .yac_list {
+        padding-top: 20px; 
+        width: 165px;
+        text-align: left; 
+}
+
+#icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li {
+        background-color: __background__;
+}
+
+#icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li:hover,
+#icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li.yui-ac-highlight {
+        background-color: __color_tag__;
+        color: __background__;
+}

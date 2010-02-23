@@ -23,50 +23,14 @@
     </div><!-- END icke__header -->
     <div id="icke__wrapper" class="dokuwiki">
         <ul id="icke__quicknav">
-<?php
-foreach (array('dashboard'    => array('txt' => 'Dashboard'),
-               'allgemeines:' => array('txt' => 'Allgemeines', 'class' => 'allgemeines', 'liclass' => 'separator'),
-               'fachwissen:'  => array('txt' => 'Fachwissen', 'class' => 'fachwissen'),
-               'projekt:'     => array('txt' => 'Projekte', 'class' => 'projekte'),
-               'produkt:'     => array('txt' => 'Produkte', 'class' => 'produkte'),
-               'kunde:'       => array('txt' => 'Kunden', 'class' => 'kunden')) as $id => $data) {
-    if (!isset($data['class'])) {
-        $data['class'] = $id;
-    }
-    if (!isset($data['quick'])) {
-        $data['quick'] = $id . (strpos($id, ':') !== false ? 'quick' : '_quick');
-    }
-    if(strpos($ID,$id) === 0) $data['liclass'] .= ' active';
-
-    echo '<li' . ($data['liclass'] ? ' class="'.$data['liclass'].'"' : '') .
-         '><a class="' . $data['class'] . '" href="' . wl($id) . '">' . $data['txt'] . '</a>';
-    icke_tplPopupPage($data['quick']);
-    echo '</li>';
-}
-?>
-
-            <li class="separator"><a class="einstellungen" href="">Einstellungen</a>
-                <div class="sec_level">
-                    <h1></h1>
-                    <ul>
-                    <li><?php tpl_actionlink('history'); ?></li>
-                    <li><?php tpl_actionlink('recent'); ?></li>
-                    <li><?php tpl_actionlink('index'); ?></li>
-                    <li><?php tpl_actionlink('backlink'); ?></li>
-                    <li><?php tpl_actionlink('subscribe'); ?></li>
-                    <li><?php tpl_actionlink('admin'); ?></li>
-                    </ul>
-                    <div class="sec_level_bottom"></div>
-                </div>
-
-            </li>
+        <?php icke_tplSidebar(); ?>
         </ul><!-- END icke__quicknav -->
         <div class="wrap">
             <ul id="icke__sidebar">
                 <li class="logon">
                     <?php
                         if($_SERVER['REMOTE_USER']){
-                            echo '<a class="profile" href="'.wl('user:'.$_SERVER['REMOTE_USER']).'">'.hsc($INFO['userinfo']['name']).'</a>';
+                            echo '<a class="profile" href="'.wl(tpl_getConf('user_ns').$_SERVER['REMOTE_USER'].':') . '">'.hsc($INFO['userinfo']['name']).'</a>';
                         }
                         tpl_actionlink('login');
                     ?>
@@ -74,32 +38,15 @@ foreach (array('dashboard'    => array('txt' => 'Dashboard'),
                 <li class="search">
 
                     <form method="post" action="" accept-charset="utf-8">
-                        <select class="namespace" name="namespace">
-                            <option value="">All</option>
-                            <option value="Fachwissen">Fachwissen</option>
-                            <option value="Allgemeines">Allgemeines</option>
-                            <option value="Projekte">Projekte</option>
-                            <option value="Produkte">Produkte</option>
-                            <option value="Kunden">Kunden</option>
-                        </select>
-                        <div id="ns_custom" class="closed" style="display: none;">
-                            <ul>
-                                <li class=""><img src="<?php echo DOKU_TPL?>images/icons/30x30/icke.png" alt="Alles" /></li>
-                                <li class="Fachwissen"><img src="<?php echo DOKU_TPL?>images/icons/30x30/fachwissen_aktiv.png" alt="Fachwissen" /></li>
-                                <li class="Allgemeines"><img src="<?php echo DOKU_TPL?>images/icons/30x30/allgemein_aktiv.png" alt="Allgemeines" /></li>
-                                <li class="Projekte"><img src="<?php echo DOKU_TPL?>images/icons/30x30/projekte_aktiv.png" alt="Projekte" /></li>
-                                <li class="Produkte"><img src="<?php echo DOKU_TPL?>images/icons/30x30/produkte_aktiv.png" alt="Produkte" /></li>
-                                <li class="Kunden"><img src="<?php echo DOKU_TPL?>images/icons/30x30/kunden_aktiv.png" alt="Kunden" /></li>
-                            </ul>
-                        </div>
+                        <?php icke_tplSearch(); ?>
                         <input type="hidden" name="do" value="search" />
-                        <input class="query" id="qsearch__in" type="text" name="id" value="<?echo hsc(preg_replace('/ ?@\S+/','',$QUERY))?>" accesskey="f" />
+                        <input class="query" id="qsearch__in" type="text" name="id" autocomplete="off" value="<?echo hsc(preg_replace('/ ?@\S+/','',$QUERY))?>" accesskey="f" />
                         <input class="submit" type="submit" name="submit" value="Search" />
                     </form>
 
                     <div id="qsearch__out" class="ajax_qsearch JSpopup"></div>
                 </li>
-                <li class="table_of_contents sideclip">
+                <li class="table_of_contents sideclip clearfix">
                     <?php tpl_toc()?>
 
                     <h3>Tags</h3>
@@ -126,26 +73,27 @@ foreach (array('dashboard'    => array('txt' => 'Dashboard'),
                     ?>
                 </div>
                 <div class="content dokuwiki clearfix">
-                    <?php if($INFO['exists'] && $ACT == 'show'):?>
-                    <p class="meta">
+                    <?php if ($ACT === 'show'): ?>
+                        <p class="meta">
+                    <?php if($INFO['exists']):?>
+
                         <span class="lastmod">
                         <?php
                             if($INFO['lastmod']){
                                 echo strftime('%e. %B %Y',$INFO['lastmod']);
                             }
                         ?>
-                        </span>
+                        </span> – 
                         <?php if($INFO['user']): ?>
-                            <a class="author" href="<?php echo wl('user:'.$INFO['user'])?>"><?php echo hsc($INFO['editor'])?></a>
+                            <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo hsc($INFO['editor'])?></a>
                         <?php else: ?>
                             <span class="author"><?php echo hsc($INFO['editor'])?></span>
                         <?php endif ?>
+                    <?php endif ?>
 
                             <?php
-                                if($ACT == 'show'){
-                                    $starred =& plugin_load('action','starred');
-                                    $starred->tpl_starred();
-                                }
+                                $starred =& plugin_load('action','starred');
+                                $starred->tpl_starred();
 
                                 echo '&nbsp;&nbsp;';
 
@@ -156,8 +104,6 @@ foreach (array('dashboard'    => array('txt' => 'Dashboard'),
                                 }
                                 tpl_actionlink('subscribe','','',$sub);
                             ?>
-
-
 
                     </p>
                     <?php endif?>

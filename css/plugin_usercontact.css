@@ -1,6 +1,6 @@
 #icke__page div.insitu-footnote {
-    background-color: #fff;
-    border: 1px solid #8CACBB;
+    background-color: __background__;
+    border: 1px solid __border__;
     font-size: 90%;
 }
 

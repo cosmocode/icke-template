@@ -70,7 +70,7 @@ div.dokuwiki input.missing {
   font-size: 100%;
   border: 1px solid __border__;
   color: __text__;
-  background-color: #ffcccc;
+  background-color: __missing_input__;
   vertical-align: middle;
   margin: 1px;
   padding: 0.20em 0.3em;
@@ -123,9 +123,42 @@ html>body div.dokuwiki button.button {
 /***** submit button *****/
 
 html > body div.dokuwiki input.button, html > body div.dokuwiki button.button {
-    background: #3E80C0 url(/lib/tpl/icke/images/buttonbshadow.png) repeat-x scroll center bottom;
-    color: #eee;
-    float: left;
+    background: __button_background__ url(/lib/tpl/icke/images/buttonbshadow.png) repeat-x scroll center bottom;
+    color: __lighter_gray__;
     margin-right: 4%;
     font-weight: bold;
 }
+
+div.dokuwiki fieldset input.button {
+    float: left;
+}
+
+div.dokuwiki input.button[disabled] {
+    background: __button_background__ url(/lib/tpl/icke/images/buttonshadow.png) repeat-x scroll center bottom;
+    cursor: not-allowed;
+}
+
+#icke__page #subscribe__form {
+        float: left;
+        margin: 5px 5px 5px 0;
+} 
+
+#icke__page #subscribe__form fieldset {
+        margin-bottom: 8px;
+        width: auto;
+        text-align: left;
+        font-size: 1.2em;
+        border: none;
+} 
+
+#icke__page #subscribe__form fieldset legend {
+        font-size:15px;
+        font-weight:bold;
+        padding-bottom:5px;
+        padding-top:8px;
+        text-align:left;
+}
+
+#icke__page #subscribe__form fieldset label {
+        display: block;
+} 

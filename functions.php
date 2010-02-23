@@ -17,12 +17,12 @@ function icke_tplProjectSteps(){
     $ns = $ID;
     do {
         $ns = getNS($ns);
-        if(page_exists("$ns:steps")) {
-            $steps = "$ns:steps";
+        if(page_exists("$ns:schritt")) {
+            $steps = "$ns:schritt";
             break;
         }
-        if(page_exists("$ns:steps:start")) {
-            $steps = "$ns:steps:start";
+        if(page_exists("$ns:schritt:start")) {
+            $steps = "$ns:schritt:start";
             break;
         }
     }while($ns);
@@ -33,4 +33,81 @@ function icke_tplProjectSteps(){
     echo '<li class="sideclip">';
     echo p_wiki_xhtml($steps,'',false);
     echo '</li>';
+}
+
+function icke_tplSidebar() {
+    global $ID;
+    include DOKU_TPLINC . 'local/namespaces.php';
+    if (isset($_SERVER['REMOTE_USER'])) {
+        $firstkey = reset(array_keys($icke_namespaces));
+        $icke_namespaces = array_merge(array(tpl_getConf('user_ns') .
+                                          $_SERVER['REMOTE_USER'] .
+                                          ':dashboard' => array
+                                                ('txt' => 'Dashboard',
+                                                 'class' => 'dashboard')),
+                                    $icke_namespaces);
+        $icke_namespaces[$firstkey]['liclass'] = 'separator';
+    }
+
+    $hasactive = false;
+
+    foreach ($icke_namespaces as $id => $data) {
+        if (!isset($data['class'])) {
+            $data['class'] = $id;
+        }
+        if (!isset($data['quick'])) {
+            $data['quick'] = $id . (strpos($id, ':') !== false ? 'quick' : '_quick');
+        }
+        if (!$hasactive && strpos($ID,$id) === 0) {
+            $data['liclass'] .= ' active';
+            $hasactive = true;
+        }
+        if (auth_quickaclcheck($id) < AUTH_READ) {
+            continue;
+        }
+
+        echo '<li' . ($data['liclass'] ? ' class="'.$data['liclass'].'"' : '') .
+             '><a class="' . $data['class'] . '" href="' . wl($id) . '">' . $data['txt'] . '</a>';
+        icke_tplPopupPage($data['quick']);
+        echo '</li>';
+    }
+    ?>
+        <li class="separator"><a class="einstellungen">Einstellungen</a>
+            <div class="sec_level">
+                <h5></h5>
+                <ul>
+                    <li><?php tpl_actionlink('history'); ?></li>
+                    <li><?php tpl_actionlink('recent'); ?></li>
+                    <li><?php tpl_actionlink('index'); ?></li>
+                    <li><?php tpl_actionlink('backlink'); ?></li>
+                    <li><?php tpl_actionlink('subscribe'); ?></li>
+                    <li><?php tpl_actionlink('admin'); ?></li>
+                </ul>
+                <div class="sec_level_bottom"></div>
+            </div>
+
+        </li>
+    <?php
+}
+
+function icke_tplSearch() {
+    include DOKU_TPLINC . 'local/namespaces.php';
+?>        <select class="namespace" name="namespace">
+            <option value="">All</option> <?php
+foreach ($icke_namespaces as $ns) {
+echo '<option value="' . $ns['txt'] . '">' . $ns['txt'] . '</option>';
+}
+?>
+        </select>
+        <div id="ns_custom" class="closed" style="display: none;">
+            <ul>
+                <li class=""><img src="<?php echo DOKU_TPL?>images/icons/30x30/icke.png" alt="Alles" /></li>
+<?php
+foreach ($icke_namespaces as $ns) {
+echo '<li class="' . $ns['class'] . '_search"><img src="' . DOKU_TPL . 'local/images/icons/30x30/' . $ns['class'] . '_aktiv.png" alt="' . $ns['txt'] . '" /></li>';
+}
+?>
+            </ul>
+        </div>
+<?php
 }

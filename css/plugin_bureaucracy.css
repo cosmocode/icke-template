@@ -1,0 +1,41 @@
+div.dokuwiki form.bureaucracy__plugin fieldset {
+    width: auto;
+    border: none;
+}
+
+div.dokuwiki form.bureaucracy__plugin fieldset legend {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+div.dokuwiki form.bureaucracy__plugin label {
+    margin-left: 0;
+
+}
+
+div.dokuwiki form.bureaucracy__plugin label span {
+    text-align: left;
+    font-size: 13px;
+    width: 15%;
+    line-height: 16px;
+}
+
+div.dokuwiki form.bureaucracy__plugin label textarea.edit, div.dokuwiki form.bureaucracy__plugin label input.edit {
+    width: 80%;
+    background: none;
+}
+
+#icke__page ul.bureaucracy_user_auto {
+        margin: 0;
+}
+
+div.dokuwiki ul.bureaucracy_user_auto li {
+        list-style-type: none;
+}
+
+div.dokuwiki ul.bureaucracy_user_auto li a {
+        text-decoration: none;
+}

@@ -96,7 +96,7 @@ it's dirty, so any "real" fixes are welcome */
 /* --- file list --- */
 
 #media__content {
-    border-left: 1px solid #545454;
+    border-left: 1px solid __border_alt__;
     padding-left: 5px;
 }
 
