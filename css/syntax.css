@@ -96,3 +96,15 @@ sub {vertical-align: sub;}
 
 #icke__page .dokuwiki ul {list-style-type: disc;}
 #icke__page .dokuwiki ol {list-style-type: decimal;}
+
+
+dl.file dt a.mediafile {
+        margin-left:2em;
+        background-color:__background__;
+        border-left:1px dashed __border__;
+        border-right:1px dashed __border__;
+        border-top:1px dashed __border__;
+        padding: 3px 5px 3px 23px;
+        background-position:3px 1px;
+        line-height: 14px;
+}
