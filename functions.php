@@ -40,35 +40,32 @@ function icke_tplSidebar() {
     include DOKU_TPLINC . 'local/namespaces.php';
     if (isset($_SERVER['REMOTE_USER'])) {
         $firstkey = reset(array_keys($icke_namespaces));
-        $icke_namespaces = array_merge(array(tpl_getConf('user_ns') .
-                                          $_SERVER['REMOTE_USER'] .
-                                          ':dashboard' => array
+        $icke_namespaces = array_merge(array('dashboard' => array
                                                 ('txt' => 'Dashboard',
-                                                 'class' => 'dashboard')),
+                                                 'id' => tpl_getConf('user_ns') .
+                                          $_SERVER['REMOTE_USER'] .
+                                          ':dashboard')),
                                     $icke_namespaces);
         $icke_namespaces[$firstkey]['liclass'] = 'separator';
     }
 
     $hasactive = false;
 
-    foreach ($icke_namespaces as $id => $data) {
-        if (!isset($data['class'])) {
-            $data['class'] = $id;
+    foreach ($icke_namespaces as $class => $data) {
+        if (!isset($data['id'])) {
+            $data['id'] = $class . ':';
         }
-        if (!isset($data['quick'])) {
-            $data['quick'] = $id . (strpos($id, ':') !== false ? 'quick' : '_quick');
-        }
-        if (!$hasactive && strpos($ID,$id) === 0) {
+        if (!$hasactive && strpos($ID, $data['id']) === 0) {
             $data['liclass'] .= ' active';
             $hasactive = true;
         }
-        if (auth_quickaclcheck($id) < AUTH_READ) {
+        if (auth_quickaclcheck($data['id']) < AUTH_READ) {
             continue;
         }
 
         echo '<li' . ($data['liclass'] ? ' class="'.$data['liclass'].'"' : '') .
-             '><a class="' . $data['class'] . '" href="' . wl($id) . '">' . $data['txt'] . '</a>';
-        icke_tplPopupPage($data['quick']);
+             '><a class="' . $class . '" href="' . wl($data['id']) . '">' . $data['txt'] . '</a>';
+        icke_tplPopupPage($data['id'] . (strpos($data['id'], ':') !== false ? 'quick' : '_quick'));
         echo '</li>';
     }
     ?>
@@ -103,8 +100,8 @@ echo '<option value="' . $ns['txt'] . '">' . $ns['txt'] . '</option>';
             <ul>
                 <li class=""><img src="<?php echo DOKU_TPL?>images/icons/30x30/icke.png" alt="Alles" /></li>
 <?php
-foreach ($icke_namespaces as $ns) {
-echo '<li class="' . $ns['class'] . '_search"><img src="' . DOKU_TPL . 'local/images/icons/30x30/' . $ns['class'] . '_aktiv.png" alt="' . $ns['txt'] . '" /></li>';
+foreach ($icke_namespaces as $class => $ns) {
+echo '<li class="' . $class . '_search"><img src="' . DOKU_TPL . 'local/images/icons/30x30/' . $class . '_aktiv.png" alt="' . $ns['txt'] . '" /></li>';
 }
 ?>
             </ul>
