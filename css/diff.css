@@ -1,0 +1,46 @@
+
+.page .diff {
+        border-collapse: separate;
+        border-spacing:2px;
+}
+
+.page .diff th {
+        border-bottom: 1px solid __border__;
+        text-align:left;
+        font-size:0.8em;
+}
+.page .diff .sum {
+        font-weight:normal;
+}
+.page .diff th a {
+        display:block;
+        text-align:center;
+        font-size:1.2em;
+}
+.page .diff th .user {
+        padding:0 3px;
+}
+.page .diff th br {
+        display:none;
+}
+
+.page .diff .diff-blockheader {
+        font-size:0.8em;
+        font-weight:bold;
+}
+
+.page .diff td {
+        padding:3px;
+        background-color: __diff_bg__;
+}
+.page .diff .diff-deletedline {
+        background-color: __diff_del__;
+}
+
+.page .diff .diff-addedline {
+        background-color: __diff_add__;
+}
+
+.page .diff td strong {
+        color:__diff_hl__;
+}
