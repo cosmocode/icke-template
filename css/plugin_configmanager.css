@@ -1,0 +1,15 @@
+#config__manager fieldset {
+        padding: 1em 1em;
+}
+#config__manager td.label span.outkey {
+        margin-top: -2em;
+        border-top:1px solid __border__;
+        border-left:1px solid __border__;
+        border-right:1px solid __border__;
+        padding: 0 0.5em;
+
+}
+#config__manager td.label span.outkey a {
+        cursor:help;
+        text-decoration: none;
+}
