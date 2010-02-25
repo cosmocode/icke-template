@@ -108,3 +108,37 @@ echo '<li class="' . $class . '_search"><img src="' . DOKU_TPL . 'local/images/i
         </div>
 <?php
 }
+
+function icke_tplMenuCSS() {
+    include DOKU_TPLINC . 'local/namespaces.php';
+    echo '<style type="text/css">';
+    $nss = array_keys($icke_namespaces);
+    $nss[] = 'dashboard';
+    $nss[] = 'einstellungen';
+    $str = ''; 
+    foreach($nss as $ns) {
+         $str .= '#icke__quicknav a.' . $ns . ",\n";
+    }
+    echo rtrim($str, ",\n");
+    ?>
+    {
+        background: transparent top left no-repeat;
+        display: block;
+        height: 60px;
+        text-indent: -9999px;
+        width: 60px;
+    }
+    <?php
+    foreach($nss as $ns) {
+        $img = 'local/images/icons/60x60/' . $ns . '_inaktiv.png';
+        $img2 = 'local/images/icons/60x60/' . $ns . '_aktiv.png';
+        if (!file_exists(dirname(__FILE__) . '/' . $img)) {
+            $img = 'images/icons/60x60/' . $ns . '_inaktiv.png';
+            $img2 = 'images/icons/60x60/' . $ns . '_aktiv.png';
+        }
+        echo "#icke__quicknav a.$ns {background-image: url(" . DOKU_TPL . "$img);}
+              #icke__quicknav li.active a.$ns,
+              #icke__quicknav li:hover a.$ns {background-image: url(" . DOKU_TPL . "$img2);}";
+    }
+    echo '</style>';
+}
