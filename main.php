@@ -114,7 +114,9 @@
                 </div>
                 <div id="icke__footer">
                     <div class="admin_toolbar">
-                        <?php tpl_actionlink('edit')?>
+                        <?php tpl_actionlink('edit'); ?>
+                        <?php tpl_actionlink('backlink'); ?>
+                        <?php tpl_actionlink('history'); ?>
                     </div>
                     <div class="footer_toolbar">
                         <p>

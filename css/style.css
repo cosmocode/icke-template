@@ -172,12 +172,23 @@ a:hover {text-decoration: none;}
 #icke__footer .admin_toolbar a.edit,
 #icke__footer .admin_toolbar a.create {
 	background: transparent url(images/icons/stift_gross.png) top right no-repeat;
+}
+
+#icke__footer .admin_toolbar a.revisions {
+	background: transparent url(images/icons/history.png) top right no-repeat;
+}
+
+#icke__footer .admin_toolbar a.backlink {
+	background: transparent url(images/icons/backlink.png) top right no-repeat;
+}
+
+#icke__footer .admin_toolbar a.action {
 	color: __edit_lnk__;
 	display: block;
 	float: right;
 	font-size: 1.1em;
 	height: 20px;
-	padding: 16px 40px 0 0;
+	padding: 16px 30px 0 16px;
 }
 
 #icke__footer .footer_toolbar {

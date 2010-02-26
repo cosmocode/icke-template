@@ -73,10 +73,8 @@ function icke_tplSidebar() {
             <div class="sec_level">
                 <h5></h5>
                 <ul>
-                    <li><?php tpl_actionlink('history'); ?></li>
                     <li><?php tpl_actionlink('recent'); ?></li>
                     <li><?php tpl_actionlink('index'); ?></li>
-                    <li><?php tpl_actionlink('backlink'); ?></li>
                     <li><?php tpl_actionlink('subscribe'); ?></li>
                     <li><?php tpl_actionlink('admin'); ?></li>
                 </ul>
