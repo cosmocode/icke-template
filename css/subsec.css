@@ -11,9 +11,11 @@ div.dokuwiki div.secedit input.button {
     text-decoration: underline;
 }
 
-
-#icke__page .content div.section_highlight {
+#icke__page .content .section_highlight {
     background-color: __nav_hover__;
+}
+
+#icke__page .content .page > .section_highlight {
     margin-left: -30px;
     margin-right: -120px;
     padding-left: 30px;
