@@ -39,3 +39,27 @@ div.dataplugin_entry dl dt {
         border: 1px solid __border_alt2__;
 }
 
+div.dokuwiki div.editbutton_plugin_data form input.button {
+        -moz-background-clip:border;
+        -moz-background-inline-policy:continuous;
+        -moz-background-origin:padding;
+        background:transparent url(/lib/tpl/icke/images/icons/stift_klein.png) no-repeat scroll right top;
+        border-color:-moz-use-text-color #8CACBB #8CACBB;
+        border-style:none solid solid;
+        border-width:medium 1px 1px;
+        cursor:pointer;
+        display:inline;
+        font-size:10px;
+        margin:0;
+        padding:0 28px 0 0;
+        text-decoration:none;
+        vertical-align:middle;
+        -moz-border-radius-bottomleft:0.5em;
+        -moz-border-radius-bottomright:0.5em;
+        float:none;
+        margin-left:2.1em;
+}
+
+div.dokuwiki div.editbutton_plugin_data {
+    margin-top: -1.2em; /* depends on the dl margin */
+}
