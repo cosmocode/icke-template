@@ -81,6 +81,14 @@
     background-color: __background_other__;
 }
 
+#icke__page .content pre.code {
+    width: 95%;
+}
+
+#icke__page table {
+    width: 98%;
+}
+
 #icke__page .content a {
     color: __link__;
 }
