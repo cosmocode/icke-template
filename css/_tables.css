@@ -49,6 +49,6 @@ html > body div.dokuwiki table.edit td.handle {
 }
 html > body div.dokuwiki table.edit td.disabledhandle {
         background-image: none;
-        background-color: #FFF2E9;
+        background-color: #F3E0D3;
         cursor: no-drop;
 }
