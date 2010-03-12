@@ -28,14 +28,14 @@ div.dokuwiki form.bureaucracy__plugin label textarea.edit, div.dokuwiki form.bur
     background: none;
 }
 
-#icke__page ul.bureaucracy_user_auto {
+#icke__page ul.autocompletion {
         margin: 0;
 }
 
-div.dokuwiki ul.bureaucracy_user_auto li {
+div.dokuwiki ul.autocompletion li {
         list-style-type: none;
 }
 
-div.dokuwiki ul.bureaucracy_user_auto li a {
+div.dokuwiki ul.autocompletion li a {
         text-decoration: none;
 }
