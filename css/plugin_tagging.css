@@ -46,3 +46,24 @@ Font-family: Arial, sans-serif;
         background-color: __color_tag__;
         color: __background__;
 }
+
+div.dokuwiki .tagcloud {
+    font-size: 1.3em;
+}
+
+div.dokuwiki .tagcloud li a {
+    text-decoration: none;
+}
+
+div.dokuwiki .tagcloud li.tagging_owntag a {
+    color: __color_tag__;
+}
+
+#pte_tags_edit_start {
+    text-align: left;
+}
+
+#pte_tags_edit_start input.pte_tags_edit_field {
+    display: block;
+}
+
