@@ -87,10 +87,11 @@ function icke_tplSidebar() {
 
 function icke_tplSearch() {
     include DOKU_TPLINC . 'local/namespaces.php';
+    $cur_val = isset($_POST['namespace']) ? $_POST['namespace'] : '';
 ?>        <select class="namespace" name="namespace">
-            <option value="">All</option> <?php
-foreach ($icke_namespaces as $ns) {
-echo '<option value="' . $ns['txt'] . '">' . $ns['txt'] . '</option>';
+            <option value="" <?php if ($cur_val === '') echo 'selected'; ?>>All</option> <?php
+foreach ($icke_namespaces as $id => $ns) {
+echo '<option value="' . $id . '"' . ($cur_val === $id ? ' selected' : '') . '>' . $ns['txt'] . '</option>';
 }
 ?>
         </select>

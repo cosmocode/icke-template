@@ -2,7 +2,18 @@ addInitEvent(function(){
     /*
      * SEARCH-BOX DROPDOWN
      */
-    jQuery("#icke__sidebar .search .namespace").replaceWith(jQuery('<input class="namespace" type="hidden" name="namespace" value="" />'));
+
+    // Replace HTML dropdown with the icon dropdown, but keep the current
+    // value.
+    jQuery("#icke__sidebar .search .namespace")
+          .replaceWith(jQuery('<input class="namespace" type="hidden" ' + 
+                              'name="namespace" value="' +
+                              jQuery("#icke__sidebar .search .namespace").val() +
+                              '" />'));
+    var cur = '#icke__sidebar .search li.' +
+              jQuery("#icke__sidebar .search .namespace").val() + '_search';
+    jQuery(cur).parent().css('top', (jQuery(cur).prevAll().size()*-30) + 'px');
+
     jQuery("#icke__sidebar .search #ns_custom").show();
     jQuery("#icke__sidebar .search #ns_custom").live("click", function(){
         jQuery(this).toggleClass("closed");
