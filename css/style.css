@@ -362,7 +362,16 @@ a:hover {text-decoration: none;}
     padding: 0;
     text-indent: -9999px;
     width: 10%;
-        cursor: pointer;
+    cursor: pointer;
+
+}
+    /** ie6,7 text indent fix**/
+* html #icke__sidebar .search .submit {
+    line-height: 0px;
+}
+
+*:first-child+html #icke__sidebar .search .submit {
+    line-height: 0px;
 }
 
 /* table of contents */
