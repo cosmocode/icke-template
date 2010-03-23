@@ -65,10 +65,14 @@
                 <div id="icke__drophead" class="closed clearfix">
                     <?php
 
+                    //Do Plugin
+                    $doplugin = plugin_load('helper','do');
+                    $doplugin->tpl_pageTasks();
+
                     //Quality Control
                     $qc = plugin_load('helper','qc');
                     $qc->tpl();
-
+                    
                     ?>
                 </div>
                 <div class="content dokuwiki clearfix">

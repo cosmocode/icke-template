@@ -2,3 +2,9 @@
 #icke__page .content a.plugin_do_status {
         text-decoration: none;
 }
+
+#icke__page .plugin__do_pagetasks {
+        float:right;
+        font-size:14px;
+        margin-top:8px;
+}
