@@ -7,14 +7,21 @@ div.dokuwiki form {
 
 div.dokuwiki label.block {
   display: block;
-  text-align: right;
+  text-align: left;
   font-weight: bold;
+}
+
+div.dokuwiki label.simple span,
+div.dokuwiki label.block span {
+       width: 120px;
+        display: inline-block;
 }
 
 div.dokuwiki label.simple {
   display: block;
   text-align: left;
   font-weight: normal;
+        margin-bottom: 5px;
 }
 
 div.dokuwiki label.block input.edit {

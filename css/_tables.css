@@ -15,6 +15,10 @@ div.dokuwiki table.inline th {
   background-color: __background_alt__;
 }
 
+div.dokuwiki table.inline th input {
+        font-weight: bold;
+}
+
 div.dokuwiki table.inline td {
   padding: 3px;
   border: 1px solid __border__;

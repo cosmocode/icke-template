@@ -18,8 +18,14 @@ div.dataplugin_entry dl dt {
 #icke__page table.dataplugin_table, 
 #icke__page table.dataplugin_list {
         border-collapse: separate;
-        padding: 11px 0 0 17px; border: 0;
         background: transparent url(images/icons/datatable_link.png) top left no-repeat;
+        padding: 11px 0 0 17px; border: 0;
+}
+
+* html #icke__page .dataplugin_list {
+        min-height: 2em;
+        height: auto !important;
+        height: 2em;
 }
 
 #icke__page ul.dataplugin_table,
@@ -30,6 +36,7 @@ div.dataplugin_entry dl dt {
         min-height: 2em;
 }
 
+
 #icke__page table.dataplugin_table th,
 #icke__page table.dataplugin_table td,
 #icke__page table.dataplugin_list th,
@@ -39,27 +46,41 @@ div.dataplugin_entry dl dt {
         border: 1px solid __border_alt2__;
 }
 
+div.dokuwiki div.editbutton_table form input.button {
+        margin-left: 5px;
+}
+
 div.dokuwiki div.editbutton_plugin_data form input.button {
         -moz-background-clip:border;
         -moz-background-inline-policy:continuous;
         -moz-background-origin:padding;
         background:transparent url(/lib/tpl/icke/images/icons/stift_klein.png) no-repeat scroll right top;
-        border-color:-moz-use-text-color #8CACBB #8CACBB;
-        border-style:none solid solid;
-        border-width:medium 1px 1px;
+        border: 1px solid #8CACBB;
+        border-top: 0;
         cursor:pointer;
         display:inline;
         font-size:10px;
         margin:0;
-        padding:0 28px 0 0;
+        padding:0 25px 2px 3px;
         text-decoration:none;
         vertical-align:middle;
-        -moz-border-radius-bottomleft:0.5em;
+
+        -moz-border-radius-bottomleft: 0.5em;
+    -opera-border-bottom-left-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em; 
         -moz-border-radius-bottomright:0.5em;
+    -opera-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em; 
         float:none;
         margin-left:2.1em;
 }
 
 div.dokuwiki div.editbutton_plugin_data {
     margin-top: -1.2em; /* depends on the dl margin */
+}
+
+#dw__editform fieldset.plugin__data {
+        clear: none;
 }

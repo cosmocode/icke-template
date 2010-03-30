@@ -53,6 +53,10 @@ div.dokuwiki div#wiki__editbar div.editButtons {
    width: 280px;
 }
 
+*:first-child+html div.dokuwiki div#wiki__editbar div.editButtons {
+   width: 320px;
+}
+
 div.dokuwiki div#wiki__editbar div.editButtons input {
    float: left;
 }

@@ -229,9 +229,11 @@ a:hover {text-decoration: none;}
 /* default sideclip */
 #icke__sidebar .sideclip {
     -moz-border-radius-topright: 10px;
+    -opera-border-top-right-radius: 10px;
     -webkit-border-top-right-radius: 10px;
     border-top-right-radius: 10px; 
     -moz-border-radius-bottomright: 10px;
+    -opera-border-bottom-right-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
     border-bottom-right-radius: 10px; 
     background: __content_bg__ url(images/layout/wrap_shadow_y_right.png) top left repeat-y;
@@ -271,9 +273,11 @@ a:hover {text-decoration: none;}
 #icke__sidebar .logon {
     background: __background__ url(images/layout/wrap_shadow_x_top.png) top left repeat-x;
     -moz-border-radius-bottomleft: 10px;
+    -opera-border-bottom-right-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
     border-bottom-right-radius: 10px; 
     -moz-border-radius-bottomright: 10px;
+    -opera-border-bottom-left-radius: 10px;
     -webkit-border-bottom-left-radius: 10px;
     border-bottom-left-radius: 10px; 
     margin: 0 0 0 1em;
@@ -304,6 +308,7 @@ a:hover {text-decoration: none;}
 #icke__sidebar .search {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
+    -opera-border-radius: 10px;
     border-radius: 10px;
     background-color: __background__;
     margin: 5em 0 1em 1em;
@@ -324,6 +329,7 @@ a:hover {text-decoration: none;}
 #icke__sidebar .search #ns_custom ul {
     -moz-border-radius: 5px;
     -webkit-border-radius: 10px;
+    -opera-border-radius: 10px;
     border-radius: 10px;
     background: __content_bg__;
     border: 1px solid __mediumgray__;
@@ -377,6 +383,8 @@ a:hover {text-decoration: none;}
 /* table of contents */
 #icke__sidebar .table_of_contents {
     -moz-border-radius-topright: 10px;
+    -opera-border-top-right-radius: 10px;
+    -opera-border-bottom-right-radius: 10px;
     -moz-border-radius-bottomright: 10px;
     -webkit-border-top-right-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
@@ -472,6 +480,7 @@ a:hover {text-decoration: none;}
 
 div.insitu-footnote {
         -moz-border-radius: 5px; 
+        -opera-border-radius: 5px; 
         -webkit-border-radius: 5px; 
         border-radius: 5px; 
         background-color:__background_other__;
@@ -511,4 +520,8 @@ div.success, div.error, div.info {
         padding: 3px 0px 3px 12em;
         font-size: 12px;
         border: none;
+}
+
+div.clearer {
+        clear: left;
 }

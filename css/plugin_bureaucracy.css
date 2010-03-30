@@ -39,3 +39,7 @@ div.dokuwiki ul.autocompletion li {
 div.dokuwiki ul.autocompletion li a {
         text-decoration: none;
 }
+
+#icke__page ul.autocompletion {
+        text-align: left;
+}
