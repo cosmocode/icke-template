@@ -78,10 +78,23 @@ function icke_tplSidebar() {
             <div class="sec_level">
                 <h5></h5>
                 <ul>
-                    <li><?php tpl_actionlink('recent'); ?></li>
-                    <li><?php tpl_actionlink('index'); ?></li>
-                    <li><?php tpl_actionlink('subscribe'); ?></li>
-                    <li><?php tpl_actionlink('admin'); ?></li>
+<?php
+                include DOKU_TPLINC . icke_getFile('tools.php');
+                foreach($icke_tools as $tool) {
+                    echo '<li>';
+                    switch ($tool['type']) {
+                    case 'action':
+                        tpl_actionlink($tool['value']);
+                        break;
+                    case 'string':
+                        echo $tool['value'];
+                        break;
+                    default:
+                        echo call_user_func_array($tool['func'], $tool['value']);
+                    }
+                    echo '</li>';
+                }
+?>
                 </ul>
                 <div class="sec_level_bottom"></div>
             </div>
