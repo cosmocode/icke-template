@@ -1,5 +1,10 @@
 <?php
 
+function icke_getFile($name) {
+    return file_exists(DOKU_TPLINC . 'local/' . $name) ?
+           'local/' . $name : $name;
+}
+
 function icke_tplPopupPage($id){
     $page = p_wiki_xhtml($id,'',false);
     if($page) {
@@ -37,7 +42,7 @@ function icke_tplProjectSteps(){
 
 function icke_tplSidebar() {
     global $ID;
-    include DOKU_TPLINC . 'local/namespaces.php';
+    include DOKU_TPLINC . icke_getFile('namespaces.php');
     if (isset($_SERVER['REMOTE_USER'])) {
         $firstkey = reset(array_keys($icke_namespaces));
         $icke_namespaces = array_merge(array('dashboard' => array
@@ -86,7 +91,7 @@ function icke_tplSidebar() {
 }
 
 function icke_tplSearch() {
-    include DOKU_TPLINC . 'local/namespaces.php';
+    include DOKU_TPLINC . icke_getFile('namespaces.php');
     $cur_val = isset($_POST['namespace']) ? $_POST['namespace'] : '';
 ?>        <select class="namespace" name="namespace">
             <option value="" <?php if ($cur_val === '') echo 'selected'; ?>>All</option> <?php
@@ -109,7 +114,7 @@ echo '<li class="' . $class . '_search"><img src="' . DOKU_TPL . 'local/images/i
 }
 
 function icke_tplMenuCSS() {
-    include DOKU_TPLINC . 'local/namespaces.php';
+    include DOKU_TPLINC . icke_getFile('namespaces.php');
     echo '<style type="text/css">';
     $nss = array_keys($icke_namespaces);
     $nss[] = 'dashboard';
@@ -129,15 +134,11 @@ function icke_tplMenuCSS() {
     }
     <?php
     foreach($nss as $ns) {
-        $img = 'local/images/icons/60x60/' . $ns . '_inaktiv.png';
-        $img2 = 'local/images/icons/60x60/' . $ns . '_aktiv.png';
-        if (!file_exists(dirname(__FILE__) . '/' . $img)) {
-            $img = 'images/icons/60x60/' . $ns . '_inaktiv.png';
-            $img2 = 'images/icons/60x60/' . $ns . '_aktiv.png';
-        }
-        echo "#icke__quicknav a.$ns {background-image: url(" . DOKU_TPL . "$img);}
+        echo "#icke__quicknav a.$ns {background-image: url(" . DOKU_TPL .
+             icke_getFile('images/icons/60x60/' . $ns . '_inaktiv.png') . ");}
               #icke__quicknav li.active a.$ns,
-              #icke__quicknav li:hover a.$ns {background-image: url(" . DOKU_TPL . "$img2);}";
+              #icke__quicknav li:hover a.$ns {background-image: url(" . DOKU_TPL .
+             icke_getFile('images/icons/60x60/' . $ns . '_aktiv.png') . ");}";
     }
     echo '</style>';
 }
