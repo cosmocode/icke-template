@@ -20,6 +20,9 @@
 }
 
 #icke__quicknav div.sec_level h1,
+#icke__quicknav div.sec_level h2,
+#icke__quicknav div.sec_level h3,
+#icke__quicknav div.sec_level h4,
 #icke__quicknav div.sec_level h5,
 #icke__quicknav div.sec_level ul {
     background: transparent url(images/layout/bubble_mitte.png) repeat-y;
@@ -31,13 +34,19 @@
     padding-top: 5px;
 }
 
-#icke__quicknav div.sec_level h5,
-#icke__quicknav div.sec_level h1 {
+#icke__quicknav div.sec_level h1,
+#icke__quicknav div.sec_level h2,
+#icke__quicknav div.sec_level h3,
+#icke__quicknav div.sec_level h4,
+#icke__quicknav div.sec_level h5 {
     padding-left: 30px;
-    font-size: 14px;
     font-weight: bold;
-    margin-top: 6px;
     padding-top: 5px;
+}
+
+#icke__quicknav div.sec_level h1 {
+    margin-top: 6px;
+    font-size: 14px;
     padding-bottom: 5px;
 }
 
