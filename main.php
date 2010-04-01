@@ -48,12 +48,13 @@
                 <li class="table_of_contents sideclip clearfix">
                     <?php tpl_toc()?>
 
-                    <h3>Tags</h3>
-
                     <?php
                         $tags = plugin_load('action','tagging');
-                        $tags->tpl_tagcloud();
-                        $tags->tpl_tagedit();
+                        if ($tags !== null) {
+                            echo '<h3>Tags</h3>';
+                            $tags->tpl_tagcloud();
+                            $tags->tpl_tagedit();
+                        }
                     ?>
 
                 </li>
@@ -67,11 +68,15 @@
 
                     //Do Plugin
                     $doplugin = plugin_load('helper','do');
-                    $doplugin->tpl_pageTasks();
+                    if ($doplugin !== null) {
+                        $doplugin->tpl_pageTasks();
+                    }
 
                     //Quality Control
                     $qc = plugin_load('helper','qc');
-                    $qc->tpl();
+                    if ($qc !== null) {
+                        $qc->tpl();
+                    }
                     
                     ?>
                 </div>
@@ -96,9 +101,10 @@
 
                             <?php
                                 $starred =& plugin_load('action','starred');
-                                $starred->tpl_starred();
-
-                                echo '&nbsp;&nbsp;';
+                                if ($starred !== null) {
+                                    $starred->tpl_starred();
+                                    echo '&nbsp;&nbsp;';
+                                }
 
                                 if($INFO['subscribed']){
                                     $sub = '<img src="'.DOKU_TPL.'images/mail-yes.png" width="16" height="16" alt="" title="'.$lang['btn_subscribe'].'" />';
