@@ -76,7 +76,7 @@ function icke_tplSidebar() {
     ?>
         <li class="separator"><a class="einstellungen">Einstellungen</a>
             <div class="sec_level">
-                <h5></h5>
+                <h1 class="empty"></h1>
                 <ul>
 <?php
                 include DOKU_TPLINC . icke_getFile('tools.php');

@@ -50,7 +50,7 @@
     padding-bottom: 5px;
 }
 
-#icke__quicknav div.sec_level h5 {
+#icke__quicknav div.sec_level .empty {
         padding-top: 0;
         padding-bottom: 0;
 }
