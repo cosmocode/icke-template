@@ -55,7 +55,7 @@ div.dokuwiki .tagcloud li a {
     text-decoration: none;
 }
 
-div.dokuwiki .tagcloud li.tagging_owntag a {
+div.dokuwiki #icke__sidebar .tagcloud li.tagging_owntag a {
     color: __color_tag__;
 }
 

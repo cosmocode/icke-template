@@ -5,7 +5,7 @@
     display:none;
     border: 1px solid __border__;
     position: absolute;
-    width:270px;
+    width:280px;
 }
 
 #media__popup h1 {
@@ -36,6 +36,12 @@
 #media__popup .button {
     margin-left:auto;
     margin-right:auto;
+}
+
+#media__popup button.button {
+    margin-right: 5px;
+    background: none;
+    background-color: #DEE7EC;
 }
 
 #media__popup .btnlbl {
