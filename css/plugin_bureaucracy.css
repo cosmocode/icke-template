@@ -13,18 +13,16 @@ div.dokuwiki form.bureaucracy__plugin fieldset legend {
 
 div.dokuwiki form.bureaucracy__plugin label {
     margin-left: 0;
-
 }
 
 div.dokuwiki form.bureaucracy__plugin label span {
     text-align: left;
     font-size: 13px;
-    width: 15%;
     line-height: 16px;
 }
 
-div.dokuwiki form.bureaucracy__plugin label textarea.edit, div.dokuwiki form.bureaucracy__plugin label input.edit {
-    width: 80%;
+div.dokuwiki form.bureaucracy__plugin label .edit {
+    float: right;
     background: none;
 }
 
