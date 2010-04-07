@@ -83,18 +83,19 @@ function icke_tplSidebar() {
 <?php
                 include DOKU_TPLINC . icke_getFile('tools.php');
                 foreach($icke_tools as $tool) {
-                    echo '<li>';
                     switch ($tool['type']) {
                     case 'action':
-                        tpl_actionlink($tool['value']);
+                        $str = tpl_actionlink($tool['value'], '', '', '', true);
                         break;
                     case 'string':
-                        echo $tool['value'];
+                        $str = $tool['value'];
                         break;
                     default:
-                        echo call_user_func_array($tool['func'], $tool['value']);
+                        $str = call_user_func_array($tool['func'], $tool['value']);
                     }
-                    echo '</li>';
+                    if ($str !== '') {
+                        echo '<li>' . $str . '</li>';
+                    }
                 }
 ?>
                 </ul>
