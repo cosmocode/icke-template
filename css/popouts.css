@@ -42,17 +42,19 @@
     padding-left: 30px;
     font-weight: bold;
     padding-top: 5px;
+    font-size: 14px;
 }
 
 #icke__quicknav div.sec_level h1 {
     margin-top: 6px;
-    font-size: 14px;
     padding-bottom: 5px;
 }
 
 #icke__quicknav div.sec_level .empty {
         padding-top: 0;
         padding-bottom: 0;
+        line-height: 1px;
+        font-size: 1px;
 }
 
 #icke__quicknav div.sec_level ul.inline {
