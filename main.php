@@ -88,7 +88,8 @@
                         <span class="lastmod">
                         <?php
                             if($INFO['lastmod']){
-                                echo strftime('%e. %B %Y',$INFO['lastmod']);
+                                // %e is not supported on Windows 
+                                echo ltrim(strftime('%d. %B %Y',$INFO['lastmod']), '0');
                             }
                         ?>
                         </span> – 
