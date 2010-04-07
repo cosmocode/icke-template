@@ -17,23 +17,25 @@ function icke_tplPopupPage($id){
 
 function icke_tplProjectSteps(){
     global $ID;
+    global $conf;
 
     $steps = '';
     $ns = $ID;
     do {
         $ns = getNS($ns);
-        if(page_exists("$ns:schritt")) {
-            $steps = "$ns:schritt";
+        $try = $ns . ':schritt';
+        if(page_exists($try)) {
+            $steps = $try;
             break;
         }
-        if(page_exists("$ns:schritt:start")) {
-            $steps = "$ns:schritt:start";
+        $try .= ':' . $conf['start'];
+        if(page_exists($try)) {
+            $steps = $try;
             break;
         }
-    }while($ns);
+    } while ($ns);
 
-    if(!$steps) return;
-
+    if (!$steps) return;
 
     echo '<li class="sideclip">';
     echo p_wiki_xhtml($steps,'',false);
