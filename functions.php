@@ -108,25 +108,13 @@ function icke_tplSidebar() {
 
 function icke_tplSearch() {
     include DOKU_TPLINC . icke_getFile('namespaces.php');
-    $cur_val = isset($_POST['namespace']) ? $_POST['namespace'] : '';
-?>        <select class="namespace" name="namespace">
-            <option value="" <?php if ($cur_val === '') echo 'selected'; ?>>All</option> <?php
-foreach ($icke_namespaces as $id => $ns) {
-echo '<option value="' . $id . '"' . ($cur_val === $id ? ' selected' : '') . '>' . $ns['txt'] . '</option>';
-}
-?>
-        </select>
-        <div id="ns_custom" class="closed" style="display: none;">
-            <ul>
-                <li class=""><img src="<?php echo DOKU_TPL?>images/icons/30x30/icke.png" alt="Alles" /></li>
-<?php
-foreach ($icke_namespaces as $class => $ns) {
-echo '<li class="' . $class . '_search"><img src="' . DOKU_TPL . 'local/images/icons/30x30/' . $class . '_aktiv.png" alt="' . $ns['txt'] . '" /></li>';
-}
-?>
-            </ul>
-        </div>
-<?php
+    foreach ($icke_namespaces as $id => &$ns) {
+        $ns['img'] = DOKU_TPL . 'local/images/icons/30x30/' . $id . '_aktiv.png';
+    }
+    $fancysearch = plugin_load('action', 'fancysearch');
+    if (!is_null($fancysearch)) {
+        $fancysearch->tpl_searchbox($icke_namespaces, DOKU_TPL . 'images/icons/30x30/icke.png');
+    }
 }
 
 function icke_tplMenuCSS() {
@@ -135,7 +123,7 @@ function icke_tplMenuCSS() {
     $nss = array_keys($icke_namespaces);
     $nss[] = 'dashboard';
     $nss[] = 'einstellungen';
-    $str = ''; 
+    $str = '';
     foreach($nss as $ns) {
          $str .= '#icke__quicknav a.' . $ns . ",\n";
     }

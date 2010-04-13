@@ -314,19 +314,19 @@ a:hover {text-decoration: none;}
     margin: 5em 0 1em 1em;
     padding: 0.5em 0.5em 0;
 }
-#icke__sidebar .search #ns_custom {
+#icke__sidebar .search #fancysearch__ns_custom {
     background: transparent url(images/icons/search_drop.png) right center no-repeat;
     float: left;
     height: 25px;
     position: relative;
     width: 27%;
 }
-#icke__sidebar .search #ns_custom.closed {
+#icke__sidebar .search #fancysearch__ns_custom.closed {
     overflow: hidden;
     cursor: pointer;
 }
 
-#icke__sidebar .search #ns_custom ul {
+#icke__sidebar .search #fancysearch__ns_custom ul {
     -moz-border-radius: 5px;
     -webkit-border-radius: 10px;
     -opera-border-radius: 10px;
@@ -341,12 +341,12 @@ a:hover {text-decoration: none;}
         cursor: pointer;
 }
 
-#icke__sidebar .search #ns_custom.closed ul {
+#icke__sidebar .search #fancysearch__ns_custom.closed ul {
     background-color: transparent;
     border: 0;
 }
 
-#icke__sidebar .search #ns_custom ul li {
+#icke__sidebar .search #fancysearch__ns_custom ul li {
     height: 30px;
     overflow: hidden;
 }
