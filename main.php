@@ -77,7 +77,7 @@
                     if ($qc !== null) {
                         $qc->tpl();
                     }
-                    
+
                     ?>
                 </div>
                 <div class="content dokuwiki clearfix">
@@ -88,7 +88,7 @@
                         <span class="lastmod">
                         <?php
                             if($INFO['lastmod']){
-                                // %e is not supported on Windows 
+                                // %e is not supported on Windows
                                 echo ltrim(strftime('%d. %B %Y',$INFO['lastmod']), '0');
                             }
                         ?>
@@ -96,7 +96,7 @@
                         <?php if($INFO['user']): ?>
                             <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo hsc($INFO['editor'])?></a>
                         <?php else: ?>
-                            <span class="author"><?php echo hsc($INFO['editor'])?></span>
+                            <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : 'Ursprungsversion'); ?></span>
                         <?php endif ?>
                     <?php endif ?>
 
