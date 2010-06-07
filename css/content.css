@@ -41,6 +41,11 @@
     font-size: 1.7em;
 }
 
+#icke__page .content h1 a,
+#icke__page .content h2 a {
+    color: __mediumgray__;
+}
+
 #icke__page .content h2 a {
   /*  color: __mediumgray__;*/
 }
@@ -56,6 +61,13 @@
 #icke__page .content h5 {
     font-size: 1.1em;
 }
+
+#icke__page .content h3 a,
+#icke__page .content h4 a,
+#icke__page .content h5 a,
+#icke__page .content h6 a {
+}
+
 
 #icke__page .content pre {
     border: 1px dashed __border__;
