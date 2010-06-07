@@ -42,22 +42,19 @@
 }
 
 #icke__page .content h2 a {
-    color: __mediumgray__;
+  /*  color: __mediumgray__;*/
 }
 
 #icke__page .content h3 {
     font-size: 1.5em;
-    margin-left: 28px;
 }
 
 #icke__page .content h4 {
     font-size: 1.3em;
-    margin-left: 40px;
 }
 
 #icke__page .content h5 {
     font-size: 1.1em;
-    margin-left: 50px;
 }
 
 #icke__page .content pre {
