@@ -146,3 +146,7 @@ function icke_tplMenuCSS() {
     }
     echo '</style>';
 }
+
+function icke_tplFavicon() {
+    echo '  <link rel="shortcut icon" href="' . DOKU_TPL . icke_getFile('images/favicon.png') . '" />';
+}

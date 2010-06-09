@@ -3,6 +3,8 @@
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
 
+require_once DOKU_TPLINC.'functions.php';
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -14,9 +16,8 @@ if (!defined('DOKU_INC')) die();
     [<?php echo strip_tags($conf['title'])?>]
   </title>
 
-  <?php tpl_metaheaders()?>
+  <?php tpl_metaheaders(); icke_tplFavicon(); ?>
 
-  <link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.png" />
 </head>
 
 <body>

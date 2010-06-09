@@ -8,7 +8,7 @@
     [<?php echo strip_tags($conf['title'])?>]
     </title>
 
-    <?php tpl_metaheaders(); icke_tplMenuCSS(); ?>
+    <?php tpl_metaheaders(); icke_tplMenuCSS(); icke_tplFavicon(); ?>
 </head>
 <body>
     <?php html_msgarea() ?>
