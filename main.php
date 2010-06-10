@@ -94,7 +94,7 @@
                         ?>
                         </span> – 
                         <?php if($INFO['user']): ?>
-                            <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo hsc($INFO['editor'])?></a>
+                            <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
                         <?php else: ?>
                             <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : 'Ursprungsversion'); ?></span>
                         <?php endif ?>
