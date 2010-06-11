@@ -79,6 +79,7 @@ div.dokuwiki div.editbutton_plugin_data form input.button {
 
 div.dokuwiki div.editbutton_plugin_data {
     margin-top: -1.2em; /* depends on the dl margin */
+    margin-bottom: 1.2em;
 }
 
 #dw__editform fieldset.plugin__data {
