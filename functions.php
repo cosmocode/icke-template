@@ -8,11 +8,22 @@ function icke_getFile($name) {
 function icke_tplPopupPage($id){
     $page = p_wiki_xhtml($id,'',false);
     if($page) {
-        echo '<div class="sec_level">';
-        echo $page;
-        echo '<div class="sec_level_bottom"></div>';
-        echo '</div>';
+        icke_tplPopup($page);
     }
+}
+
+function icke_tplPopup($page) {
+    ?>
+    <div class="sec_level">
+    <span class="a"></span>
+    <span class="b"></span>
+    <div class="popup_content">
+    <?php echo $page; ?>
+    </div>
+    <span class="c"></span>
+    <span class="d"></span>
+    </div>
+    <?php
 }
 
 function icke_tplProjectSteps(){
@@ -75,35 +86,30 @@ function icke_tplSidebar() {
         icke_tplPopupPage($data['id'] . (strpos($data['id'], ':') !== false ? 'quick' : '_quick'));
         echo '</li>';
     }
-    ?>
-        <li class="separator"><a class="einstellungen">Einstellungen</a>
-            <div class="sec_level">
-                <h1 class="empty"></h1>
-                <ul>
-<?php
-                include DOKU_TPLINC . icke_getFile('tools.php');
-                foreach($icke_tools as $tool) {
-                    switch ($tool['type']) {
-                    case 'action':
-                        $str = tpl_actionlink($tool['value'], '', '', '', true);
-                        break;
-                    case 'string':
-                        $str = $tool['value'];
-                        break;
-                    default:
-                        $str = call_user_func_array($tool['func'], $tool['value']);
-                    }
-                    if ($str !== '') {
-                        echo '<li>' . $str . '</li>';
-                    }
-                }
-?>
-                </ul>
-                <div class="sec_level_bottom"></div>
-            </div>
 
-        </li>
-    <?php
+    echo '<li class="separator"><a class="einstellungen">Einstellungen</a>';
+
+    $text = '<h1 class="empty"></h1><div class="level2"><ul>';
+    include DOKU_TPLINC . icke_getFile('tools.php');
+    foreach($icke_tools as $tool) {
+        switch ($tool['type']) {
+        case 'action':
+            $str = tpl_actionlink($tool['value'], '', '', '', true);
+            break;
+        case 'string':
+            $str = $tool['value'];
+            break;
+        default:
+            $str = call_user_func_array($tool['func'], $tool['value']);
+        }
+        if ($str !== '') {
+            $text .= '<li>' . $str . '</li>';
+        }
+    }
+    $text .= '</ul></div>';
+    icke_tplPopup($text);
+
+    echo '</li>';
 }
 
 function icke_tplSearch() {
