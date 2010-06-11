@@ -22,15 +22,3 @@ div.dokuwiki div.secedit input.button {
     padding-left: 30px;
     padding-right: 120px;
 }
-
-/* Keep section padding */
-#icke__page .content .page > h3.section_highlight {
-}
-
-#icke__page .content .page > h4.section_highlight {
-    padding-left: 70px;
-}
-
-#icke__page .content .page > h5.section_highlight {
-    padding-left: 80px;
-}
