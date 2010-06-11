@@ -67,6 +67,14 @@ p, b, strong, i, em, strong, b, code, samp, dnf, abbr, acronym, ins, del, big, s
     margin: 0.75em 0 1.25em;
 }
 
+#icke__page .dokuwiki div.level1,
+#icke__page .dokuwiki div.level2,
+#icke__page .dokuwiki div.level3,
+#icke__page .dokuwiki div.level4,
+#icke__page .dokuwiki div.level5 {
+    padding-bottom: 0.1em;
+}
+
 /* =TEXTLOGIC
    ----------------------------------------------------*/
 
