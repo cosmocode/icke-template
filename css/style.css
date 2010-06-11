@@ -454,6 +454,15 @@ a:hover {text-decoration: none;}
     color: __wiki_lnk__;
 }
 
+#icke__page .content a.urlextern {
+    padding-right: 17px;
+    background: transparent url(images/icons/extlink.png) center right no-repeat;
+}
+#icke__page .content a.urlextern:visited {
+    padding-right: 17px;
+    background: transparent url(images/icons/extlink_visited.png) center right no-repeat;
+}
+
 #icke__page .content sup a {
         font-size: 9px;
         padding-left: 2px;
