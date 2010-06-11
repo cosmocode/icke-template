@@ -534,3 +534,7 @@ div.success, div.error, div.info {
 div.clearer {
         clear: left;
 }
+
+#icke__page #page__revisions span.user {
+        font-style: italic;
+}
