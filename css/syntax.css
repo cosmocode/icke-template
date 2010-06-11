@@ -6,7 +6,7 @@
 /* =HEADLINES
    ----------------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
     font-style: normal;
     font-weight: normal;
     vertical-align: baseline;
@@ -32,17 +32,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 #icke__page .dokuwiki h5 {
     font-size: 1em;
-}
-#icke__page .dokuwiki h6 {
-    font-size: 0.9em;
     font-style: italic;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, h2 a, h3 a, h4 a, h5 a {
     font-size: 1em;
     text-decoration: none;
 }
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
     text-decoration: none;
 }
 

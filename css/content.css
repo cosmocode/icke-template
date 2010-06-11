@@ -63,13 +63,6 @@
     font-size: 1.1em;
 }
 
-#icke__page .content h3 a,
-#icke__page .content h4 a,
-#icke__page .content h5 a,
-#icke__page .content h6 a {
-}
-
-
 #icke__page .content pre {
     border: 1px dashed __border__;
     color: __text__;
