@@ -9,6 +9,7 @@ div.dokuwiki div.secedit input.button {
     margin-right: -95px;
     padding-right: 30px;
     text-decoration: underline;
+    text-align: right;
 }
 
 #icke__page .content .section_highlight {
