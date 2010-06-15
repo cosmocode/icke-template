@@ -15,7 +15,7 @@ div.dataplugin_entry dl dt {
         width: auto;
 }
 
-#icke__page table.dataplugin_table, 
+#icke__page table.dataplugin_table,
 #icke__page table.dataplugin_list {
         border-collapse: separate;
         background: transparent url(images/icons/datatable_link.png) top left no-repeat;
@@ -28,8 +28,8 @@ div.dataplugin_entry dl dt {
         height: 2em;
 }
 
-#icke__page ul.dataplugin_table,
-#icke__page ul.dataplugin_list {
+#icke__page .dataplugin_table,
+#icke__page .dataplugin_list {
         margin-left: 0;
         padding: 0.8em 0 0 3.5em;
         background: transparent url(images/icons/datatable_link.png) no-repeat scroll 10px top;
@@ -38,9 +38,7 @@ div.dataplugin_entry dl dt {
 
 
 #icke__page table.dataplugin_table th,
-#icke__page table.dataplugin_table td,
-#icke__page table.dataplugin_list th,
-#icke__page table.dataplugin_list td {
+#icke__page table.dataplugin_table td {
         padding: 5px;
         border: 0;
         border: 1px solid __border_alt2__;
