@@ -70,7 +70,7 @@ function icke_tplSidebar() {
             continue;
         }
 
-        echo '<li' . ($data['liclass'] ? ' class="'.$data['liclass'].'"' : '') .
+        echo '<li' . (isset($data['liclass']) ? ' class="'.$data['liclass'].'"' : '') .
              '><a class="' . $class . '" href="' . wl($data['id']) . '">' . $data['txt'] . '</a>';
         icke_tplPopupPage($data['id'] . (strpos($data['id'], ':') !== false ? 'quick' : '_quick'));
         echo '</li>';
