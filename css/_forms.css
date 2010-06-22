@@ -130,7 +130,7 @@ html>body div.dokuwiki button.button {
 /***** submit button *****/
 
 html > body div.dokuwiki input.button, html > body div.dokuwiki button.button {
-    background: __button_background__ url(/lib/tpl/icke/images/buttonbshadow.png) repeat-x scroll center bottom;
+    background: __button_background__ url(images/buttonbshadow.png) repeat-x scroll center bottom;
     color: __lighter_gray__;
     margin-right: 4%;
     font-weight: bold;
@@ -141,14 +141,14 @@ div.dokuwiki fieldset input.button {
 }
 
 div.dokuwiki input.button[disabled] {
-    background: __button_background__ url(/lib/tpl/icke/images/buttonshadow.png) repeat-x scroll center bottom;
+    background: __button_background__ url(images/buttonshadow.png) repeat-x scroll center bottom;
     cursor: not-allowed;
 }
 
 #icke__page #subscribe__form {
         float: left;
         margin: 5px 5px 5px 0;
-} 
+}
 
 #icke__page #subscribe__form fieldset {
         margin-bottom: 8px;

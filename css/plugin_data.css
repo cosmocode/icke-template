@@ -52,7 +52,7 @@ div.dokuwiki div.editbutton_plugin_data form input.button {
         -moz-background-clip:border;
         -moz-background-inline-policy:continuous;
         -moz-background-origin:padding;
-        background:transparent url(/lib/tpl/icke/images/icons/stift_klein.png) no-repeat scroll right top;
+        background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
         border: 1px solid #8CACBB;
         border-top: 0;
         cursor:pointer;
