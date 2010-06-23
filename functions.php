@@ -113,7 +113,7 @@ function icke_tplSearch() {
     }
     $fancysearch = plugin_load('action', 'fancysearch');
     if (!is_null($fancysearch)) {
-        $fancysearch->tpl_searchbox($icke_namespaces, DOKU_TPL . 'images/icons/30x30/icke.png');
+        $fancysearch->tpl_searchform($icke_namespaces, DOKU_TPL . 'images/icons/30x30/icke.png');
     }
 }
 

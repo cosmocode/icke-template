@@ -35,15 +35,7 @@
                     ?>
                 </li>
                 <li class="search">
-
-                    <form method="post" action="" accept-charset="utf-8">
-                        <?php icke_tplSearch(); ?>
-                        <input type="hidden" name="do" value="search" />
-                        <input class="query" id="qsearch__in" type="text" name="id" autocomplete="off" value="<?php echo hsc(preg_replace('/ ?@\S+/','',$QUERY))?>" accesskey="f" />
-                        <input class="submit" type="submit" name="submit" value="Search" />
-                    </form>
-
-                    <div id="qsearch__out" class="ajax_qsearch JSpopup"></div>
+                    <?php icke_tplSearch(); ?>
                 </li>
                 <li class="table_of_contents sideclip clearfix">
                     <?php tpl_toc()?>
