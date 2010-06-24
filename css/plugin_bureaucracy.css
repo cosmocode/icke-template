@@ -19,11 +19,18 @@ div.dokuwiki form.bureaucracy__plugin label span {
     text-align: left;
     font-size: 13px;
     line-height: 16px;
+    width: 28%;
+    max-width: 300px;
 }
 
 div.dokuwiki form.bureaucracy__plugin label .edit {
-    float: right;
     background: none;
+    width: 70%;
+}
+
+div.dokuwiki form.bureaucracy__plugin label select {
+    background: none;
+    width: 30%;
 }
 
 #icke__page ul.autocompletion {

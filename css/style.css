@@ -41,6 +41,7 @@ a:hover {text-decoration: none;}
     line-height: 1.3em;
     position: absolute;
     top: 30px;
+    padding-right: 200px;
 }
 
 #icke__header h5 span {
