@@ -29,11 +29,12 @@ div.dataplugin_entry dl dt {
 }
 
 #icke__page .dataplugin_table,
-#icke__page .dataplugin_list {
+#icke__page .content .dataplugin_list {
         margin-left: 0;
         padding: 0.8em 0 0 3.5em;
         background: transparent url(images/icons/datatable_link.png) no-repeat scroll 10px top;
         min-height: 2em;
+        margin: 0 0 1em 3.5em;
 }
 
 
