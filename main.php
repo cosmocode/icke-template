@@ -10,8 +10,8 @@
     <?php tpl_metaheaders(); icke_tplMenuCSS(); icke_tplFavicon(); ?>
 </head>
 <body>
-    <?php icke_startupCheck(); ?>
     <?php html_msgarea() ?>
+    <?php icke_startupCheck() ?>
     <div id="icke__header" class="clearfix">
         <a class="logo" href="<?php echo wl()?>"><img src="<?php echo ml(tpl_getConf('logo'))?>" alt="" /></a>
         <h5>
@@ -84,7 +84,7 @@
                                 echo ltrim(strftime('%d. %B %Y',$INFO['lastmod']), '0');
                             }
                         ?>
-                        </span> – 
+                        </span> –
                         <?php if($INFO['user']): ?>
                             <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
                         <?php else: ?>
@@ -134,3 +134,4 @@
 <?php tpl_indexerWebBug() ?>
 </body>
 </html>
+

@@ -156,6 +156,6 @@ function icke_startupCheck() {
     $requiredPlugins = array('jquery');
     foreach ($requiredPlugins as $req) {
         if (in_array($req, $plugins)) continue;
-        echo '<div class="error">ICKE-template requires the '. hsc($req).'-plugin.</div>';
+        msg('ICKE-template requires the '. hsc($req).'-plugin.');
     }
 }
