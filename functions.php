@@ -150,3 +150,12 @@ function icke_tplMenuCSS() {
 function icke_tplFavicon() {
     echo '  <link rel="shortcut icon" href="' . DOKU_TPL . icke_getFile('images/favicon.png') . '" />';
 }
+
+function icke_startupCheck() {
+    $plugins = plugin_list();
+    $requiredPlugins = array('jquery');
+    foreach ($requiredPlugins as $req) {
+        if (in_array($req, $plugins)) continue;
+        echo '<div class="error">ICKE-template requires the '. hsc($req).'-plugin.</div>';
+    }
+}

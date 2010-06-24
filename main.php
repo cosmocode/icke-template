@@ -7,10 +7,10 @@
     <?php tpl_pagetitle()?>
     [<?php echo strip_tags($conf['title'])?>]
     </title>
-
     <?php tpl_metaheaders(); icke_tplMenuCSS(); icke_tplFavicon(); ?>
 </head>
 <body>
+    <?php icke_startupCheck(); ?>
     <?php html_msgarea() ?>
     <div id="icke__header" class="clearfix">
         <a class="logo" href="<?php echo wl()?>"><img src="<?php echo ml(tpl_getConf('logo'))?>" alt="" /></a>
