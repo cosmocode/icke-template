@@ -51,7 +51,7 @@ a:hover {text-decoration: none;}
 }
 
 #icke__header .branding {
-    background: __background__ url(images/logos/icke_logo.jpg) center center no-repeat;
+    background: __background__ url(images/logos/icke_logo.png) center center no-repeat;
     width: 180px;
     height: 125px;
     text-indent: -9999px;
