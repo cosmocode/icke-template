@@ -153,7 +153,7 @@ function icke_tplFavicon() {
 
 function icke_startupCheck() {
     $plugins = plugin_list();
-    $requiredPlugins = array('jquery');
+    $requiredPlugins = array('jquery', 'fancysearch');
     foreach ($requiredPlugins as $req) {
         if (in_array($req, $plugins)) continue;
         msg('ICKE-template requires the '. hsc($req).'-plugin.');
