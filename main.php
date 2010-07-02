@@ -85,6 +85,9 @@
                             }
                         ?>
                         </span> –
+                        <?php if($INFO['sum']): ?>
+                            <span class="sum"><?php echo hsc($INFO['sum']); ?></span> –
+                        <?php endif ?>
                         <?php if($INFO['user']): ?>
                             <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
                         <?php else: ?>
