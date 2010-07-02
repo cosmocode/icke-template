@@ -80,7 +80,7 @@ i, em {font-style: italic;}
 code, samp {font-size: 0.9em; }
 dfn {font-size: 1.125em; font-style: italic;}
 abbr {font-size: 0.9em;}
-acronym {font-size: 1.125em;}
+acronym {border-bottom:1px dotted;}
 ins {text-decoration: underline;}
 del {text-decoration: linethrough;}
 big {font-size: 1.2em;}
