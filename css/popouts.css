@@ -17,7 +17,7 @@
 
 #icke__quicknav span.a {
     background: transparent url(images/layout/bubble_topleft.png) no-repeat top left;
-    height: 5px;
+    height: 6px;
     width: 23px;
     display: block;
     position: absolute;
@@ -29,11 +29,11 @@
 #icke__quicknav span.b  {
     background: transparent url(images/layout/bubble_topright.png) no-repeat top right;
     width: 100%;
-    height: 8px;
+    height: 6px;
     display: block;
     position: absolute;
-    right: -36px;
-    padding-left: 13px;
+    right: -23px;
+    padding-left: 0px;
     margin-left: 13px;
     z-index: 3;
 }
@@ -41,7 +41,7 @@
 #icke__quicknav span.c {
     background: transparent url(images/layout/bubble_bottomleft.png) no-repeat top left;
     height: 12px;
-    width: 24px;
+    width: 23px;
     display: block;
     position: absolute;
     left: 0px;
@@ -54,9 +54,9 @@
     height: 12px;
     display: block;
     position: absolute;
-    right: -36px;
+    right: -23px;
     margin-left: 13px;
-    padding-left: 12px;
+    padding-left: -2px;
     z-index: 3;
 }
 
@@ -64,8 +64,9 @@
         width: 100%;
         background: transparent url(images/layout/bubble_content.png) repeat-y right top;
         margin-left: 19px;
-        padding-right: 13px;
+        padding-right: 0px;
         padding-left: 4px;
+        margin-right: -13px;
 }
 
 #icke__quicknav div.sec_level ul {
@@ -82,6 +83,7 @@
     padding-top: 8px;
     font-size: 14px;
     padding-left: 12px;
+    margin-right: 12px;
 }
 
 #icke__quicknav div.sec_level h1 {
@@ -111,9 +113,9 @@
     text-decoration: none;
     display: block;
     padding: 5px 8px 5px 12px;
-    margin-left: 10px;
     overflow: hidden;
     margin-left: 1px;
+    margin-right: 13px;
     white-space: nowrap;
 }
 
@@ -154,10 +156,11 @@
 
 *:first-child+html #icke__quicknav div.sec_level span.b {
         margin-top: -5px;
+        height: 5px;
 }
 
 * html #icke__quicknav div.sec_level ul li a,
 *:first-child+html #icke__quicknav div.sec_level ul li a {
         white-space: normal;
-        width: 180px;
+        width: 167px;
 }
