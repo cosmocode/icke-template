@@ -539,3 +539,8 @@ div.clearer {
 #icke__page #page__revisions span.user {
         font-style: italic;
 }
+
+#icke__page del {
+        text-decoration: line-through;
+
+}
