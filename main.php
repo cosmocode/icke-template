@@ -13,7 +13,11 @@
     <?php html_msgarea() ?>
     <?php icke_startupCheck() ?>
     <div id="icke__header" class="clearfix">
-        <a class="logo" href="<?php echo wl()?>"><img src="<?php echo ml(tpl_getConf('logo'))?>" alt="" /></a>
+        <a class="logo" href="<?php echo wl()?>">
+          <?php if (tpl_getConf('logo') && file_exists(mediaFN(tpl_getConf('logo')))) {?>
+            <img src="<?php echo ml(tpl_getConf('logo'))?>" alt="" />
+          <?php } ?>
+        </a>
         <h5>
             <?php echo $conf['title']?><br />
             <span><?php echo tpl_getConf('tagline')?></span>
