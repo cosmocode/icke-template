@@ -51,21 +51,6 @@
 
                 </li>
 
-                <?php if (!isset($_SERVER['REMOTE_USER'])) { ?>
-                <li class="sideclip" id="icke__about">
-                <h3>Herzlich Willkommen im ICKEWiki-Demosystem!</h3>
-                <img src="<?php echo DOKU_TPL; ?>images/logos/icke_logo38x38.png" style="float: right;" />
-                <p>Sie befinden sich im Wiki des fiktiven Unternehmens »AquaTools Produktion AG«. </p>
-                <p>Bevor Sie sich mit dem System vertraut machen, sollten Sie sich
-                   mit einem unserer Testbenutzer <a href="?do=random_login">einloggen</a>.</p>
-                <p>Auf der <a href="http://ickewiki.de" title="ickewiki.de">offiziellen Website</a>
-                   erhalten Sie jederzeit weitere Informationen zu ICKE.</p>
-                <p>Vielen Dank für Ihr Interesse!</p>
-                <p><span class="sig">Ihr ICKE-Team</span></p>
-                <div class="clearfix"></div>
-                </li>
-                <?php } ?>
-
                 <?php icke_tplProjectSteps(); ?>
 
             </ul><!-- END icke__sidebar -->
