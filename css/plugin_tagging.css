@@ -13,38 +13,41 @@ Font-family: Arial, sans-serif;
     font-size: 1.1em;
     line-height: 1.3em;
     background: transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
-    padding-top: 5px;
-    padding-right: 33px;
+    padding-top: 8px;
+    padding-right: 30px;
+    text-decoration: underline;
+    color: __edit_lnk__;
+    font-weight: bold;
 }
 
 #icke__sidebar .sideclip .pte_tags_edit {
-        width: 180px;
+    width: 180px;
 }
 
 #icke__sidebar .sideclip .pte_tags_edit input {
-        font-size: 1.2em;
-        font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
 }
 
 #icke__sidebar .sideclip .pte_tags_edit input.pte_tags_edit_field {
-        width: 160px;
-        float: left;
+    width: 160px;
+    float: left;
 }
 
 #icke__sidebar .sideclip .pte_edit_wrapper .yac_list {
-        margin-top: 20px; 
-        width: 165px;
-        text-align: left; 
+    margin-top: 20px;
+    width: 165px;
+    text-align: left;
 }
 
 #icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li {
-        background-color: __background__;
+    background-color: __background__;
 }
 
 #icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li:hover,
 #icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li.yui-ac-highlight {
-        background-color: __color_tag__;
-        color: __background__;
+    background-color: __color_tag__;
+    color: __background__;
 }
 
 div.dokuwiki .tagcloud {
