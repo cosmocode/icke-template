@@ -524,10 +524,10 @@ div.insitu-footnote {
 
 div.success, div.error, div.info {
         line-height: 22px;
-        background-position: 10em center;
+        background-position: 10% center;
         font-family: verdana, sans-serif;
         border: none;
-        padding: 3px 0px 3px 12em;
+        padding: 3px 3px 3px 15%;
         font-size: 12px;
         border: none;
 }
@@ -542,5 +542,5 @@ div.clearer {
 
 #icke__page del {
         text-decoration: line-through;
-
 }
+
