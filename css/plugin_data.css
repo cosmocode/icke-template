@@ -1,3 +1,9 @@
+div.dataplugin_entry {
+    padding-top: 1px;
+    margin-left: -13px;
+    background: transparent url(images/icons/datatable_cog.png) no-repeat scroll -1px top;
+}
+
 div.dataplugin_entry dl {
         font-size: 1.2em;
         line-height: 1.3em;
@@ -5,38 +11,28 @@ div.dataplugin_entry dl {
         background: __background__;
 }
 
-div.dataplugin_entry {
-        padding: 1px 0 0 1px;
-        background: transparent url(images/icons/datatable_cog.png) top left no-repeat;
-}
-
 div.dataplugin_entry dl dt {
         text-align: left;
         width: auto;
 }
 
-#icke__page table.dataplugin_table,
-#icke__page table.dataplugin_list {
-        border-collapse: separate;
-        background: transparent url(images/icons/datatable_link.png) top left no-repeat;
-        padding: 11px 0 0 17px; border: 0;
-}
-
-* html #icke__page .dataplugin_list {
-        min-height: 2em;
-        height: auto !important;
-        height: 2em;
-}
-
 #icke__page .dataplugin_table,
 #icke__page .content .dataplugin_list {
-        margin-left: 0;
-        padding: 0.8em 0 0 3.5em;
-        background: transparent url(images/icons/datatable_link.png) no-repeat scroll 10px top;
-        min-height: 2em;
-        margin: 0 0 1em 0.5em;
+    min-height: 2em;
+    background: transparent url(images/icons/datatable_link.png) no-repeat scroll -1px top;
+    padding-top: 0.8em;
+    padding-left: 1.5em;
+    margin-left: -1.5em;
 }
 
+#icke__page .content .dataplugin_list {
+    padding-left: 3em;
+}
+
+#icke__page table.dataplugin_table {
+    border-collapse: separate;
+    border: 0;
+}
 
 #icke__page table.dataplugin_table th,
 #icke__page table.dataplugin_table td {
@@ -67,11 +63,11 @@ div.dokuwiki div.editbutton_plugin_data form input.button {
         -moz-border-radius-bottomleft: 0.5em;
     -opera-border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em; 
+    border-bottom-left-radius: 0.5em;
         -moz-border-radius-bottomright:0.5em;
     -opera-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em; 
+    border-bottom-right-radius: 0.5em;
         float:none;
         margin-left:2.1em;
 }

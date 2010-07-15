@@ -100,28 +100,6 @@
     color: __link_visited__;
 }
 
-#icke__page .content ul,
-#icke__page .content ol {
-    line-height: 1.5em;
-    font-size: 1.2em;
-    list-style-image: none;
-    margin: 0 0 1em 3.5em;
-}
-
-#icke__page .content ul{
-    list-style-type: square;
-}
-
-#icke__page .content ol ol {
-    list-style-type: upper-roman; 
-}
-
-#icke__page .content li ul,
-#icke__page .content li ol {
-    font-size: 1em;
-    margin-left: 15px;
-}
-
 #icke__page .content blockquote {
     border-left: 2px solid __border__;
     padding-left: 3px;

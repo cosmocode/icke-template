@@ -92,16 +92,30 @@ sub {vertical-align: sub;}
 /* =LISTS
    ----------------------------------------------------*/
 
-#icke__page .dokuwiki ul,
-#icke__page .dokuwiki ol {
-/*    font-size: 1.2em;*/
-    line-height: 1.5em;
-    margin: 1em 2em;
-}
-
-#icke__page .dokuwiki ul {list-style-type: disc;}
 #icke__page .dokuwiki ol {list-style-type: decimal;}
 
+#icke__page .content ul,
+#icke__page .content ol {
+    line-height: 1.5em;
+    font-size: 1.2em;
+    list-style-image: none;
+    margin-left: -2em;
+    padding: 0 0 1em 3.5em;
+}
+
+#icke__page .content ul{
+    list-style-type: square;
+}
+
+#icke__page .content ol ol {
+    list-style-type: upper-roman;
+}
+
+#icke__page .content li ul,
+#icke__page .content li ol {
+    font-size: 1em;
+    margin-left: 15px;
+}
 
 dl.file dt a.mediafile {
         margin-left:2em;
