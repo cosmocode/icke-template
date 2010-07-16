@@ -196,6 +196,7 @@ a:hover {text-decoration: none;}
 	z-index: 1;
 }
 
+#icke__footer .admin_toolbar a.show,
 #icke__footer .admin_toolbar a.create,
 #icke__footer .admin_toolbar a.edit {
 	background: transparent url(images/icons/stift_gross.png) right 3px no-repeat;
@@ -203,10 +204,12 @@ a:hover {text-decoration: none;}
 	padding-right: 40px;
 }
 
-#icke__footer .admin_toolbar a.edit:hover {
-	text-indent: 0px;
+#icke__footer .admin_toolbar a.show {
+	background: transparent url(images/icons/show.png) right 3px no-repeat;
 }
 
+#icke__footer .admin_toolbar a.edit:hover,
+#icke__footer .admin_toolbar a.show:hover,
 #icke__footer .admin_toolbar a.create:hover {
 	text-indent: 0px;
 }
