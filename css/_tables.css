@@ -28,19 +28,34 @@ div.dokuwiki div.editbutton_table form input.button:hover {
         color: __mediumgray__;
 }
 
-div.dokuwiki div.editbutton_table form input.button {
-        background-color:__background__;
-        border:1px solid __border__;
-        background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
-        border-top: none;
-        cursor:pointer;
-        display:inline;
-        font-size:10px;
-        margin:0;
-        padding:0;
-        padding-right: 28px;
-        text-decoration:none;
-        vertical-align:middle;
+div.dokuwiki div.editbutton_table form input.button,
+div.dokuwiki div.editbutton_table form input.button:hover {
+    -moz-border-radius: 0;
+    -opera-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-border-radius-bottomleft: 0.5em;
+    -opera-border-bottom-left-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    -moz-border-radius-bottomright:0.5em;
+    -opera-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+    background-color:__background__;
+    border:1px solid __border__;
+    background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
+    border-top: none;
+    cursor:pointer;
+    display:inline;
+    font-size:10px;
+    margin:0;
+    padding: 0px 25px 2px 3px;
+    text-decoration:none;
+    vertical-align:middle;
+    margin-left: 2.1em;
+    text-indent: 0px;
 }
 
 div.dokuwiki div.editbutton_table {
@@ -48,10 +63,10 @@ div.dokuwiki div.editbutton_table {
         margin-bottom: 1.2em;
 }
 
-
 html > body div.dokuwiki table.edit td.handle {
         cursor: move;
 }
+
 html > body div.dokuwiki table.edit td.disabledhandle {
         background-image: none;
         background-color: #c0c0c0;

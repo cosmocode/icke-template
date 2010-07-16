@@ -11,6 +11,7 @@ div.dokuwiki div.secedit input.button {
     text-align: left;
     text-indent: -99999px;
 }
+
 div.dokuwiki div.secedit input.button:hover {
     text-indent: 0px;
     background-color: white;
@@ -18,12 +19,4 @@ div.dokuwiki div.secedit input.button:hover {
     -opera-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-}
-
-div.dokuwiki div.editbutton_table input.button {
-
-}
-
-div.dokuwiki div.editbutton_table input.button:hover {
-
 }

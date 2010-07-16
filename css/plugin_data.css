@@ -5,16 +5,16 @@ div.dataplugin_entry {
 }
 
 div.dataplugin_entry dl {
-        font-size: 1.2em;
-        line-height: 1.3em;
-	margin-right: 0;
-        width: auto;
-        background: __background__;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-right: 0;
+    width: auto;
+    background: __background__;
 }
 
 div.dataplugin_entry dl dt {
-        text-align: left;
-        width: auto;
+    text-align: left;
+    width: auto;
 }
 
 #icke__page .dataplugin_table,
@@ -37,40 +37,43 @@ div.dataplugin_entry dl dt {
 
 #icke__page table.dataplugin_table th,
 #icke__page table.dataplugin_table td {
-        padding: 5px;
-        border: 0;
-        border: 1px solid __border_alt2__;
+    padding: 5px;
+    border: 0;
+    border: 1px solid __border_alt2__;
 }
 
-div.dokuwiki div.editbutton_table form input.button {
-        margin-left: 5px;
-}
+div.dokuwiki div.editbutton_plugin_data form input.button,
+div.dokuwiki div.editbutton_plugin_data form input.button:hover {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
+    border: 1px solid #8CACBB;
+    border-top: 0;
+    cursor:pointer;
+    display:inline;
+    font-size:10px;
+    margin:0;
+    padding:0 25px 2px 3px;
+    text-decoration:none;
+    vertical-align:middle;
 
-div.dokuwiki div.editbutton_plugin_data form input.button {
-        -moz-background-clip:border;
-        -moz-background-inline-policy:continuous;
-        -moz-background-origin:padding;
-        background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
-        border: 1px solid #8CACBB;
-        border-top: 0;
-        cursor:pointer;
-        display:inline;
-        font-size:10px;
-        margin:0;
-        padding:0 25px 2px 3px;
-        text-decoration:none;
-        vertical-align:middle;
+    -moz-border-radius: 0;
+    -opera-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 
-        -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
     -opera-border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
-        -moz-border-radius-bottomright:0.5em;
+    -moz-border-radius-bottomright:0.5em;
     -opera-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
-        float:none;
-        margin-left:2.1em;
+    float:none;
+    margin-left:2.1em;
+    text-indent: 0px;
 }
 
 div.dokuwiki div.editbutton_plugin_data {
@@ -79,5 +82,5 @@ div.dokuwiki div.editbutton_plugin_data {
 }
 
 #dw__editform fieldset.plugin__data {
-        clear: none;
+    clear: none;
 }
