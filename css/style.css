@@ -169,34 +169,61 @@ a:hover {text-decoration: none;}
     color: __content_bg__;
     height: 45px;
     padding: 0.25em 2.5em 0.25em 2em;
-}
-
-#icke__footer .admin_toolbar a.edit,
-#icke__footer .admin_toolbar a.create {
-	background: transparent url(images/icons/stift_gross.png) top right no-repeat;
-}
-
-#icke__footer .admin_toolbar a.revisions {
-	background: transparent url(images/icons/history.png) top right no-repeat;
-}
-
-#icke__footer .admin_toolbar a.backlink {
-	background: transparent url(images/icons/backlink.png) top right no-repeat;
+    position: relative;
 }
 
 #icke__footer .admin_toolbar a.action {
 	color: __edit_lnk__;
 	display: block;
-	float: right;
-	font-size: 1.1em;
+	position: absolute;
+	font-size: 1.3em;
+	font-weight: bold;
 	height: 20px;
-	padding: 16px 30px 0 16px;
+	padding: 13px 35px 0 0px;
+	margin-left: 5px;
+	text-decoration: none;
+	text-indent: -9999px;
+	z-index: 2;
+}
+
+#icke__footer .admin_toolbar a.revs {
+	background: transparent url(images/icons/history.png) left 3px no-repeat;
+	left: 20px;
+}
+
+#icke__footer .admin_toolbar a.revs:hover {
+	text-indent: 80px;
+	z-index: 1;
+}
+
+#icke__footer .admin_toolbar a.create,
+#icke__footer .admin_toolbar a.edit {
+	background: transparent url(images/icons/stift_gross.png) right 3px no-repeat;
+	right: 25px;
+	padding-right: 40px;
+}
+
+#icke__footer .admin_toolbar a.edit:hover {
+	text-indent: 0px;
+}
+
+#icke__footer .admin_toolbar a.create:hover {
+	text-indent: 0px;
+}
+
+#icke__footer .admin_toolbar a.backlink {
+	background: transparent url(images/icons/backlink.png) left 3px no-repeat;
+	left: 60px;
+}
+
+#icke__footer .admin_toolbar a.backlink:hover {
+	text-indent: 40px;
 }
 
 #icke__footer .footer_toolbar {
 	background: __border_alt__ url(images/layout/footer_gradient.jpg) top left repeat-x;
 	height: 17px;
-    padding: 6px 2.5em 0 2em;
+	padding: 6px 2.5em 0 2em;
 }
 
 #icke__footer .footer_toolbar p {
