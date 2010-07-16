@@ -41,7 +41,8 @@ div.dataplugin_entry dl dt {
     border: 1px solid __border_alt2__;
 }
 
-div.dokuwiki div.editbutton_plugin_data form input.button{
+div.dokuwiki div.editbutton_plugin_data form input.button,
+div.dokuwiki div.editbutton_plugin_data form input.button:hover {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
@@ -72,6 +73,17 @@ div.dokuwiki div.editbutton_plugin_data form input.button{
     float:none;
     margin-left:2.1em;
     text-indent: 0px;
+}
+
+*:first-child+html div.dokuwiki div.editbutton_plugin_data form input.button {
+    width: auto;
+    font-size: 10px;
+    line-height: 1.2em;
+}
+
+*:first-child+html div.dokuwiki div.editbutton_plugin_data form input.button:hover {
+    font-size: 10px;
+    line-height: 1.2em;
 }
 
 div.dokuwiki div.editbutton_plugin_data {
