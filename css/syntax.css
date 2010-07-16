@@ -16,16 +16,13 @@ h1, h2, h3, h4, h5 {
 }
 
 #icke__page .dokuwiki h1 {
-    font-size: 2.5em;
-    margin: 2em 0 1em;
+    font-size: 2.2em;
 }
 #icke__page .dokuwiki h2 {
     font-size: 1.8em;
-    margin: 1.25em 0 0.75em;
 }
 #icke__page .dokuwiki h3 {
     font-size: 1.25em;
-    margin: 1.25em 0 0;
 }
 #icke__page .dokuwiki h4 {
     font-size: 1.1em;
@@ -35,12 +32,54 @@ h1, h2, h3, h4, h5 {
     font-style: italic;
 }
 
+#icke__page .content h1,
+#icke__page .content h2,
+#icke__page .content h3,
+#icke__page .content h4,
+#icke__page .content h5 {
+    clear: left;
+    font-weight: bold;
+    margin: 0.6em 0 0.3em;
+    padding: 0.4em 0 0.2em;
+}
+
+#icke__page .content h2 {
+    border-bottom: 1px solid #8CACBB;
+}
+
 h1 a, h2 a, h3 a, h4 a, h5 a {
     font-size: 1em;
     text-decoration: none;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
     text-decoration: none;
+}
+
+#icke__page .content .section_highlight {
+    background-color: __nav_hover__;
+}
+
+#icke__page .content .page > .section_highlight {
+    margin-left: -30px;
+    margin-right: -70px;
+    padding-left: 30px;
+    padding-right: 70px;
+}
+
+#icke__page .content .page > h1.section_highlight,
+#icke__page .content .page > h2.section_highlight,
+#icke__page .content .page > h3.section_highlight,
+#icke__page .content .page > h4.section_highlight,
+#icke__page .content .page > h5.section_highlight,
+#icke__page .content .page > h6.section_highlight {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+#icke__page .content .page > h2.section_highlight {
+    border-bottom: 1px solid __nav_hover__;
 }
 
 /* =PARAGRAPHS

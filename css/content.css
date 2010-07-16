@@ -22,26 +22,6 @@
     line-height: 1em;
 }
 
-#icke__page .content h1,
-#icke__page .content h2,
-#icke__page .content h3,
-#icke__page .content h4,
-#icke__page .content h5 {
-    clear: left;
-    font-weight: bold;
-    margin: 0.6em 0 0.3em;
-    padding: 0.4em 0 0.2em;
-}
-
-#icke__page .content h1 {
-    font-size: 2.2em;
-}
-
-#icke__page .content h2 {
-    font-size: 1.7em;
-    border-bottom: 1px solid #8CACBB;
-}
-
 #icke__page .content h1 a,
 #icke__page .content h2 a,
 #icke__page .content h3 a,
