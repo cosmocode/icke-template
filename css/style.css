@@ -293,6 +293,7 @@ a:hover {text-decoration: none;}
 }
 
 #icke__sidebar table th {
+    background-color: __table_head__;
     font-weight: bold;
     text-align: left;
     padding: 0.5em 0;
