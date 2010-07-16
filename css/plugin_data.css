@@ -41,8 +41,7 @@ div.dataplugin_entry dl dt {
     border: 1px solid __border_alt2__;
 }
 
-div.dokuwiki div.editbutton_plugin_data form input.button,
-div.dokuwiki div.editbutton_plugin_data form input.button:hover {
+div.dokuwiki div.editbutton_plugin_data form input.button{
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;

@@ -87,7 +87,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 
 /* reset */
 p, b, strong, i, em, strong, b, code, samp, dnf, abbr, acronym, ins, del, big, small, sup, sub {
-    line-height: 1em;
+    /*line-height: 1em; /* fixes a line-height bug in firefox */
     font-size: 1em;
     font-weight: normal;
     font-style: normal;
