@@ -7,7 +7,6 @@ div.dataplugin_entry {
 div.dataplugin_entry dl {
     font-size: 1.2em;
     line-height: 1.3em;
-    margin-right: 0;
     width: auto;
     background: __background__;
 }
