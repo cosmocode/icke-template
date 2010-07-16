@@ -4,12 +4,28 @@ div.dokuwiki div.secedit input.button {
     color: __edit_lnk__;
     cursor: pointer;
     float: right;
-    height: 27px;
-    margin-top: -25px;
-    margin-right: -95px;
-    padding-right: 30px;
-    text-decoration: underline;
-    text-align: right;
+    height: 25px;
+    margin-top: -27px;
+    margin-right: -42px;
+    padding-right: 25px;
+    text-align: left;
+    text-indent: -99999px;
+}
+div.dokuwiki div.secedit input.button:hover {
+    text-indent: 0px;
+    background-color: white;
+    -moz-border-radius: 10px;
+    -opera-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+div.dokuwiki div.editbutton_table input.button {
+
+}
+
+div.dokuwiki div.editbutton_table input.button:hover {
+
 }
 
 #icke__page .content .section_highlight {
@@ -18,7 +34,8 @@ div.dokuwiki div.secedit input.button {
 
 #icke__page .content .page > .section_highlight {
     margin-left: -30px;
-    margin-right: -120px;
+    margin-right: -70px;
     padding-left: 30px;
-    padding-right: 120px;
+    padding-right: 70px;
 }
+

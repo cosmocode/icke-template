@@ -149,9 +149,10 @@ a:hover {text-decoration: none;}
 /* document-content */
 #icke__page .content {
     background-color: __content_bg__;
-    padding: 10px 120px 20px 30px;
+    padding: 10px 70px 20px 30px;
     font-size: 1.1em; /* Check cryptsign and do inline icons with line height */
     min-height: 500px; 
+    overflow: hidden;
 }
 
 
