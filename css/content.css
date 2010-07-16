@@ -43,12 +43,12 @@
 }
 
 #icke__page .content h1 a,
-#icke__page .content h2 a {
+#icke__page .content h2 a,
+#icke__page .content h3 a,
+#icke__page .content h4 a,
+#icke__page .content h5 a,
+#icke__page .content h6 a {
     color: __mediumgray__;
-}
-
-#icke__page .content h2 a {
-  /*  color: __mediumgray__;*/
 }
 
 #icke__page .content h3 {
