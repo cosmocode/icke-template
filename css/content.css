@@ -29,8 +29,8 @@
 #icke__page .content h5 {
     clear: left;
     font-weight: bold;
-    margin: 0;
-    padding: 0.1em 0 0.4em;
+    margin: 0.6em 0 0.3em;
+    padding: 0.4em 0 0.2em;
 }
 
 #icke__page .content h1 {
@@ -38,8 +38,8 @@
 }
 
 #icke__page .content h2 {
-    margin-top: 0.3em;
     font-size: 1.7em;
+    border-bottom: 1px solid #8CACBB;
 }
 
 #icke__page .content h1 a,
