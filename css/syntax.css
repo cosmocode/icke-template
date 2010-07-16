@@ -39,8 +39,8 @@ h1, h2, h3, h4, h5 {
 #icke__page .content h5 {
     clear: left;
     font-weight: bold;
-    margin: 0.6em 0 0.3em;
-    padding: 0.4em 0 0.2em;
+    margin: 0em 0 0.3em;
+    padding: 0.8em 0 0.2em;
 }
 
 #icke__page .content h2 {
@@ -74,7 +74,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 #icke__page .content .page > h6.section_highlight {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 1em;
+    padding-top: 0.8em;
     padding-bottom: 0.5em;
 }
 
