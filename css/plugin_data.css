@@ -19,7 +19,7 @@ div.dataplugin_entry dl dt {
 #icke__page .dataplugin_table,
 #icke__page .content .dataplugin_list {
     min-height: 2em;
-    background: transparent url(images/icons/datatable_link.png) no-repeat scroll -1px top;
+    background: transparent url(images/icons/datatable_link.png) no-repeat scroll 3px top;
     padding-top: 0.8em;
     padding-left: 1.5em;
     margin-left: -1.5em;
