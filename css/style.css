@@ -448,11 +448,17 @@ a:hover {text-decoration: none;}
 }
 
 /* table of contents - toc */
+
+#icke__sidebar .sideclip  .li {
+    padding-bottom: 0.4em;
+    display: block;
+}
+
 #icke__sidebar .sideclip ul li a,
 #icke__sidebar .table_of_contents ul.toc li a {
     color: __mediumgray__;
     font-size: 1.3em;
-    line-height: 1.5em;
+    line-height: 1em;
     text-decoration: none;
 }
 
