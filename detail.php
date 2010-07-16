@@ -4,6 +4,7 @@
 if (!defined('DOKU_INC')) die();
 
 require_once DOKU_TPLINC.'functions.php';
+require_once DOKU_TPLINC.'components.php';
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -16,16 +17,18 @@ require_once DOKU_TPLINC.'functions.php';
     [<?php echo strip_tags($conf['title'])?>]
   </title>
 
-  <?php tpl_metaheaders(); icke_tplFavicon(); ?>
+  <?php tpl_metaheaders(); icke_tplMenuCSS(); icke_tplFavicon(); ?>
 
 </head>
+<?php
+icke_header();
+icke_sidebar();
+?>
+  <div id="icke__page">
+                <div id="icke__drophead" class="closed clearfix">
+                </div>
 
-<body>
-<div class="dokuwiki">
-  <?php html_msgarea()?>
-
-  <div id="detail__page">
-  <div class="page">
+  <div id="detail__page" class="dokuwiki content page">
     <?php if($ERROR){ print $ERROR; }else{ ?>
 
     <h1><?php echo hsc(tpl_img_getTag('IPTC.Headline',$IMG))?></h1>
@@ -70,6 +73,14 @@ require_once DOKU_TPLINC.'functions.php';
 
   <?php } ?>
   </div>
+                <div id="icke__footer">
+                    <div class="footer_toolbar">
+                        <p>
+                        </p>
+                        <p class="copy">&copy; Copyright 2009–2010 <a href="<?php echo wl('icke')?>">ICKE</a></p>
+                    </div>
+                </div><!-- END icke__footer -->
+
 </div>
 </div>
 </body>
