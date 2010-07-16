@@ -8,9 +8,10 @@ div.dokuwiki div.secedit input.button {
     margin-top: -27px;
     margin-right: -42px;
     padding-right: 25px;
-    text-align: left;
+    text-align: center;
     text-indent: -99999px;
 }
+
 
 div.dokuwiki div.secedit input.button:hover {
     text-indent: 0px;
@@ -19,4 +20,16 @@ div.dokuwiki div.secedit input.button:hover {
     -opera-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+}
+
+*:first-child+html div.dokuwiki div.secedit input.button {
+    width: 42px;
+    font-size: 0;
+    line-height: 0;
+}
+
+*:first-child+html div.dokuwiki div.secedit input.button:hover {
+    width: auto;
+    font-size: 12px;
+    line-height: 14px;
 }
