@@ -116,8 +116,8 @@ a:hover {text-decoration: none;}
 }
 
 /* document-meta */
-#icke__page p.meta {
-    line-height: 1em;
+#icke__page .content p.meta {
+    line-height: 1.2em;
     margin: 0;
 }
 
