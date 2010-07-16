@@ -114,7 +114,6 @@ sub {vertical-align: sub;}
 #icke__page .content li ul,
 #icke__page .content li ol {
     font-size: 1em;
-    margin-left: 15px;
 }
 
 dl.file dt a.mediafile {
