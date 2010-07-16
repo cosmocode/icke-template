@@ -9,6 +9,7 @@
 body {
     background: __bg_all__;
     position: relative;
+    overflow-x: hidden;
 }
 
 a,a:hover {color: __text__;}
