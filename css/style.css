@@ -175,52 +175,40 @@ a:hover {text-decoration: none;}
 #icke__footer .admin_toolbar a.action {
 	color: __edit_lnk__;
 	display: block;
-	position: absolute;
 	font-size: 1.3em;
 	font-weight: bold;
 	height: 20px;
 	padding: 13px 35px 0 0px;
-	margin-left: 5px;
+	margin-left: 23px;
 	text-decoration: none;
-	text-indent: -9999px;
+	float: right;
 	z-index: 2;
 }
 
-#icke__footer .admin_toolbar a.revs {
-	background: transparent url(images/icons/history.png) left 3px no-repeat;
-	left: 20px;
+#icke__footer .admin_toolbar a.action:hover {
+	text-decoration: underline;
 }
 
-#icke__footer .admin_toolbar a.revs:hover {
-	text-indent: 80px;
-	z-index: 1;
+#icke__footer .admin_toolbar a.revs {
+	background: transparent url(images/icons/history.png) right 3px no-repeat;
+}
+
+#icke__footer .admin_toolbar a.source {
+	background: transparent url(images/icons/code.png) right 3px no-repeat;
 }
 
 #icke__footer .admin_toolbar a.show,
 #icke__footer .admin_toolbar a.create,
 #icke__footer .admin_toolbar a.edit {
 	background: transparent url(images/icons/stift_gross.png) right 3px no-repeat;
-	right: 25px;
-	padding-right: 40px;
 }
 
 #icke__footer .admin_toolbar a.show {
 	background: transparent url(images/icons/show.png) right 3px no-repeat;
 }
 
-#icke__footer .admin_toolbar a.edit:hover,
-#icke__footer .admin_toolbar a.show:hover,
-#icke__footer .admin_toolbar a.create:hover {
-	text-indent: 0px;
-}
-
 #icke__footer .admin_toolbar a.backlink {
-	background: transparent url(images/icons/backlink.png) left 3px no-repeat;
-	left: 60px;
-}
-
-#icke__footer .admin_toolbar a.backlink:hover {
-	text-indent: 40px;
+	background: transparent url(images/icons/backlink.png) right 3px no-repeat;
 }
 
 #icke__footer .footer_toolbar {
