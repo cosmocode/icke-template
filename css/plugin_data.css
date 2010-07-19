@@ -46,14 +46,14 @@ div.dokuwiki div.editbutton_plugin_data form input.button:hover {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
-    background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
+    background:transparent url(images/icons/stift_klein.png) no-repeat scroll 3px top;
     border: 1px solid #8CACBB;
     border-top: 0;
     cursor:pointer;
     display:inline;
     font-size:10px;
     margin:0;
-    padding:0 25px 2px 3px;
+    padding:0 5px 2px 25px;
     text-decoration:none;
     vertical-align:middle;
 
