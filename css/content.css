@@ -68,6 +68,14 @@
     width: 95%;
 }
 
+#icke__page img.mediaright {
+    padding: 0 0 0.5em 0.3em;
+}
+
+#icke__page img.medialeft {
+    padding: 0.5em 0.3em 0 0;
+}
+
 #icke__page table {
     width: 100%;
 }
