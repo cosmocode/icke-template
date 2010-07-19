@@ -2,6 +2,13 @@ div.dataplugin_entry {
     padding-top: 1px;
     margin-left: -13px;
     background: transparent url(images/icons/datatable_cog.png) no-repeat scroll -1px top;
+    min-height: 30px;
+}
+
+/* IE 7 only hack, does correctly position wheel */
+*:first-child+html div.dataplugin_entry {
+    padding-top: 0 !important;
+    margin-top: 14px;
 }
 
 div.dataplugin_entry dl {
