@@ -51,6 +51,10 @@
     padding: 0.5em 0.3em 0 0;
 }
 
+#media__tree img.mediaright {
+    padding: 0 0 0.5em 0.3em;
+}
+
 #media__tree ul {
     list-style-type: none;
     list-style-image: none;
