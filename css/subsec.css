@@ -10,6 +10,8 @@ div.dokuwiki div.secedit input.button {
     padding-right: 25px;
     text-align: center;
     text-indent: -99999px;
+    padding-top: 2px;
+    padding-bottom: 0;
 }
 
 
