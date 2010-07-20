@@ -415,7 +415,15 @@ a:hover {text-decoration: none;}
     margin: 2em 0 3em;
 }
 
-#icke__sidebar .table_of_contents li li {
+#icke__sidebar .toc li.level1 > div.li {
+    display: none;
+}
+
+#icke__sidebar .toc li li {
+    display: block;
+}
+
+#icke__sidebar .toc li li li {
     margin-left: 1em;
 }
 
