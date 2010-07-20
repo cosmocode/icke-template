@@ -13,6 +13,11 @@ require_once DOKU_TPLINC.'components.php';
     <?php tpl_metaheaders(); icke_tplMenuCSS(); icke_tplFavicon(); ?>
 </head>
 <?php
+// render the content into buffer for later use (see doku>devel:templates#tpl_toc
+ob_start();
+tpl_content(false);
+$buffer = ob_get_clean();
+
 icke_header();
 icke_sidebar();
 ?>
@@ -76,7 +81,7 @@ icke_sidebar();
                     <?php endif?>
 
                     <div class="page">
-                    <?php tpl_content(false)?>
+                    <?php echo $buffer ?>
                     </div>
 
                 </div>
