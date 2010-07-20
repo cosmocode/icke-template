@@ -12,7 +12,8 @@ body {
 }
 
 a,a:hover {color: __text__;}
-a:hover {text-decoration: none;}
+a:hover {text-decoration: underline;}
+a {text-decoration: none;}
 
 /* =HEADER
    ----------------------------------------------------*/
@@ -251,11 +252,11 @@ a:hover {text-decoration: none;}
     -moz-border-radius-topright: 10px;
     -opera-border-top-right-radius: 10px;
     -webkit-border-top-right-radius: 10px;
-    border-top-right-radius: 10px; 
+    border-top-right-radius: 10px;
     -moz-border-radius-bottomright: 10px;
     -opera-border-bottom-right-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
-    border-bottom-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
     background: __content_bg__ url(images/layout/wrap_shadow_y_right.png) top left repeat-y;
     margin: 2em 0;
     padding: 1em;
@@ -296,11 +297,11 @@ a:hover {text-decoration: none;}
     -moz-border-radius-bottomleft: 10px;
     -opera-border-bottom-right-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
-    border-bottom-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
     -moz-border-radius-bottomright: 10px;
     -opera-border-bottom-left-radius: 10px;
     -webkit-border-bottom-left-radius: 10px;
-    border-bottom-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
     margin: 0 0 0 1em;
     padding: 0.5em 1em 0;
     height: 2em;
@@ -454,13 +455,11 @@ a:hover {text-decoration: none;}
     color: __mediumgray__;
     font-size: 1.3em;
     line-height: 1em;
-    text-decoration: none;
 }
 
 #icke__sidebar .sideclip ul li a:hover,
 #icke__sidebar .table_of_contents ul.toc li a:hover {
     color: __toc_hover__;
-    text-decoration: underline;
 }
 
 #icke__sidebar .table_of_contents ul.toc li .edit {
