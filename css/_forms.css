@@ -134,6 +134,7 @@ html > body div.dokuwiki input.button, html > body div.dokuwiki button.button {
     color: __lighter_gray__;
     margin-right: 4%;
     font-weight: bold;
+    padding: 2px 8px;
 }
 
 div.dokuwiki fieldset input.button {
