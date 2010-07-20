@@ -140,7 +140,13 @@ sub {vertical-align: sub;}
     list-style-image: none;
     margin-left: -2em;
     padding: 0 0 1em 3.5em;
+    color: __text_alt__;
 }
+
+div.dokuwiki .li {
+    color: __text__;
+}
+
 
 #icke__page .content ul{
     list-style-type: square;
