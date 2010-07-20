@@ -198,8 +198,8 @@ a {text-decoration: none;}
 	background: transparent url(images/icons/code.png) right 3px no-repeat;
 }
 
-#icke__footer .admin_toolbar a.show,
 #icke__footer .admin_toolbar a.create,
+#icke__footer .admin_toolbar a.draft,
 #icke__footer .admin_toolbar a.edit {
 	background: transparent url(images/icons/stift_gross.png) right 3px no-repeat;
 }
