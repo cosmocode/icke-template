@@ -38,11 +38,13 @@ div.dokuwiki form.bureaucracy__plugin label select {
 }
 
 div.dokuwiki ul.autocompletion li {
-        list-style-type: none;
+    list-style-type: none;
+    font-size: 1.6em;
 }
 
 div.dokuwiki ul.autocompletion li a {
-        text-decoration: none;
+    text-decoration: none;
+    color: __link__
 }
 
 #icke__page ul.autocompletion {
