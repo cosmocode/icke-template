@@ -51,7 +51,7 @@ div.dokuwiki #size__ctl img {
 div.dokuwiki div#wiki__editbar div.editButtons {
    float: left;
    padding: 0 0.8em 0.7em 0;
-   width: 280px;
+   width: 305px;
 }
 
 *:first-child+html div.dokuwiki div#wiki__editbar div.editButtons {
