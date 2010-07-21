@@ -32,10 +32,6 @@ div.dataplugin_entry dl dt {
     margin-left: -16px;
 }
 
-#icke__page .dataaggregation .dataplugin_list {
-    padding-left: 3em;
-}
-
 #icke__page table.dataplugin_table th,
 #icke__page table.dataplugin_table td {
     padding: 5px;
