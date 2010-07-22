@@ -121,7 +121,7 @@ dfn {font-size: 1.125em; font-style: italic;}
 abbr {font-size: 0.9em;}
 acronym {border-bottom:1px dotted;}
 ins {text-decoration: underline;}
-del {text-decoration: linethrough;}
+del {text-decoration: line-through;}
 big {font-size: 1.2em;}
 small {font-size: 0.7em;}
 sup, sub {font-size: 0.8em;}
