@@ -1,5 +1,5 @@
 div.dokuwiki div.secedit input.button {
-    background: transparent url(images/icons/stift_klein.png) top right no-repeat;
+    background: transparent url(images/icons/stift_klein.png) center right no-repeat;
     border: none;
     color: __edit_lnk__;
     cursor: pointer;
@@ -10,7 +10,7 @@ div.dokuwiki div.secedit input.button {
     padding-right: 25px;
     text-align: center;
     text-indent: -99999px;
-    padding-top: 2px;
+    padding-top: 0px;
     padding-bottom: 0;
 }
 

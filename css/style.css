@@ -178,8 +178,8 @@ a {text-decoration: none;}
 	display: block;
 	font-size: 1.3em;
 	font-weight: bold;
-	height: 20px;
-	padding: 13px 35px 0 0px;
+	height: 22px;
+	padding: 7px 30px 0 0px;
 	margin-left: 23px;
 	text-decoration: none;
 	float: right;
@@ -191,25 +191,25 @@ a {text-decoration: none;}
 }
 
 #icke__footer .admin_toolbar a.revs {
-	background: transparent url(images/icons/history.png) right 3px no-repeat;
+	background: transparent url(images/icons/history.png) right center no-repeat;
 }
 
 #icke__footer .admin_toolbar a.source {
-	background: transparent url(images/icons/code.png) right 3px no-repeat;
+	background: transparent url(images/icons/code.png) right center no-repeat;
 }
 
 #icke__footer .admin_toolbar a.create,
 #icke__footer .admin_toolbar a.draft,
 #icke__footer .admin_toolbar a.edit {
-	background: transparent url(images/icons/stift_gross.png) right 3px no-repeat;
+	background: transparent url(images/icons/stift_gross.png) right center no-repeat;
 }
 
 #icke__footer .admin_toolbar a.show {
-	background: transparent url(images/icons/show.png) right 3px no-repeat;
+	background: transparent url(images/icons/show.png) right center no-repeat;
 }
 
 #icke__footer .admin_toolbar a.backlink {
-	background: transparent url(images/icons/backlink.png) right 3px no-repeat;
+	background: transparent url(images/icons/backlink.png) right center no-repeat;
 }
 
 #icke__footer .footer_toolbar {
