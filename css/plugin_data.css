@@ -5,12 +5,6 @@ div.dataplugin_entry {
     min-height: 30px;
 }
 
-/* IE 7 only hack, does correctly position wheel */
-*:first-child+html div.dataplugin_entry {
-    padding-top: 0 !important;
-    margin-top: 14px;
-}
-
 div.dataplugin_entry dl {
     font-size: 1.2em;
     line-height: 1.3em;
