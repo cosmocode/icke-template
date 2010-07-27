@@ -159,6 +159,8 @@ div.dokuwiki .li {
 #icke__page .content li ul,
 #icke__page .content li ol {
     font-size: 1em;
+    /* no bottom gap in between nested lists */
+    padding-bottom: 0;
 }
 
 dl.file dt a.mediafile {
