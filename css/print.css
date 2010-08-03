@@ -1,0 +1,8 @@
+#icke__header,
+#icke__quicknav,
+#icke__sidebar,
+#icke__drophead,
+#icke__page .dokuwiki .meta,
+#icke__footer {
+  display: none;
+}
