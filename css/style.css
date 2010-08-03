@@ -106,6 +106,8 @@ a {text-decoration: none;}
     background: transparent url(images/layout/wrap_shadow_y_right.png) top right repeat-y;
     margin: 0 18.6em 0 0;
     padding: 0 1.4em 0 0;
+    /* Sidebar falls into content on page preview in IE sometimes without this */
+    position: relative;
 }
 
 /* drophead */
@@ -414,6 +416,8 @@ a {text-decoration: none;}
     border-bottom-right-radius: 10px;
     background: __content_bg__ none;
     margin: 2em 0 3em;
+    z-index: 2;
+    position: relative;
 }
 
 #icke__sidebar .table_of_contents div.tocheader {
