@@ -416,7 +416,7 @@ a {text-decoration: none;}
     border-bottom-right-radius: 10px;
     background: __content_bg__ none;
     margin: 2em 0 3em;
-    z-index: 2;
+    z-index: 1; /* Above content, but below quicksearch */
     position: relative;
 }
 
