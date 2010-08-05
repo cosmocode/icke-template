@@ -344,6 +344,7 @@ a {text-decoration: none;}
     height: 25px;
     position: relative;
     width: 27%;
+    z-index: 3;
 }
 #icke__sidebar .search #fancysearch__ns_custom.closed {
     overflow: hidden;

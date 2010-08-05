@@ -1,5 +1,9 @@
 /* second-level navigation */
 
+#icke__quicknav {
+    z-index: 1;
+}
+
 #icke__quicknav li:hover div.sec_level {display: block;}
 #icke__quicknav li.hover div.sec_level { display: block; z-index: 10; }
 
