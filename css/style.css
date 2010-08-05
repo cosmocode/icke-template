@@ -141,12 +141,12 @@ a {text-decoration: none;}
 
 #icke__page p.meta .subscribe {
         position: absolute;
-        right: 230px;
+        right: 40px;
 }
 
 #icke__page p.meta #plugin__starred {
         position: absolute;
-        right: 250px;
+        right: 60px;
 }
 
 /* document-content */
