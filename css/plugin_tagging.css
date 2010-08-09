@@ -1,86 +1,64 @@
-.pte_edit a {
-background: transparent url(images/icons/stift_gross.png) top right no-repeat;
-color: __edit_lnk__;
-display: block;
-float: right;
-font-size: 1.1em;
-height: 20px;
-padding: 16px 40px 0 0;
-Font-family: Arial, sans-serif;
-}
-
-#icke__sidebar .sideclip .pte_edit a {
-    font-size: 1.1em;
-    line-height: 1.3em;
-    background: transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
-    padding-top: 8px;
-    padding-right: 30px;
+/* Edit link – keep synchronous to secedit.css */
+#icke__sidebar .sideclip .btn_tagging_edit input.button {
+    background: transparent url(images/icons/stift_klein.png) center right no-repeat;
+    border: none;
+    color: __edit_lnk__;
+    cursor: pointer;
+    float: right;
+    height: 25px;
+    text-align: center;
     text-indent: -99999px;
+    padding-top: 0px;
+    padding-bottom: 0;
+    padding-right: 25px;
+    font-size: 11px;
+    margin-right: 0;
 }
 
-#icke__sidebar .sideclip .pte_edit a:hover {
+div.dokuwiki div.secedit input.button:hover,
+#icke__sidebar .sideclip .btn_tagging_edit .button:hover {
     text-indent: 0px;
     background-color: white;
     -moz-border-radius: 10px;
     -opera-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    color: __edit_lnk__;
-    font-weight: bold;
-    text-decoration: none;
 }
 
-#icke__sidebar .sideclip .pte_tags_edit {
-    width: 180px;
+*:first-child+html #icke__sidebar .sideclip .btn_tagging_edit input.button {
+    width: 42px;
+    font-size: 0;
+    line-height: 0;
 }
 
-#icke__sidebar .sideclip .pte_tags_edit input {
-    font-size: 1.2em;
-    font-family: Arial, sans-serif;
+*:first-child+html #icke__sidebar .sideclip .btn_tagging_edit input.button:hover {
+    width: auto;
+    font-size: 12px;
+    line-height: 14px;
 }
 
-#icke__sidebar .sideclip .pte_tags_edit input.pte_tags_edit_field {
-    width: 160px;
-    float: left;
-}
-
-#icke__sidebar .sideclip .pte_edit_wrapper .yac_list {
-    margin-top: 20px;
-    width: 165px;
-    text-align: left;
-}
-
-#icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li {
-    background-color: __background__;
-}
-
-#icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li:hover,
-#icke__sidebar .sideclip .pte_edit_wrapper .yac_list ul li.yui-ac-highlight {
-    background-color: __color_tag__;
-    color: __background__;
-}
-
-div.dokuwiki .tagcloud {
+div.dokuwiki .tagging_cloud {
     font-size: 1.3em;
 }
 
-div.dokuwiki .tagcloud li a {
+#tagging_edit {
+    font-size: 1.2em;
+}
+
+#tagging_edit input {
+    width: 95%;
+    margin: 0.5em 0;
+}
+
+#tagging_edit input.button {
+    width: 49%;
+    margin: 0px;
+}
+
+div.dokuwiki .tagging_cloud li a {
     text-decoration: none;
 }
 
-div.dokuwiki .tagcloud li a:hover {
+div.dokuwiki .tagging_cloud li a:hover {
     text-decoration: underline;
 }
-
-div.dokuwiki #icke__sidebar .tagcloud li.tagging_owntag a {
-    color: __color_tag__;
-}
-
-#pte_tags_edit_start {
-    text-align: left;
-}
-
-#pte_tags_edit_start input.pte_tags_edit_field {
-    display: block;
-}
-

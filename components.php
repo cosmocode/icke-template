@@ -44,11 +44,13 @@ function icke_sidebar() {
                     <?php tpl_toc()?>
 
                     <?php
-                        $tags = plugin_load('action','tagging');
-                        if ($tags !== null) {
-                            echo '<h3>Tags</h3>';
-                            $tags->tpl_tagcloud();
-                            $tags->tpl_tagedit();
+                        global $ACT;
+                        if ($ACT == 'show') {
+                            $tags = plugin_load('helper','tagging');
+                            if ($tags !== null) {
+                                echo '<h3>Tags</h3>';
+                                $tags->tpl_tags();
+                            }
                         }
                     ?>
 
