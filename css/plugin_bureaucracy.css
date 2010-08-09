@@ -33,20 +33,21 @@ div.dokuwiki form.bureaucracy__plugin label select {
     width: 30%;
 }
 
-#icke__page ul.autocompletion {
-        margin: 0;
+ul.autocompletion {
+    margin: 0;
+    z-index: 40;
 }
 
-div.dokuwiki ul.autocompletion li {
+ul.autocompletion li {
     list-style-type: none;
     font-size: 1.6em;
 }
 
-div.dokuwiki ul.autocompletion li a {
+ul.autocompletion li a {
     text-decoration: none;
     color: __link__
 }
 
-#icke__page ul.autocompletion {
+ul.autocompletion {
         text-align: left;
 }
