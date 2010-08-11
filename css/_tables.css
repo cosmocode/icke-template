@@ -62,13 +62,3 @@ div.dokuwiki div.editbutton_table {
         margin-top: -1.2em;
         margin-bottom: 1.2em;
 }
-
-html > body div.dokuwiki table.edit td.handle {
-        cursor: move;
-}
-
-html > body div.dokuwiki table.edit td.disabledhandle {
-        background-image: none;
-        background-color: #c0c0c0;
-        cursor: no-drop;
-}
