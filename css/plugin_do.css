@@ -8,3 +8,8 @@
         font-size:14px;
         margin-top:8px;
 }
+
+#do__popup ul {
+    font-size: 1.2em;
+    list-style-image: none;
+}

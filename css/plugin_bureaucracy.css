@@ -20,7 +20,6 @@ div.dokuwiki form.bureaucracy__plugin label span {
     font-size: 13px;
     line-height: 16px;
     width: 26%;
-    float: left;
 }
 
 div.dokuwiki form.bureaucracy__plugin label .edit {
@@ -33,21 +32,12 @@ div.dokuwiki form.bureaucracy__plugin label select {
     width: 30%;
 }
 
-ul.autocompletion {
+/* neutralize #icke__page .content ul, #icke__page .content ol */
+#icke__page .content ul.autocompletion {
     margin: 0;
-    z-index: 40;
+    padding: 0.3em;
 }
 
 ul.autocompletion li {
     list-style-type: none;
-    font-size: 1.6em;
-}
-
-ul.autocompletion li a {
-    text-decoration: none;
-    color: __link__
-}
-
-ul.autocompletion {
-        text-align: left;
 }
