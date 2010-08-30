@@ -110,15 +110,18 @@
     width: 100%;
 }
 
-#icke__quicknav div.sec_level ul li a {
+#icke__quicknav div.sec_level ul li a,
+#icke__quicknav div.sec_level p {
     font-size: 12px;
-    text-decoration: none;
-    display: block;
     padding: 5px 8px 5px 12px;
-    overflow: hidden;
     margin-left: 1px;
     margin-right: 13px;
     white-space: nowrap;
+    display: block;
+}
+
+#icke__quicknav div.sec_level ul li a {
+    text-decoration: none;
 }
 
 #icke__quicknav div.sec_level ul li a:hover {
