@@ -40,21 +40,24 @@ function icke_sidebar() {
                 <li class="search">
                     <?php icke_tplSearch(); ?>
                 </li>
+                <?php
+                $toc = tpl_toc(true);
+                global $ACT;
+                if ($toc || $ACT == 'show') {
+                ?>
                 <li class="table_of_contents sideclip clearfix">
-                    <?php tpl_toc()?>
-
                     <?php
-                        global $ACT;
-                        if ($ACT == 'show') {
-                            $tags = plugin_load('helper','tagging');
-                            if ($tags !== null) {
-                                echo '<h3>Tags</h3>';
-                                $tags->tpl_tags();
-                            }
+                    echo $toc;
+                    if ($ACT == 'show') {
+                        $tags = plugin_load('helper','tagging');
+                        if ($tags !== null) {
+                            echo '<h3>Tags</h3>';
+                            $tags->tpl_tags();
                         }
+                    }
                     ?>
-
                 </li>
+                <?php } ?>
 
                 <?php icke_tplProjectSteps(); ?>
 
