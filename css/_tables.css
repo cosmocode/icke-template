@@ -24,12 +24,26 @@ div.dokuwiki table.inline td {
   border: 1px solid __border__;
 }
 
+/**
+ * Edit button; keep this synced to css/plugin_data.css
+ **/
+
 div.dokuwiki div.editbutton_table form input.button:hover {
-        color: __mediumgray__;
+    color: __mediumgray__;
 }
 
 div.dokuwiki div.editbutton_table form input.button,
 div.dokuwiki div.editbutton_table form input.button:hover {
+    border: 1px solid __border__;
+    background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
+    border-top: none;
+    cursor:pointer;
+    display:inline;
+    font-size:10px;
+    margin:0;
+    padding: 0px 25px 2px 3px;
+    text-decoration:none;
+    vertical-align:middle;
     -moz-border-radius: 0;
     -opera-border-radius: 0;
     -webkit-border-radius: 0;
@@ -42,23 +56,22 @@ div.dokuwiki div.editbutton_table form input.button:hover {
     -opera-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
-
-    background-color:__background__;
-    border:1px solid __border__;
-    background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
-    border-top: none;
-    cursor:pointer;
-    display:inline;
-    font-size:10px;
-    margin:0;
-    padding: 0px 25px 2px 3px;
-    text-decoration:none;
-    vertical-align:middle;
     margin-left: 2.1em;
     text-indent: 0px;
 }
 
 div.dokuwiki div.editbutton_table {
-        margin-top: -1.2em;
-        margin-bottom: 1.2em;
+    margin-top: -1.2em; /* depends on the table margin (*1.2) */
+    margin-bottom: 1.2em;
+}
+
+*:first-child+html div.dokuwiki div.editbutton_table form input.button {
+    width: auto;
+    font-size: 10px;
+    line-height: 1.2em;
+}
+
+*:first-child+html div.dokuwiki div.editbutton_table form input.button:hover {
+    font-size: 10px;
+    line-height: 1.2em;
 }

@@ -31,27 +31,34 @@ div.dataplugin_entry dl dt {
     padding: 5px;
 }
 
+#dw__editform fieldset.plugin__data {
+    clear: none;
+}
+
+/**
+ * Edit button; keep this synced to css/_tables.css
+ **/
+
+div.dokuwiki div.editbutton_plugin_data form input.button:hover {
+    color: __mediumgray__;
+}
+
 div.dokuwiki div.editbutton_plugin_data form input.button,
 div.dokuwiki div.editbutton_plugin_data form input.button:hover {
-    -moz-background-clip:border;
-    -moz-background-inline-policy:continuous;
-    -moz-background-origin:padding;
+    border: 1px solid __border__;
     background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
-    border: 1px solid #8CACBB;
-    border-top: 0;
+    border-top: none;
     cursor:pointer;
     display:inline;
     font-size:10px;
     margin:0;
-    padding:0 25px 2px 3px;
+    padding: 0px 25px 2px 3px;
     text-decoration:none;
     vertical-align:middle;
-
     -moz-border-radius: 0;
     -opera-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
-
     -moz-border-radius-bottomleft: 0.5em;
     -opera-border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
@@ -60,9 +67,13 @@ div.dokuwiki div.editbutton_plugin_data form input.button:hover {
     -opera-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
-    float:none;
-    margin-left:2.1em;
+    margin-left: 2.1em;
     text-indent: 0px;
+}
+
+div.dokuwiki div.editbutton_plugin_data {
+    margin-top: -1.2em; /* depends on the dl margin (*1.2) */
+    margin-bottom: 1.2em;
 }
 
 *:first-child+html div.dokuwiki div.editbutton_plugin_data form input.button {
@@ -74,13 +85,4 @@ div.dokuwiki div.editbutton_plugin_data form input.button:hover {
 *:first-child+html div.dokuwiki div.editbutton_plugin_data form input.button:hover {
     font-size: 10px;
     line-height: 1.2em;
-}
-
-div.dokuwiki div.editbutton_plugin_data {
-    margin-top: -1.2em; /* depends on the dl margin */
-    margin-bottom: 1.2em;
-}
-
-#dw__editform fieldset.plugin__data {
-    clear: none;
 }
