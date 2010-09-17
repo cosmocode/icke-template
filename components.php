@@ -51,7 +51,7 @@ function icke_sidebar() {
                     if ($ACT == 'show') {
                         $tags = plugin_load('helper','tagging');
                         if ($tags !== null) {
-                            echo '<h3>Tags</h3>';
+                            echo '<h3>Tags zu dieser Seite</h3>';
                             $tags->tpl_tags();
                         }
                     }
