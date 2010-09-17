@@ -337,17 +337,22 @@ a {text-decoration: none;}
     background-color: __background__;
     margin: 2em 0 1em 1em;
     padding: 0.5em 0.5em 0;
+    /* Fix z-index of #fancysearch__ns_custom ul in IE 7 */
+    z-index: 21;
+    /* Fix too high search section in IE 7 */
+    position: relative;
 }
 #icke__sidebar .search #fancysearch__ns_custom {
     background: transparent url(images/icons/search_drop.png) right center no-repeat;
     float: left;
     height: 25px;
     position: relative;
-    width: 27%;
-    z-index: 3;
+    width: 47px;
 }
+
 #icke__sidebar .search #fancysearch__ns_custom.closed {
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: visible;
     cursor: pointer;
 }
 
@@ -362,8 +367,9 @@ a {text-decoration: none;}
     padding: 0 1px;
     position: absolute;
     top: 0px;
-    z-index: 2;
-        cursor: pointer;
+    width: 28px;
+    z-index: 20;
+    cursor: pointer;
 }
 
 #icke__sidebar .search #fancysearch__ns_custom.closed ul {
@@ -587,4 +593,3 @@ div.clearer {
 #icke__page del {
         text-decoration: line-through;
 }
-
