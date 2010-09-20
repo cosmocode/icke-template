@@ -384,7 +384,6 @@ a {text-decoration: none;}
 
 #icke__sidebar .search .query {
     border: 1px solid __text_other__;
-    color: __sidebar_qry__;
     float: left;
     margin: 0.25em 0.25em 0 0.5em;
     padding: 0 2px;
