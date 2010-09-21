@@ -23,7 +23,6 @@ a {text-decoration: none;}
     height: 126px;
     overflow: hidden;
     padding: 0 1em;
-    position: relative;
 }
 
 #icke__header .logo {
@@ -140,13 +139,13 @@ a {text-decoration: none;}
 }
 
 #icke__page p.meta .subscribe {
-        position: absolute;
-        right: 40px;
+    position: absolute;
+    right: 40px;
 }
 
 #icke__page p.meta #plugin__starred {
-        position: absolute;
-        right: 60px;
+    position: absolute;
+    right: 60px;
 }
 
 /* document-content */
@@ -154,7 +153,7 @@ a {text-decoration: none;}
     background-color: __content_bg__;
     padding: 10px 70px 20px 30px;
     font-size: 1.1em; /* Check cryptsign and do inline icons with line height */
-    min-height: 500px; 
+    min-height: 500px;
     overflow: hidden;
 }
 

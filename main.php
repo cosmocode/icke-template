@@ -39,7 +39,7 @@ icke_sidebar();
 
                     ?>
                 </div>
-                <div class="content dokuwiki clearfix">
+                <div class="content clearfix">
                     <?php if ($ACT === 'show'): ?>
                         <p class="meta">
                     <?php if($INFO['exists']):?>
