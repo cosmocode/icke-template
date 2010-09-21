@@ -320,7 +320,7 @@ a {text-decoration: none;}
 }
 
 #icke__sidebar .logon .logout {
-    background: transparent url(images/icons/logout2.png) top left no-repeat;
+    background: transparent url(images/icons/logout.png) top left no-repeat;
     float: right;
     display: block;
     height: 18px;
