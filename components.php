@@ -35,7 +35,23 @@ function icke_sidebar() {
                             echo '<a class="profile" href="'.wl(tpl_getConf('user_ns').$_SERVER['REMOTE_USER'].':') . '">'.hsc($USERINFO['name']).'</a>';
                         }
                         tpl_actionlink('login');
+
+                        $doplugin = plugin_load('helper','do');
+                        if ($doplugin !== null && isset($_SERVER['REMOTE_USER'])) {
+                            $tasks = $doplugin->loadTasks(array('status' => 'undone',
+                                                                'user'   => $_SERVER['REMOTE_USER']));
+                            if (count($tasks) > 0) {
+                                $ignoreme = array();
+                                echo '<div class="icke__opentasks">';
+                                printf(tpl_getLang(count($tasks) === 1 ? 'opentask' : 'opentasks'),
+                                       wl(tpl_getConf('user_ns').$_SERVER['REMOTE_USER'].':dashboard') .
+                                        '#' . sectionID(tpl_getConf('dashboard_task_section'), $ignoreme),
+                                       count($tasks));
+                                echo '</div>';
+                            }
+                        }
                     ?>
+                    <div class="clearfix"></div>
                 </li>
                 <li class="search">
                     <?php icke_tplSearch(); ?>

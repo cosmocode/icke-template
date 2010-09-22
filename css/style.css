@@ -304,8 +304,7 @@ a {text-decoration: none;}
     -webkit-border-bottom-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin: 0 0 0 1em;
-    padding: 0.5em 1em 0;
-    height: 2em;
+    padding: 0.5em 1em;
 }
 
 #icke__sidebar .logon .profile {
@@ -325,6 +324,18 @@ a {text-decoration: none;}
     height: 18px;
     text-indent: -9999px;
     width: 18px;
+}
+
+#icke__sidebar .logon .icke__opentasks {
+    clear: both;
+    padding-top: 0.5em;
+    font-size: 1.2em;
+}
+
+#icke__sidebar .logon .icke__opentasks a,
+#icke__sidebar .logon .icke__opentasks a:hover {
+    color: red;
+    font-weight: bold;
 }
 
 /* search */
