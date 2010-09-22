@@ -152,6 +152,10 @@ div.dokuwiki .li {
     list-style-type: square;
 }
 
+#icke__page .content ol {
+    list-style-type: decimal;
+}
+
 #icke__page .content ol ol {
     list-style-type: upper-roman;
 }
