@@ -38,7 +38,7 @@ function icke_sidebar() {
 
                         $doplugin = plugin_load('helper','do');
                         if ($doplugin !== null && isset($_SERVER['REMOTE_USER'])) {
-                            $tasks = $doplugin->loadTasks(array('status' => 'undone',
+                            $tasks = $doplugin->loadTasks(array('status' => array('undone'),
                                                                 'user'   => $_SERVER['REMOTE_USER']));
                             if (count($tasks) > 0) {
                                 $ignoreme = array();
