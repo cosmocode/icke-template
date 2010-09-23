@@ -110,12 +110,6 @@
     margin-top: 0;
 }
 
-#icke__quicknav div.sec_level ul li {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
 #icke__quicknav div.sec_level ul li,
 #icke__quicknav div.sec_level p {
     padding: 5px 8px 5px 12px;
@@ -123,13 +117,19 @@
     margin-right: 13px;
     white-space: nowrap;
     display: block;
+    width: auto;
 }
 
-#icke__quicknav div.sec_level a {
+#icke__quicknav div.popup_content a {
     text-decoration: none;
 }
 
-#icke__quicknav div.sec_level a:hover {
+#icke__quicknav div.popup_content div a:hover {
+    text-decoration: underline;
+}
+
+#icke__quicknav div.popup_content div ul li:hover,
+#icke__quicknav div.popup_content div p:hover {
     background-color: __nav_hover__;
 }
 
