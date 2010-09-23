@@ -1,7 +1,9 @@
 /* second-level navigation */
 
 #icke__quicknav {
-    z-index: 20;
+    /* Fix for IE 6&7; otherwise the popouts are below the content;
+       this brings overlays under the sidebar, though */
+    *z-index: 20;
 }
 
 #icke__quicknav li:hover div.sec_level,
@@ -29,7 +31,7 @@
     position: absolute;
     left: 0px;
     top: 0;
-    z-index: 53;
+    z-index: 51;
 }
 
 #icke__quicknav span.b  {
@@ -41,7 +43,7 @@
     right: -23px;
     padding-left: 0px;
     margin-left: 13px;
-    z-index: 53;
+    z-index: 51;
 }
 
 #icke__quicknav span.c {
@@ -51,7 +53,7 @@
     display: block;
     position: absolute;
     left: 0px;
-    z-index: 53;
+    z-index: 51;
 }
 
 #icke__quicknav span.d  {
@@ -62,7 +64,7 @@
     position: absolute;
     right: -23px;
     margin-left: 13px;
-    z-index: 53;
+    z-index: 51;
 }
 
 #icke__quicknav div.popup_content {
@@ -73,7 +75,7 @@
     padding-left: 4px;
     margin-right: -13px;
     font-size: 12px;
-    z-index: 53;
+    z-index: 51;
 }
 
 #icke__quicknav div.sec_level ul {
@@ -123,11 +125,11 @@
     display: block;
 }
 
-#icke__quicknav div.sec_level ul li a {
+#icke__quicknav div.sec_level a {
     text-decoration: none;
 }
 
-#icke__quicknav div.sec_level ul li a:hover {
+#icke__quicknav div.sec_level a:hover {
     background-color: __nav_hover__;
 }
 
