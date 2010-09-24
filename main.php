@@ -69,12 +69,10 @@ icke_sidebar();
                                     echo '&nbsp;&nbsp;';
                                 }
 
-                                if($INFO['subscribed']){
-                                    $sub = '<img src="'.DOKU_TPL.'images/mail-yes.png" width="16" height="16" alt="" title="'.$lang['btn_subscribe'].'" />';
-                                }else{
-                                    $sub = '<img src="'.DOKU_TPL.'images/mail-no.png" width="16" height="16" alt="" title="'.$lang['btn_subscribe'].'" />';
+                                $quicksubscribe = plugin_load('helper', 'quicksubscribe');
+                                if ($quicksubscribe !== null) {
+                                    $quicksubscribe->tpl_subscribe();
                                 }
-                                tpl_actionlink('subscribe','','',$sub);
                             ?>
 
                     </p>
