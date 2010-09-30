@@ -1,4 +1,4 @@
 <?php
 
-$lang['opentask']  = 'Sie haben <a href="%s" title="Ihr Dashboard">einen offenen Task</a>!';
-$lang['opentasks'] = 'Sie haben <a href="%s" title="Ihr Dashboard">%d offene Tasks</a>!';
+$lang['opentask']  = 'You have <a href="%s" title="Your dashboard">1 open Task</a>!';
+$lang['opentasks'] = 'You have <a href="%s" title="Your dashboard">%d open Tasks</a>!';
