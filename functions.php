@@ -56,38 +56,51 @@ function icke_tplProjectSteps(){
 function icke_tplSidebar() {
     global $ID;
     include DOKU_TPLINC . icke_getFile('namespaces.php');
+    if (!isset($icke_ns)) {
+        $icke_ns = $icke_namespaces + array('bottom_sep' => array('_special' => 'separator'));
+    }
     if (isset($_SERVER['REMOTE_USER'])) {
-        $firstkey = reset(array_keys($icke_namespaces));
-        $icke_namespaces = array_merge(array('dashboard' => array
-                                                ('txt' => 'Dashboard',
-                                                 'id' => tpl_getConf('user_ns') .
-                                          $_SERVER['REMOTE_USER'] .
-                                          ':dashboard')),
-                                    $icke_namespaces);
-        $icke_namespaces[$firstkey]['liclass'] = 'separator';
+        $icke_ns = array('dashboard' => array('txt' => 'Dashboard',
+                                              'id'  => tpl_getConf('user_ns') .
+                                                       $_SERVER['REMOTE_USER'] .
+                                                       ':dashboard'),
+                         'dashb_sep' => array('_special' => 'separator')) +
+                   $icke_ns;
     }
 
     $hasactive = false;
+    $addsep = false;
 
-    foreach ($icke_namespaces as $class => $data) {
+    foreach ($icke_ns as $class => $data) {
+        if (isset($data['_special']) && $data['_special'] === 'separator') {
+            $addsep = true;
+            continue;
+        }
         if (!isset($data['id'])) {
             $data['id'] = $class . ':';
+        }
+        if (auth_quickaclcheck($data['id']) < AUTH_READ) {
+            continue;
+        }
+        if (!isset($data['liclass'])) {
+            $data['liclass'] = '';
         }
         if (!$hasactive && strpos($ID, $data['id']) === 0) {
             $data['liclass'] .= ' active';
             $hasactive = true;
         }
-        if (auth_quickaclcheck($data['id']) < AUTH_READ) {
-            continue;
+        if ($addsep) {
+            $data['liclass'] .= ' separator';
+            $addsep = false;
         }
 
-        echo '<li' . (isset($data['liclass']) ? ' class="'.$data['liclass'].'"' : '') .
-             '><a class="' . $class . '" href="' . wl($data['id']) . '">' . $data['txt'] . '</a>';
+        echo '<li class="'.$data['liclass'].'"><a class="qnav_item ' . $class . '" ' .
+             'href="' . wl($data['id']) . '">' . $data['txt'] . '</a>';
         icke_tplPopupPage($data['id'] . (strpos($data['id'], ':') !== false ? 'quick' : '_quick'));
         echo '</li>';
     }
 
-    echo '<li class="separator"><a class="einstellungen">Einstellungen</a>';
+    echo '<li ' . ($addsep ? 'class="separator"' : '') . '><a class="qnav_item einstellungen">Einstellungen</a>';
 
     $text = '<h1 class="empty"></h1><div class="level2"><ul>';
     include DOKU_TPLINC . icke_getFile('tools.php');
@@ -114,36 +127,33 @@ function icke_tplSidebar() {
 
 function icke_tplSearch() {
     include DOKU_TPLINC . icke_getFile('namespaces.php');
-    foreach ($icke_namespaces as $id => &$ns) {
-        $ns['img'] = DOKU_TPL . 'local/images/icons/30x30/' . $id . '_aktiv.png';
+    if (!isset($icke_ns)) {
+        $icke_ns = $icke_namespaces;
+    }
+    $search_items = array();
+    foreach ($icke_ns as $id => $ns) {
+        if (isset($ns['_special'])) continue;
+        $ns['img'] = DOKU_TPL . icke_getFile('images/icons/30x30/' . $id . '_aktiv.png');
+        $search_items[$id] = $ns;
     }
     $fancysearch = plugin_load('action', 'fancysearch');
     if (!is_null($fancysearch)) {
-        $fancysearch->tpl_searchform($icke_namespaces, DOKU_TPL . 'images/icons/30x30/icke.png');
+        $fancysearch->tpl_searchform($search_items, DOKU_TPL . icke_getFile('images/icons/30x30/icke.png'));
     }
 }
 
 function icke_tplMenuCSS() {
     include DOKU_TPLINC . icke_getFile('namespaces.php');
-    echo '<style type="text/css">';
-    $nss = array_keys($icke_namespaces);
+    if (!isset($icke_ns)) {
+        $icke_ns = $icke_namespaces;
+    }
+
+    $nss = array_keys($icke_ns);
     $nss[] = 'dashboard';
     $nss[] = 'einstellungen';
-    $str = '';
+    echo '<style type="text/css">';
     foreach($nss as $ns) {
-         $str .= '#icke__quicknav a.' . $ns . ",\n";
-    }
-    echo rtrim($str, ",\n");
-    ?>
-    {
-        background: transparent top left no-repeat;
-        display: block;
-        height: 60px;
-        text-indent: -9999px;
-        width: 60px;
-    }
-    <?php
-    foreach($nss as $ns) {
+        if (isset($icke_ns[$ns]['_special'])) continue;
         echo "#icke__quicknav a.$ns {background-image: url(" . DOKU_TPL .
              icke_getFile('images/icons/60x60/' . $ns . '_inaktiv.png') . ");}
               #icke__quicknav li.active a.$ns,

@@ -6,6 +6,14 @@
     *z-index: 20;
 }
 
+#icke__quicknav a.qnav_item {
+    background: transparent top left no-repeat;
+    display: block;
+    height: 60px;
+    text-indent: -9999px;
+    width: 60px;
+}
+
 #icke__quicknav li:hover div.sec_level,
 #icke__quicknav li.hover div.sec_level {
     display: block;
