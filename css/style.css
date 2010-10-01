@@ -326,14 +326,20 @@ a {text-decoration: none;}
     width: 18px;
 }
 
-#icke__sidebar .logon .icke__opentasks {
+#icke__sidebar .logon .icke__noopentasks,
+#icke__sidebar .logon .icke__opentasks,
+#icke__sidebar .logon .icke__opentask {
     clear: both;
     padding-top: 0.5em;
     font-size: 1.2em;
+    display: block;
+    text-align: center;
 }
 
-#icke__sidebar .logon .icke__opentasks a,
-#icke__sidebar .logon .icke__opentasks a:hover {
+#icke__sidebar .logon .icke__opentasks,
+#icke__sidebar .logon .icke__opentasks:hover,
+#icke__sidebar .logon .icke__opentask,
+#icke__sidebar .logon .icke__opentask:hover {
     color: red;
     font-weight: bold;
 }

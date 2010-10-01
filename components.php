@@ -40,15 +40,20 @@ function icke_sidebar() {
                         if ($doplugin !== null && isset($_SERVER['REMOTE_USER'])) {
                             $tasks = $doplugin->loadTasks(array('status' => array('undone'),
                                                                 'user'   => $_SERVER['REMOTE_USER']));
-                            if (count($tasks) > 0) {
-                                $ignoreme = array();
-                                echo '<div class="icke__opentasks">';
-                                printf(tpl_getLang(count($tasks) === 1 ? 'opentask' : 'opentasks'),
-                                       wl(tpl_getConf('user_ns').$_SERVER['REMOTE_USER'].':dashboard') .
-                                        '#' . sectionID(tpl_getConf('dashboard_task_section'), $ignoreme),
-                                       count($tasks));
-                                echo '</div>';
+                            switch (count($tasks)) {
+                                case 0:  $class = 'noopentasks'; break;
+                                case 1:  $class = 'opentask'; break;
+                                default: $class = 'opentasks'; break;
                             }
+                            $ignoreme = array();
+                            $linktarget = tpl_getConf('tasks_page');
+                            if (substr($linktarget, 0, 1) !== ':') {
+                                $linktarget = tpl_getConf('user_ns'). $_SERVER['REMOTE_USER'] .
+                                              ':' . $linktarget;
+                            }
+                            echo '<a class="icke__' . $class . '"' .
+                                   ' href="' . wl($linktarget) . '">' .
+                                 sprintf(tpl_getLang($class), count($tasks)) . '</a>';
                         }
                     ?>
                     <div class="clearfix"></div>
