@@ -115,7 +115,7 @@ function icke_tplSidebar() {
         default:
             $str = call_user_func_array($tool['func'], $tool['value']);
         }
-        if ($str !== '') {
+        if ($str != '') {
             $text .= '<li>' . $str . '</li>';
         }
     }
