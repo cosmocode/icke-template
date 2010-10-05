@@ -554,17 +554,18 @@ a {text-decoration: none;}
 }
 
 div.insitu-footnote {
-        -moz-border-radius: 5px; 
-        -opera-border-radius: 5px; 
-        -webkit-border-radius: 5px; 
-        border-radius: 5px; 
-        background-color:__background_other__;
-        border:1px solid __border__;
-        line-height:1.2em;
-        max-width:40%;
-        padding:6px;
-        text-align:left;
-        font-size: 1.2em;
+    -moz-border-radius: 5px;
+    -opera-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color:__background_other__;
+    border:1px solid __border__;
+    line-height:1.2em;
+    max-width:40%;
+    padding:6px;
+    text-align:left;
+    font-size: 1.2em;
+    z-index: 60;
 }
 
 /* table of contents - tags */
