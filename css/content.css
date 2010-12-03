@@ -31,18 +31,6 @@
     color: __mediumgray__;
 }
 
-#icke__page .content h3 {
-    font-size: 1.5em;
-}
-
-#icke__page .content h4 {
-    font-size: 1.3em;
-}
-
-#icke__page .content h5 {
-    font-size: 1.1em;
-}
-
 #icke__page .content pre {
     border: 1px dashed __border__;
     color: __text__;

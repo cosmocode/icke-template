@@ -15,20 +15,20 @@ h1, h2, h3, h4, h5 {
     text-transform: none;
 }
 
-#icke__page .dokuwiki h1 {
-    font-size: 2.2em;
+#icke__page .content h1 {
+    font-size: 2em;
 }
-#icke__page .dokuwiki h2 {
-    font-size: 1.8em;
+#icke__page .content h2 {
+    font-size: 1.5em;
 }
-#icke__page .dokuwiki h3 {
-    font-size: 1.25em;
+#icke__page .content h3 {
+    font-size: 1.45em;
 }
-#icke__page .dokuwiki h4 {
-    font-size: 1.1em;
+#icke__page .content h4 {
+    font-size: 1.3em;
 }
-#icke__page .dokuwiki h5 {
-    font-size: 1em;
+#icke__page .content h5 {
+    font-size: 1.2em;
     font-style: italic;
 }
 
@@ -39,8 +39,8 @@ h1, h2, h3, h4, h5 {
 #icke__page .content h5 {
     clear: left;
     font-weight: bold;
-    margin: 0em 0 0.3em;
-    padding: 0.8em 0 0.2em;
+    margin-bottom: 0.6em;
+    padding: 0.5em 0 0.2em;
 }
 
 #icke__page .content h2 {
@@ -74,8 +74,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
 #icke__page .content .page > h6.section_highlight {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 0.8em;
-    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.8em;
 }
 
 #icke__page .content .page > h2.section_highlight {
@@ -97,18 +97,12 @@ p, b, strong, i, em, strong, b, code, samp, dnf, abbr, acronym, ins, del, big, s
     text-transform: none;
 }
 
-#icke__page .dokuwiki p {
-    font-size: 1.2em;
-    line-height: 1.4em;
-    margin: 0.75em 0 1.25em;
-}
-
-#icke__page .dokuwiki div.level1,
-#icke__page .dokuwiki div.level2,
-#icke__page .dokuwiki div.level3,
-#icke__page .dokuwiki div.level4,
-#icke__page .dokuwiki div.level5 {
-    padding-bottom: 0.1em;
+#icke__page .content div.level1,
+#icke__page .content div.level2,
+#icke__page .content div.level3,
+#icke__page .content div.level4,
+#icke__page .content div.level5 {
+    padding-bottom: 1em; /* Leave space for the edit button since it floats into the content */
 }
 
 /* =TEXTLOGIC
@@ -131,7 +125,7 @@ sub {vertical-align: sub;}
 /* =LISTS
    ----------------------------------------------------*/
 
-#icke__page .dokuwiki ol {list-style-type: decimal;}
+#icke__page .content ol {list-style-type: decimal;}
 
 #icke__page .content ul,
 #icke__page .content ol {
@@ -139,7 +133,7 @@ sub {vertical-align: sub;}
     font-size: 1.2em;
     list-style-image: none;
     margin-left: -2em;
-    padding: 0 0 1em 3.5em;
+    padding-left: 3.5em;
     color: __text_alt__;
 }
 

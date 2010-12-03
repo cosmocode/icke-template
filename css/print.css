@@ -2,7 +2,7 @@
 #icke__quicknav,
 #icke__sidebar,
 #icke__drophead,
-#icke__page .dokuwiki .meta,
+#icke__page .content .meta,
 #icke__footer {
   display: none;
 }
