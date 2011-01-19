@@ -70,6 +70,12 @@ function icke_sidebar() {
                     <?php
                     echo $toc;
                     if ($ACT == 'show') {
+                        $labeled = plugin_load('helper','labeled');
+                        if ($labeled !== null) {
+                            echo '<h3 class="labeled">Labels zu dieser Seite</h3>';
+                            $labeled->tpl_labels();
+                        }
+
                         $tags = plugin_load('helper','tagging');
                         if ($tags !== null) {
                             echo '<h3>Tags zu dieser Seite</h3>';

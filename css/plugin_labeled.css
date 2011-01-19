@@ -1,0 +1,18 @@
+
+#icke__sidebar h3.labeled {
+/*    padding-top:2em;*/
+    margin-bottom:1em;
+}
+
+#icke__sidebar .plugin_labeled ul li.labeled_active a {
+    color: #fff;
+    font-size:8pt;
+}
+
+#icke__sidebar .plugin_labeled ul li {
+    font-size:8pt;
+}
+#icke__sidebar .plugin_labeled ul li.labeled_inactive a {
+    color: #ccc;
+    font-size:8pt;
+}
