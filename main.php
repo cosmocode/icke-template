@@ -92,7 +92,7 @@ icke_sidebar();
                     <div class="footer_toolbar">
                         <p>
                         </p>
-                        <p class="copy">&copy; Copyright 2009–2010 <a href="http://www.ickewiki.de">ICKE</a></p>
+                        <p class="copy">&copy; Copyright 2009–2011 <a href="http://www.ickewiki.de">ICKE</a></p>
                     </div>
                 </div><!-- END icke__footer -->
             </div><!-- END icke__page -->
