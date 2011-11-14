@@ -139,6 +139,8 @@ function icke_tplSearch() {
     $fancysearch = plugin_load('action', 'fancysearch');
     if (!is_null($fancysearch)) {
         $fancysearch->tpl_searchform($search_items, DOKU_TPL . icke_getFile('images/icons/30x30/icke.png'));
+    }else{
+        tpl_searchform(true, false);
     }
 }
 
@@ -167,11 +169,3 @@ function icke_tplFavicon() {
     echo '  <link rel="shortcut icon" href="' . DOKU_TPL . icke_getFile('images/favicon.png') . '" />';
 }
 
-function icke_startupCheck() {
-    $plugins = plugin_list();
-    $requiredPlugins = array('jquery', 'fancysearch');
-    foreach ($requiredPlugins as $req) {
-        if (in_array($req, $plugins)) continue;
-        msg('ICKE-template requires the '. hsc($req).'-plugin.');
-    }
-}

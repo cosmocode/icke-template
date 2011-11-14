@@ -4,7 +4,6 @@ function icke_header() {
 ?>
 <body>
     <?php html_msgarea() ?>
-    <?php icke_startupCheck() ?>
     <div id="icke__header" class="clearfix">
         <a class="logo" href="<?php echo wl()?>">
           <?php if (tpl_getConf('logo') && file_exists(mediaFN(tpl_getConf('logo')))) {?>
