@@ -10,7 +10,7 @@ require_once DOKU_TPLINC.'components.php';
     <?php tpl_pagetitle()?>
     [<?php echo strip_tags($conf['title'])?>]
     </title>
-    <?php tpl_metaheaders(); icke_tplMenuCSS(); icke_tplFavicon(); ?>
+    <?php tpl_metaheaders(); icke_tplCSS(); icke_tplFavicon(); ?>
 </head>
 <?php
 // render the content into buffer for later use (see doku>devel:templates#tpl_toc
