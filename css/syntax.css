@@ -125,16 +125,24 @@ sub {vertical-align: sub;}
 /* =LISTS
    ----------------------------------------------------*/
 
-#icke__page .content ol {list-style-type: decimal;}
+.content ol {list-style-type: decimal;}
 
-#icke__page .content ul,
-#icke__page .content ol {
+.content ul,
+.content ol {
     line-height: 1.5em;
     font-size: 1.2em;
     list-style-image: none;
-    margin-left: -2em;
-    padding-left: 3.5em;
     color: __text_alt__;
+
+    margin: 0 0 1.5em 1.5em;
+    padding: 0;
+}
+
+.content li ul,
+.content li ol {
+    font-size: 1em;
+    margin: 0 0 0 1.5em;
+    padding: 0;
 }
 
 div.dokuwiki .li {
@@ -142,24 +150,18 @@ div.dokuwiki .li {
 }
 
 
-#icke__page .content ul{
+.content ul{
     list-style-type: square;
 }
 
-#icke__page .content ol {
+.content ol {
     list-style-type: decimal;
 }
 
-#icke__page .content ol ol {
+.content ol ol {
     list-style-type: upper-roman;
 }
 
-#icke__page .content li ul,
-#icke__page .content li ol {
-    font-size: 1em;
-    /* no bottom gap in between nested lists */
-    padding-bottom: 0;
-}
 
 dl.file dt a.mediafile {
         margin-left:2em;
