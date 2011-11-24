@@ -163,7 +163,7 @@ function icke_tplCSS() {
 
         echo "#icke__quicknav a.qnav_$class {";
             if(file_exists(mediaFN("$ns:icon_off.png"))){
-                echo "background-image: url(".ml("$ns:icon_off.png",array('w'=>60,'h'=>60)).")";
+                echo "background-image: url(".ml("$ns:icon_off.png",array('w'=>60,'h'=>60),true,'&').")";
             }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$class.'_inaktiv.png')){
                 echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$class."_inaktiv.png)";
             }else{
@@ -173,7 +173,7 @@ function icke_tplCSS() {
 
         echo "#icke__quicknav li.active a.qnav_$class, #icke__quicknav li:hover a.qnav_$class {";
             if(file_exists(mediaFN("$ns:icon_on.png"))){
-                echo "background-image: url(".ml("$ns:icon_on.png",array('w'=>60,'h'=>60)).")";
+                echo "background-image: url(".ml("$ns:icon_on.png",array('w'=>60,'h'=>60),true,'&').")";
             }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$class.'_aktiv.png')){
                 echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$class."_aktiv.png)";
             }else{
