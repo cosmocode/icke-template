@@ -42,6 +42,7 @@ icke_sidebar();
                 <div class="content clearfix">
                     <?php if ($ACT === 'show'): ?>
                         <p class="meta">
+                        <div><?php tpl_youarehere(); ?></div>
                     <?php if($INFO['exists']):?>
 
                         <span class="lastmod">
@@ -74,7 +75,6 @@ icke_sidebar();
                                     $quicksubscribe->tpl_subscribe();
                                 }
                             ?>
-
                     </p>
                     <?php endif?>
 
