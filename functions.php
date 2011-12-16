@@ -181,31 +181,64 @@ function icke_tplCSS() {
             }
         echo "}\n";
 
-        #FIXME add fancy search icons here as well
+        # fancy search icons
+        echo "#fancysearch__ns_custom .fancysearch_ns_$class {";
+            if(file_exists(mediaFN("$ns:icon_off.png"))){
+                echo "background-image: url(".ml("$ns:icon_off.png",array('w'=>30,'h'=>30),true,'&').");\n";
+            }elseif(file_exists(DOKU_TPLINC.'/images/icons/30x30/'.$class.'_aktiv.png')){
+                echo "background-image: url(".DOKU_TPL.'/images/icons/30x30/'.$class."_aktiv.png);\n";
+            }else{
+                echo "background-image: url(".DOKU_TPL."/images/icons/30x30/fail.png);\n";
+            }
+        echo "color: transparent;\n";
+        echo "}\n";
     }
+
+    # fancy search icke icon (search from root)
+    echo "#fancysearch__ns_custom .fancysearch_ns_icke {";
+    if(file_exists(DOKU_TPLINC.'/images/icons/30x30/icke.png')){
+                echo "background-image: url(".DOKU_TPL."/images/icons/30x30/icke.png);\n";
+    }else{
+       echo "background-image: url(".DOKU_TPL."/images/icons/30x30/fail.png);\n";
+    }
+    echo "color: transparent;\n";
+    echo "}\n";
+
     echo "</style>\n";
 }
 
 
 function icke_tplSearch() {
-/* FIXME
-    include DOKU_TPLINC . icke_getFile('namespaces.php');
-    if (!isset($icke_ns)) {
-        $icke_ns = $icke_namespaces;
-    }
+    global $ID;
+
+    // load dynamic namespaces
+    $navi = tpl_getConf('namespaces');
+    $navi = explode(',',$navi);
     $search_items = array();
-    foreach ($icke_ns as $id => $ns) {
-        if (isset($ns['_special'])) continue;
-        $ns['img'] = DOKU_TPL . icke_getFile('images/icons/30x30/' . $id . '_aktiv.png');
-        $search_items[$id] = $ns;
+    $search_items[''] = 'icke'; // search from root
+    foreach($navi as $id){
+        // empty ones are separators
+        if(!$id) continue;
+
+        // skip user based links
+        if(strstr($id,'%USER%') !== false) continue;
+
+        $link = $id;
+        resolve_pageid('',$link,$exists); // create full links
+        if (auth_quickaclcheck($link) < AUTH_READ) continue;
+        $ns = getNS($link);
+        if(!$ns) $ns = $link; // treat link as outside namespace startpage
+        $class = array_shift(explode(':',$ns)); // css class #fancysearch_ns_$class
+        $search_items[$id] = $class;
     }
+
     $fancysearch = plugin_load('action', 'fancysearch');
     if (!is_null($fancysearch)) {
-        $fancysearch->tpl_searchform($search_items, DOKU_TPL . icke_getFile('images/icons/30x30/icke.png'));
+        # NOTE/FIXME: fancysearch does not correctly remember the selected namespace after a submit
+        $fancysearch->tpl_searchform($search_items);
     }else{
-        tpl_searchform(true, false);
+        tpl_searchform(true);
     }
-*/
 }
 
 
