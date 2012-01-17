@@ -181,31 +181,48 @@ function icke_tplCSS() {
             }
         echo "}\n";
 
-        #FIXME add fancy search icons here as well
+        echo "#fancysearch__ns_custom li.fancysearch_ns_$class {";
+            echo 'text-indent: -10000px; width:30px; height:30px;';
+            if(file_exists(mediaFN("$ns:icon_on.png"))){
+                echo "background-image: url(".ml("$ns:icon_on.png",array('w'=>30,'h'=>30),true,'&').")";
+            }elseif(file_exists(DOKU_TPLINC.'/images/icons/30x30/'.$class.'_aktiv.png')){
+                echo "background-image: url(".DOKU_TPL.'/images/icons/30x30/'.$class."_aktiv.png)";
+            }else{
+                echo "background-image: url(".DOKU_TPL."/images/icons/30x30/fail.png)";
+            }
+        echo "}\n";
     }
+    echo "#fancysearch__ns_custom li.fancysearch_ns_icke {";
+    echo 'text-indent: -10000px; width:30px; height:30px;';
+    echo 'background-image: url('.DOKU_TPL.'/images/icons/30x30/icke.png)';
+    echo "}\n";
+
     echo "</style>\n";
 }
 
 
 function icke_tplSearch() {
-/* FIXME
-    include DOKU_TPLINC . icke_getFile('namespaces.php');
-    if (!isset($icke_ns)) {
-        $icke_ns = $icke_namespaces;
+    $navi = array('' => 'icke');
+    $ns = tpl_getConf('namespaces');
+    $ns = explode(',',$ns);
+    foreach($ns as $id){
+        if(!$id) continue;
+        if(strstr($id,'%USER%') !== false) continue;
+
+        $link = $id;
+        resolve_pageid('',$link,$exists); // create full links
+        if (auth_quickaclcheck($link) < AUTH_READ) continue;
+        $ns   = getNS($link);
+        if(!$ns) $ns = $link;
+        $navi[$ns] = array_shift(explode(':',$ns));
     }
-    $search_items = array();
-    foreach ($icke_ns as $id => $ns) {
-        if (isset($ns['_special'])) continue;
-        $ns['img'] = DOKU_TPL . icke_getFile('images/icons/30x30/' . $id . '_aktiv.png');
-        $search_items[$id] = $ns;
-    }
+
     $fancysearch = plugin_load('action', 'fancysearch');
     if (!is_null($fancysearch)) {
-        $fancysearch->tpl_searchform($search_items, DOKU_TPL . icke_getFile('images/icons/30x30/icke.png'));
+        $fancysearch->tpl_searchform($navi);
     }else{
         tpl_searchform(true, false);
     }
-*/
 }
 
 
