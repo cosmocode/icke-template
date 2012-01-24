@@ -41,7 +41,7 @@
 #media__popup button.button {
     margin-right: 5px;
     background: none;
-    background-color: #DEE7EC;
+    background-color: __medium__;
 }
 
 #media__popup .btnlbl {

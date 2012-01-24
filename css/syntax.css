@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #icke__page .content h2 {
-    border-bottom: 1px solid #8CACBB;
+    border-bottom: 1px solid __dark__;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a {

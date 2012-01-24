@@ -9,7 +9,7 @@
 }
 
 #media__left {
-    background-color: #F7F7F7;
+    background-color: __lighter__;
     width: 31%;
     height: 100%;
     overflow: auto;
@@ -18,7 +18,7 @@
 }
 
 #media__right {
-    background-color: #F7F7F7;
+    background-color: __lighter__;
     width: 69%;
     height: 100%;
     overflow: auto;
@@ -29,8 +29,8 @@
 #media__manager h1 {
     margin: 0;
     padding: 0;
-	margin-bottom:0.5em;
-	padding-top:0.4em;
+    margin-bottom:0.5em;
+    padding-top:0.4em;
     padding-left: 0.2em;
 }
 
@@ -43,7 +43,7 @@
 /* --- Tree formatting --- */
 
 #media__tree {
-	line-height: 1.5em;
+    line-height: 1.5em;
 }
 
 #media__tree img {
