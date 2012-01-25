@@ -73,15 +73,15 @@ function icke_sidebar() {
                         if ($labeled !== null) {
                             $labels = $labeled->tpl_labels();
                             if ($labels) {
-                                echo '<h3 class="labeled">Labels zu dieser Seite</h3>';
+                                echo '<h3 class="labeled">'.tpl_getLang('labeled').'</h3>';
                                 echo $labels;
                             }
-                            
+
                         }
 
                         $tags = plugin_load('helper','tagging');
                         if ($tags !== null) {
-                            echo '<h3>Tags zu dieser Seite</h3>';
+                            echo '<h3>'.tpl_getLang('tagging').'</h3>';
                             $tags->tpl_tags();
                         }
                     }
