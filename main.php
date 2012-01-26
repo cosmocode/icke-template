@@ -10,6 +10,7 @@ require_once DOKU_TPLINC.'components.php';
     <?php tpl_pagetitle()?>
     [<?php echo strip_tags($conf['title'])?>]
     </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php tpl_metaheaders(); icke_tplCSS(); icke_tplFavicon(); ?>
 </head>
 <?php
