@@ -43,7 +43,7 @@ icke_sidebar();
                 <?php html_msgarea() ?>
                 <div class="content clearfix">
                     <?php if ($ACT === 'show'): ?>
-                        <div><?php tpl_youarehere(); ?></div>
+                        <div class="bc"><?php tpl_youarehere(); ?></div>
                         <p class="meta">
 
                             <?php if($INFO['exists']):?>
