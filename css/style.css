@@ -609,3 +609,10 @@ div.clearer {
 #icke__page del {
         text-decoration: line-through;
 }
+
+div.pagenav-prev {
+    float: left;
+}
+div.pagenav-next {
+    float: right;
+}
