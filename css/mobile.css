@@ -94,15 +94,11 @@
         margin-right: 0;
     }
 
-    div.dokuwiki div.bc {
-        display: none;
-    }
-
-    #icke__footer .admin_toolbar {
-        display: none;
-    }
-
-    #plugin__qc__wrapper {
+    div.dokuwiki div.bc,
+    #icke__footer .admin_toolbar,
+    #plugin__qc__wrapper,
+    .qsub__link,
+    #plugin__starred {
         display: none;
     }
 
