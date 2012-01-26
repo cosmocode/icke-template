@@ -64,6 +64,10 @@
         float: left;
     }
 
+    #icke__toolbar input {
+        border: 1px solid __border__;
+    }
+
     #icke__page {
         clear: both;
         margin: 0;
