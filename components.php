@@ -15,6 +15,11 @@ function icke_header() {
         </h5>
         <a class="branding" href="http://www.ickewiki.de">ICKE - Integrated Collaboration &amp; Knowledge Environment</a>
     </div><!-- END icke__header -->
+
+    <div id="icke__toolbar">
+        <?php tpl_actiondropdown() ?>
+        <?php tpl_searchform() ?>
+    </div>
 <?php
 }
 

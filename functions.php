@@ -80,6 +80,7 @@ function icke_navi($link,$name='',$class='',$popup='',$act=false,$sep=false){
     $liclass = '';
     if($act) $liclass .= ' active';
     if($sep) $liclass .= ' separator';
+    if($name == 'Settings') $liclass .= ' nomobile';
     $liclass = trim($liclass);
     if($liclass) $liclass = ' class="'.$liclass.'"';
 

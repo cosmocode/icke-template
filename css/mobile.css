@@ -1,0 +1,68 @@
+
+#icke__toolbar {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    .nomobile {
+        display: none;
+    }
+
+    #icke__header {
+        display: none;
+    }
+
+    #icke__quicknav {
+        float: none;
+        position: static;
+        width: auto;
+        clear: left;
+    }
+
+    #icke__quicknav li {
+        float: left;
+    }
+
+    #icke__quicknav li.separator {
+        border-top: none;
+        border-left: 1px solid __nav_seperator__;
+        margin: 0;
+        padding: 5px 10px;
+        margin-left: 10px;
+    }
+
+    #icke__sidebar {
+        display: none; //FIXME reintroduce somewhere
+    }
+
+    #icke__wrapper .wrap {
+        margin: 0;
+        padding: 0;
+        background-image: none;
+    }
+
+    #icke__toolbar {
+        display: block;
+    }
+
+    #icke__toolbar form {
+        float: left;
+    }
+
+    #icke__page {
+        clear: both;
+        margin: 0;
+        position: static;
+        padding: 0;
+    }
+
+    #icke__page .content {
+        padding: 10px 10px 20px 10px
+    }
+
+    div.dokuwiki div.secedit input.button {
+        margin-right: 0;
+    }
+}
