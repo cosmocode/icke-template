@@ -3,7 +3,6 @@ function icke_header() {
     global $conf;
 ?>
 <body>
-    <?php html_msgarea() ?>
     <div id="icke__header" class="clearfix">
         <a class="logo" href="<?php echo wl()?>">
           <?php if (tpl_getConf('logo') && file_exists(mediaFN(tpl_getConf('logo')))) {?>

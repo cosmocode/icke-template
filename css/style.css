@@ -588,12 +588,12 @@ div.insitu-footnote {
     font-size: 1.0em;
 }
 
-div.success, div.error, div.info {
+div.success, div.error, div.info, div.notify {
         line-height: 22px;
-        background-position: 10% center;
+        background-position: 7px center;
         font-family: verdana, sans-serif;
         border: none;
-        padding: 3px 3px 3px 15%;
+        padding: 3px 3px 3px 30px;
         font-size: 12px;
         border: none;
 }

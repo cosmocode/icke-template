@@ -39,6 +39,7 @@ icke_sidebar();
 
                     ?>
                 </div>
+                <?php html_msgarea() ?>
                 <div class="content clearfix">
                     <?php if ($ACT === 'show'): ?>
                         <div><?php tpl_youarehere(); ?></div>
