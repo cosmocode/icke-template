@@ -50,6 +50,10 @@
         display: none; //FIXME reintroduce somewhere
     }
 
+    #icke__wrapper {
+        background-image: none;
+    }
+
     #icke__wrapper .wrap {
         margin: 0;
         padding: 0;
@@ -62,10 +66,17 @@
 
     #icke__toolbar form {
         float: left;
+        font-size: 12px;
     }
 
+    #icke__toolbar select,
     #icke__toolbar input {
-        border: 1px solid __border__;
+//        border: 1px solid __border__;
+        border: none;
+        background-color: #fff;
+        height: 30px;
+        margin: 0 5px 0 0;
+        padding: 0 5px;
     }
 
     #icke__page {
@@ -86,4 +97,13 @@
     div.dokuwiki div.bc {
         display: none;
     }
+
+    #icke__footer .admin_toolbar {
+        display: none;
+    }
+
+    #plugin__qc__wrapper {
+        display: none;
+    }
+
 }
