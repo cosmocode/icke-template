@@ -25,8 +25,9 @@ function icke_header() {
 
 function icke_sidebar() {
     global $USERINFO;
+    global $ACT;
 ?>
-    <div id="icke__wrapper" class="dokuwiki">
+    <div id="icke__wrapper" class="dokuwiki act_<?php echo $ACT ?>">
         <ul id="icke__quicknav">
         <?php icke_tplSidebar(); ?>
         </ul><!-- END icke__quicknav -->

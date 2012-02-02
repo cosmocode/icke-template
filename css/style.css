@@ -616,3 +616,11 @@ div.pagenav-prev {
 div.pagenav-next {
     float: right;
 }
+
+/* disabled sidebar */
+div.act_media #icke__sidebar {
+    display: none;
+}
+div.act_media #icke__page {
+    margin: 0;
+}
