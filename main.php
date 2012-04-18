@@ -10,7 +10,7 @@ require_once DOKU_TPLINC.'components.php';
     <?php tpl_pagetitle()?>
     [<?php echo strip_tags($conf['title'])?>]
     </title>
-    <?php tpl_metaheaders(); icke_tplMenuCSS(); icke_tplFavicon(); ?>
+    <?php tpl_metaheaders(); icke_tplCSS(); icke_tplFavicon(); ?>
 </head>
 <?php
 // render the content into buffer for later use (see doku>devel:templates#tpl_toc
@@ -41,26 +41,29 @@ icke_sidebar();
                 </div>
                 <div class="content clearfix">
                     <?php if ($ACT === 'show'): ?>
+                        <div><?php tpl_youarehere(); ?></div>
                         <p class="meta">
-                    <?php if($INFO['exists']):?>
 
-                        <span class="lastmod">
-                        <?php
-                            if($INFO['lastmod']){
-                                // %e is not supported on Windows
-                                echo ltrim(strftime('%d. %B %Y',$INFO['lastmod']), '0');
-                            }
-                        ?>
-                        </span> –
-                        <?php if($INFO['sum']): ?>
-                            <span class="sum"><?php echo hsc($INFO['sum']); ?></span> –
-                        <?php endif ?>
-                        <?php if($INFO['user']): ?>
-                            <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
-                        <?php else: ?>
-                            <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : 'Ursprungsversion'); ?></span>
-                        <?php endif ?>
-                    <?php endif ?>
+                            <?php if($INFO['exists']):?>
+
+                                <span class="lastmod">
+                                <?php
+                                    if($INFO['lastmod']){
+                                        // %e is not supported on Windows
+                                        echo ltrim(strftime('%d. %B %Y',$INFO['lastmod']), '0');
+                                    }
+                                ?>
+                                </span> –
+                                <?php if($INFO['sum']): ?>
+                                    <span class="sum"><?php echo hsc($INFO['sum']); ?></span> –
+                                <?php endif ?>
+
+                                <?php if($INFO['user']): ?>
+                                    <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
+                                <?php else: ?>
+                                    <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : 'Ursprungsversion'); ?></span>
+                                <?php endif ?>
+                            <?php endif ?>
 
                             <?php
                                 $starred =& plugin_load('action','starred');
@@ -74,12 +77,11 @@ icke_sidebar();
                                     $quicksubscribe->tpl_subscribe();
                                 }
                             ?>
-
-                    </p>
+                        </p>
                     <?php endif?>
 
                     <div class="page">
-                    <?php echo $buffer ?>
+                        <?php echo $buffer ?>
                     </div>
 
                 </div>

@@ -4,11 +4,10 @@ function icke_header() {
 ?>
 <body>
     <?php html_msgarea() ?>
-    <?php icke_startupCheck() ?>
     <div id="icke__header" class="clearfix">
         <a class="logo" href="<?php echo wl()?>">
           <?php if (tpl_getConf('logo') && file_exists(mediaFN(tpl_getConf('logo')))) {?>
-            <img src="<?php echo ml(tpl_getConf('logo'))?>" alt="" />
+            <img src="<?php echo ml(tpl_getConf('logo'),array('w'=>95,'h'=>95))?>" alt="" />
           <?php } ?>
         </a>
         <h5>
