@@ -12,7 +12,7 @@ function icke_header() {
         </a>
         <h5>
             <?php echo $conf['title']?><br />
-            <span><?php echo tpl_getConf('tagline')?></span>
+            <span><?php echo $conf['tagline']?></span>
         </h5>
         <a class="branding" href="http://www.ickewiki.de">ICKE - Integrated Collaboration &amp; Knowledge Environment</a>
     </div><!-- END icke__header -->
