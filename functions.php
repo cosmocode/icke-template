@@ -126,7 +126,7 @@ function icke_tplSidebar() {
         if (auth_quickaclcheck($link) < AUTH_READ) continue;
         $ns   = getNS($link);
         if(!$ns) $ns = $link; // treat link as outside namespace startpage
-        $link = icke_tplSidebarTranslationLink($link);
+        $link = icke_translatedID($link);
 
         $popup = p_wiki_xhtml($ns.':quick','',false);
         $act   = (bool) preg_match('/^'.preg_quote($ns,'/').':/',$ID);
@@ -139,15 +139,17 @@ function icke_tplSidebar() {
     icke_navi('','Settings','qnav_einstellungen',icke_toolbox(),false,false);
 }
 
-function icke_tplSidebarTranslationLink($id) {
-    global $ID;
-    $translation =& plugin_load('helper', 'translation');
+function icke_translatedID($id, $mustExist = true) {
+    $translation =& plugin_load('action', 'translation');
     if ($translation === null) {
         return $id;
     }
-    $lang = $translation->getLangPart($ID);
-    $translatedId = $lang . ":$id";
-    if (page_exists($translatedId)) {
+
+    if ($translation->locale === null) {
+        return $id;
+    }
+    $translatedId = $translation->locale . ":$id";
+    if (page_exists($translatedId) || !$mustExist ) {
         return $translatedId;
     }
     return $id;
@@ -169,18 +171,27 @@ function icke_tplCSS() {
 
     foreach($navi as $id){
         if(!$id) continue;
+        if(strstr($id,'%USER%') !== false) continue;
         $link = $id;
         resolve_pageid('',$link,$exists);
+        if (auth_quickaclcheck($link) < AUTH_READ) continue;
         $ns   = getNS($link);
         if(!$ns) $ns = $link;
 
+        // try to use translated namespaces for translation plug-in
         $class = array_shift(explode(':',$ns));
+        $imgClass = $class;
+        if (page_exists($link)) {
+            $class = icke_translatedID($class, false);
+            $class = str_replace(':', '_', $class);
+
+        }
 
         echo "#icke__quicknav a.qnav_$class {";
             if(file_exists(mediaFN("$ns:icon_off.png"))){
                 echo "background-image: url(".ml("$ns:icon_off.png",array('w'=>60,'h'=>60),true,'&').")";
-            }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$class.'_inaktiv.png')){
-                echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$class."_inaktiv.png)";
+            }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$imgClass.'_inaktiv.png')){
+                echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$imgClass."_inaktiv.png)";
             }else{
                 echo "background-image: url(".DOKU_TPL."/images/icons/60x60/fail.png)";
             }
@@ -189,8 +200,8 @@ function icke_tplCSS() {
         echo "#icke__quicknav li.active a.qnav_$class, #icke__quicknav li:hover a.qnav_$class {";
             if(file_exists(mediaFN("$ns:icon_on.png"))){
                 echo "background-image: url(".ml("$ns:icon_on.png",array('w'=>60,'h'=>60),true,'&').")";
-            }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$class.'_aktiv.png')){
-                echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$class."_aktiv.png)";
+            }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$imgClass.'_aktiv.png')){
+                echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$imgClass."_aktiv.png)";
             }else{
                 echo "background-image: url(".DOKU_TPL."/images/icons/60x60/fail.png)";
             }
@@ -200,8 +211,8 @@ function icke_tplCSS() {
             echo 'text-indent: -10000px; width:30px; height:30px;';
             if(file_exists(mediaFN("$ns:icon_on.png"))){
                 echo "background-image: url(".ml("$ns:icon_on.png",array('w'=>30,'h'=>30),true,'&').")";
-            }elseif(file_exists(DOKU_TPLINC.'/images/icons/30x30/'.$class.'_aktiv.png')){
-                echo "background-image: url(".DOKU_TPL.'/images/icons/30x30/'.$class."_aktiv.png)";
+            }elseif(file_exists(DOKU_TPLINC.'/images/icons/30x30/'.$imgClass.'_aktiv.png')){
+                echo "background-image: url(".DOKU_TPL.'/images/icons/30x30/'.$imgClass."_aktiv.png)";
             }else{
                 echo "background-image: url(".DOKU_TPL."/images/icons/30x30/fail.png)";
             }
@@ -217,6 +228,12 @@ function icke_tplCSS() {
 
 
 function icke_tplSearch() {
+    $fancysearch = plugin_load('action', 'fancysearch');
+    if (is_null($fancysearch)) {
+        tpl_searchform(true, false);
+        return;
+    }
+
     $navi = array('' => 'icke');
     $ns = tpl_getConf('namespaces');
     $ns = explode(',',$ns);
@@ -229,17 +246,17 @@ function icke_tplSearch() {
         if (auth_quickaclcheck($link) < AUTH_READ) continue;
         $ns   = getNS($link);
         if(!$ns) $ns = $link;
-        $navi[$ns] = array_shift(explode(':',$ns));
+
+        // try to use translated namespaces for translation plug-in
+        $topNs = array_shift(explode(':',$ns));
+        if (page_exists($link)) {
+            $topNs = icke_translatedID($topNs, false);
+        }
+        $navi[$ns] = $topNs;
     }
 
-    $fancysearch = plugin_load('action', 'fancysearch');
-    if (!is_null($fancysearch)) {
-        $fancysearch->tpl_searchform($navi);
-    }else{
-        tpl_searchform(true, false);
-    }
+    $fancysearch->tpl_searchform($navi);
 }
-
 
 function icke_tplFavicon() {
     echo '  <link rel="shortcut icon" href="' . DOKU_TPL . icke_getFile('images/favicon.png') . '" />';
