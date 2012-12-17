@@ -1,0 +1,9 @@
+
+div.plugin_translation {
+    padding-left: 1em;
+    padding-top: 4px;
+}
+
+div.plugin_translation ul li a {
+    background-color: transparent;
+}

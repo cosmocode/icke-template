@@ -25,6 +25,11 @@ icke_sidebar();
                 <div id="icke__drophead" class="closed clearfix">
                     <?php
 
+                    $translation =& plugin_load('helper','translation');
+                    if ($translation !== null) {
+                        echo $translation->showTranslations();
+                    }
+
                     //Do Plugin
                     $doplugin = plugin_load('helper','do');
                     if ($doplugin !== null) {
@@ -66,6 +71,8 @@ icke_sidebar();
                             <?php endif ?>
 
                             <?php
+
+
                                 $starred =& plugin_load('action','starred');
                                 if ($starred !== null) {
                                     $starred->tpl_starred();
@@ -78,6 +85,7 @@ icke_sidebar();
                                 }
                             ?>
                         </p>
+
                     <?php endif?>
 
                     <div class="page">

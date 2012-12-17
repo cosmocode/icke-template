@@ -126,6 +126,7 @@ function icke_tplSidebar() {
         if (auth_quickaclcheck($link) < AUTH_READ) continue;
         $ns   = getNS($link);
         if(!$ns) $ns = $link; // treat link as outside namespace startpage
+        $link = icke_tplSidebarTranslationLink($link);
 
         $popup = p_wiki_xhtml($ns.':quick','',false);
         $act   = (bool) preg_match('/^'.preg_quote($ns,'/').':/',$ID);
@@ -136,6 +137,20 @@ function icke_tplSidebar() {
 
     // Add toolbox
     icke_navi('','Settings','qnav_einstellungen',icke_toolbox(),false,false);
+}
+
+function icke_tplSidebarTranslationLink($id) {
+    global $ID;
+    $translation =& plugin_load('helper', 'translation');
+    if ($translation === null) {
+        return $id;
+    }
+    $lang = $translation->getLangPart($ID);
+    $translatedId = $lang . ":$id";
+    if (page_exists($translatedId)) {
+        return $translatedId;
+    }
+    return $id;
 }
 
 /**
