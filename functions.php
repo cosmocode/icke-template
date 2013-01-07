@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__FILE__) . '/IckeNavigation.php';
+
 function icke_getFile($name) {
     return file_exists(DOKU_TPLINC . 'local/' . $name) ?
            'local/' . $name : $name;
@@ -75,10 +77,10 @@ function icke_toolbox(){
 /**
  * Print a single navigation item and associated quick popup
  */
-function icke_navi($link,$name='',$class='',$popup='',$act=false,$sep=false){
+function icke_navi($link,$name='',$class='',$popup='',$active=false,$sep=false){
     // active/separator decorations
     $liclass = '';
-    if($act) $liclass .= ' active';
+    if($active) $liclass .= ' active';
     if($sep) $liclass .= ' separator';
     $liclass = trim($liclass);
     if($liclass) $liclass = ' class="'.$liclass.'"';
@@ -102,41 +104,8 @@ function icke_navi($link,$name='',$class='',$popup='',$act=false,$sep=false){
  * Populate the navigation side bar from the configured navigation links
  */
 function icke_tplSidebar() {
-    global $ID;
-    $sep = false;
-
-    // load dynamic namespaces
-    $navi = tpl_getConf('namespaces');
-    $navi = explode(',',$navi);
-    foreach($navi as $id){
-        // empty ones are separators
-        if(!$id){
-            $sep = true;
-            continue;
-        }
-
-        // handle user based links
-        if(strstr($id,'%USER%') !== false){
-            if(!$_SERVER['REMOTE_USER']) continue; // no user available, skip it
-            $id = str_replace('%USER%',$_SERVER['REMOTE_USER'],$id);
-        }
-
-        $link = $id;
-        resolve_pageid('',$link,$exists); // create full links
-        if (auth_quickaclcheck($link) < AUTH_READ) continue;
-        $ns   = getNS($link);
-        if(!$ns) $ns = $link; // treat link as outside namespace startpage
-        $link = icke_translatedID($link);
-
-        $popup = p_wiki_xhtml($ns.':quick','',false);
-        $act   = (bool) preg_match('/^'.preg_quote($ns,'/').':/',$ID);
-        $class = 'qnav_'.array_shift(explode(':',$ns)); // first ns part
-        icke_navi($link,'',$class,$popup,$act,$sep);
-        $sep =false;
-    }
-
-    // Add toolbox
-    icke_navi('','Settings','qnav_einstellungen',icke_toolbox(),false,false);
+    $navigation = icke_getNavigation();
+    $navigation->drawSidebar();
 }
 
 function icke_translatedID($id, $mustExist = true) {
@@ -162,97 +131,49 @@ function icke_translatedID($id, $mustExist = true) {
  * then in the template, then uses a fail image.
  */
 function icke_tplCSS() {
-    $navi = tpl_getConf('namespaces');
-    $navi = explode(',',$navi);
+    $navigation = icke_getNavigation();
+    $navigation->buildPageCss();
+}
 
-    echo "<style type=\"text/css\">\n";
+function icke_processFancySearchItem($id) {
+    if(!$id) return false;
+    $link = $id;
+    resolve_pageid('',$link,$exists);
+    if (auth_quickaclcheck($link) < AUTH_READ) return false;
+    $ns   = getNS($link);
+    if(!$ns) $ns = $link;
 
-    $navi[] = "einstellungen";
-
-    foreach($navi as $id){
-        if(!$id) continue;
-        if(strstr($id,'%USER%') !== false) continue;
-        $link = $id;
-        resolve_pageid('',$link,$exists);
-        if (auth_quickaclcheck($link) < AUTH_READ) continue;
-        $ns   = getNS($link);
-        if(!$ns) $ns = $link;
-
-        // try to use translated namespaces for translation plug-in
-        $class = array_shift(explode(':',$ns));
-        $imgClass = $class;
-        if (page_exists($link)) {
-            $class = icke_translatedID($class, false);
-            $class = str_replace(':', '_', $class);
-
-        }
-
-        echo "#icke__quicknav a.qnav_$class {";
-            if(file_exists(mediaFN("$ns:icon_off.png"))){
-                echo "background-image: url(".ml("$ns:icon_off.png",array('w'=>60,'h'=>60),true,'&').")";
-            }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$imgClass.'_inaktiv.png')){
-                echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$imgClass."_inaktiv.png)";
-            }else{
-                echo "background-image: url(".DOKU_TPL."/images/icons/60x60/fail.png)";
-            }
-        echo "}\n";
-
-        echo "#icke__quicknav li.active a.qnav_$class, #icke__quicknav li:hover a.qnav_$class {";
-            if(file_exists(mediaFN("$ns:icon_on.png"))){
-                echo "background-image: url(".ml("$ns:icon_on.png",array('w'=>60,'h'=>60),true,'&').")";
-            }elseif(file_exists(DOKU_TPLINC.'/images/icons/60x60/'.$imgClass.'_aktiv.png')){
-                echo "background-image: url(".DOKU_TPL.'/images/icons/60x60/'.$imgClass."_aktiv.png)";
-            }else{
-                echo "background-image: url(".DOKU_TPL."/images/icons/60x60/fail.png)";
-            }
-        echo "}\n";
-
-        echo "#fancysearch__ns_custom li.fancysearch_ns_$class {";
-            echo 'text-indent: -10000px; width:30px; height:30px;';
-            if(file_exists(mediaFN("$ns:icon_on.png"))){
-                echo "background-image: url(".ml("$ns:icon_on.png",array('w'=>30,'h'=>30),true,'&').")";
-            }elseif(file_exists(DOKU_TPLINC.'/images/icons/30x30/'.$imgClass.'_aktiv.png')){
-                echo "background-image: url(".DOKU_TPL.'/images/icons/30x30/'.$imgClass."_aktiv.png)";
-            }else{
-                echo "background-image: url(".DOKU_TPL."/images/icons/30x30/fail.png)";
-            }
-        echo "}\n";
+    // try to use translated namespaces for translation plug-in
+    $class = array_shift(explode(':',$ns));
+    $imgClass = $class;
+    if (page_exists($link)) {
+        $class = icke_translatedID($class, false);
+        $class = str_replace(':', '_', $class);
     }
-    echo "#fancysearch__ns_custom li.fancysearch_ns_icke {";
-    echo 'text-indent: -10000px; width:30px; height:30px;';
-    echo 'background-image: url('.DOKU_TPL.'/images/icons/30x30/icke.png)';
-    echo "}\n";
-
-    echo "</style>\n";
+    return array('ns' => $ns, 'class' => $class, 'imgClass' => $imgClass);
 }
 
 
 function icke_tplSearch() {
+
     $fancysearch = plugin_load('action', 'fancysearch');
     if (is_null($fancysearch)) {
         tpl_searchform(true, false);
         return;
     }
 
-    $navi = array('' => 'icke');
-    $ns = tpl_getConf('namespaces');
-    $ns = explode(',',$ns);
-    foreach($ns as $id){
-        if(!$id) continue;
-        if(strstr($id,'%USER%') !== false) continue;
+    $navigation = icke_getNavigation();
+    $navi = array();
+    $navi[''] = 'icke';
+    foreach($navigation->navigation as $item){
+        if (!($item instanceof IckeNavigationItem)) continue;
+        if(strstr($item->id,'%USER%') !== false) continue;
+        //$processed = icke_processFancySearchItem($id);
+        //if (!$processed) continue;
+        $ns = rtrim($item->getNamespace(), ':');
+        $class = $item->class;
 
-        $link = $id;
-        resolve_pageid('',$link,$exists); // create full links
-        if (auth_quickaclcheck($link) < AUTH_READ) continue;
-        $ns   = getNS($link);
-        if(!$ns) $ns = $link;
-
-        // try to use translated namespaces for translation plug-in
-        $topNs = array_shift(explode(':',$ns));
-        if (page_exists($link)) {
-            $topNs = icke_translatedID($topNs, false);
-        }
-        $navi[$ns] = $topNs;
+        $navi[$ns] = $class;
     }
 
     $fancysearch->tpl_searchform($navi);
