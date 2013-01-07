@@ -179,7 +179,4 @@ function icke_tplSearch() {
     $fancysearch->tpl_searchform($navi);
 }
 
-function icke_tplFavicon() {
-    echo '  <link rel="shortcut icon" href="' . DOKU_TPL . icke_getFile('images/favicon.png') . '" />';
-}
 

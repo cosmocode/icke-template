@@ -17,7 +17,7 @@ require_once DOKU_TPLINC.'components.php';
     [<?php echo strip_tags($conf['title'])?>]
   </title>
 
-  <?php tpl_metaheaders(); icke_tplCSS(); icke_tplFavicon(); ?>
+  <?php tpl_metaheaders(); icke_tplCSS(); echo tpl_favicon(array('favicon', 'mobile')); ?>
 
 </head>
 <?php

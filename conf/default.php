@@ -1,6 +1,5 @@
 <?php
 
-$conf['tagline']    = '';
 $conf['logo']       = '';
 
 $conf['namespaces'] = 'user:%USER%:dashboard,,allgemeines:,fachwissen:,projekt:,kunde:,,hilfe:';
