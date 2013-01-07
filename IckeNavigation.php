@@ -116,6 +116,7 @@ class IckeNavigation {
                 $firstItem = false;
                 continue;
             }
+            $firstItem = false;
             if ($item instanceof IckeNavigationItem) {
 
                 $namespace = getNS($item->id);
