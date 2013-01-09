@@ -120,7 +120,8 @@ class IckeNavigation {
             if ($item instanceof IckeNavigationItem) {
 
                 $namespace = getNS($item->id);
-                $popup  = p_wiki_xhtml($namespace.':quick','',false);
+
+                $popup  = p_wiki_xhtml($this->getLocalizedPopup($namespace.':quick'),'',false);
                 $translationNs = preg_quote($this->getCurrentTranslation().':', '/');
                 $active = (bool) preg_match('/^('.$translationNs.')?'.preg_quote($namespace,'/').':/',$ID);
                 $class = 'qnav_'.array_shift(explode(':',$item->class)); // first ns part
@@ -132,6 +133,17 @@ class IckeNavigation {
 
         // Add toolbox
         icke_navi('','Settings','qnav_einstellungen',icke_toolbox(),false,false);
+    }
+
+    private function getLocalizedPopup($id) {
+        $lang = $this->getCurrentTranslation();
+        if ($lang === '') return $id;
+
+        $local = "$lang:$id";
+        if (page_exists($local)) {
+            return $local;
+        }
+        return $id;
     }
 
     public function buildPageCss() {
