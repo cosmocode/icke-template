@@ -119,7 +119,7 @@ class IckeNavigation {
             $firstItem = false;
             if ($item instanceof IckeNavigationItem) {
 
-                $namespace = getNS($item->id);
+                $namespace = $this->replaceUserPlaceholder(getNS($item->id));
 
                 $popup  = p_wiki_xhtml($this->getLocalizedPopup($namespace.':quick'),'',false);
                 $translationNs = preg_quote($this->getCurrentTranslation().':', '/');
