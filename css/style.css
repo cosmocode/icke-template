@@ -609,3 +609,7 @@ div.clearer {
 #icke__page del {
         text-decoration: line-through;
 }
+
+#icke__page .search_results {
+    font-size: 130%;
+}
