@@ -10,7 +10,11 @@ require_once DOKU_TPLINC.'components.php';
     <?php tpl_pagetitle()?>
     [<?php echo strip_tags($conf['title'])?>]
     </title>
-    <?php tpl_metaheaders(); icke_tplCSS(); icke_tplFavicon(); ?>
+    <?php
+    tpl_metaheaders();
+    icke_tplCSS();
+    icke_tplFavicon();
+    ?>
 </head>
 <?php
 // render the content into buffer for later use (see doku>devel:templates#tpl_toc
@@ -66,7 +70,7 @@ icke_sidebar();
                                 <?php if($INFO['user']): ?>
                                     <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
                                 <?php else: ?>
-                                    <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : 'Ursprungsversion'); ?></span>
+                                    <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : tpl_getLang('current version')); ?></span>
                                 <?php endif ?>
                             <?php endif ?>
 
