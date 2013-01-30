@@ -81,7 +81,7 @@ function icke_sidebar() {
 
                         $tags = plugin_load('helper','tagging');
                         if ($tags !== null) {
-                            echo '<h3>Tags zu dieser Seite</h3>';
+                            echo '<h3>' .tpl_getLang('tags to this page'). '</h3>';
                             $tags->tpl_tags();
                         }
                     }
