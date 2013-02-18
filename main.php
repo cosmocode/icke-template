@@ -11,7 +11,7 @@ require_once DOKU_TPLINC.'components.php';
     [<?php echo strip_tags($conf['title'])?>]
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php tpl_metaheaders(); icke_tplCSS(); icke_tplFavicon(); ?>
+    <?php tpl_metaheaders(); icke_tplCSS(); echo tpl_favicon(array('favicon', 'mobile')) ?>
 </head>
 <?php
 // render the content into buffer for later use (see doku>devel:templates#tpl_toc
@@ -25,6 +25,11 @@ icke_sidebar();
             <div id="icke__page">
                 <div id="icke__drophead" class="closed clearfix">
                     <?php
+
+                    $translation =& plugin_load('helper','translation');
+                    if ($translation !== null) {
+                        echo $translation->showTranslations();
+                    }
 
                     //Do Plugin
                     $doplugin = plugin_load('helper','do');
@@ -68,6 +73,8 @@ icke_sidebar();
                             <?php endif ?>
 
                             <?php
+
+
                                 $starred =& plugin_load('action','starred');
                                 if ($starred !== null) {
                                     $starred->tpl_starred();
@@ -80,6 +87,7 @@ icke_sidebar();
                                 }
                             ?>
                         </p>
+
                     <?php endif?>
 
                     <div class="page">

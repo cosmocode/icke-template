@@ -1,6 +1,5 @@
 <?php
 
-$meta['tagline']    = array('string');
 $meta['logo']       = array('string');
 
 $meta['namespaces'] = array('string');
