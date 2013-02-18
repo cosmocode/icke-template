@@ -183,7 +183,7 @@ class IckeNavigation {
 
     private function getImage(IckeNavigationItem $navigationItem, $size, $nsPostFix, $pathPostFix) {
         if (file_exists(mediaFN($navigationItem->getNamespace() . $nsPostFix))) {
-            return ml($navigationItem->getNamespace() . ':icon:off.png', array('w'=>$size,'h'=>$size), true, '&');
+            return ml($navigationItem->getNamespace() . $nsPostFix, array('w'=>$size,'h'=>$size), true, '&');
         }
 
         $path = "/images/icons/{$size}x$size/".$navigationItem->class.$pathPostFix;
