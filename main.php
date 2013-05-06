@@ -10,7 +10,8 @@ require_once DOKU_TPLINC.'components.php';
     <?php tpl_pagetitle()?>
     [<?php echo strip_tags($conf['title'])?>]
     </title>
-    <?php tpl_metaheaders(); icke_tplCSS(); icke_tplFavicon(); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php tpl_metaheaders(); icke_tplCSS(); echo tpl_favicon(array('favicon', 'mobile')) ?>
 </head>
 <?php
 // render the content into buffer for later use (see doku>devel:templates#tpl_toc
@@ -24,6 +25,11 @@ icke_sidebar();
             <div id="icke__page">
                 <div id="icke__drophead" class="closed clearfix">
                     <?php
+
+                    $translation =& plugin_load('helper','translation');
+                    if ($translation !== null) {
+                        echo $translation->showTranslations();
+                    }
 
                     //Do Plugin
                     $doplugin = plugin_load('helper','do');
@@ -39,9 +45,10 @@ icke_sidebar();
 
                     ?>
                 </div>
+                <?php html_msgarea() ?>
                 <div class="content clearfix">
                     <?php if ($ACT === 'show'): ?>
-                        <div><?php tpl_youarehere(); ?></div>
+                        <div class="bc"><?php tpl_youarehere(); ?></div>
                         <p class="meta">
 
                             <?php if($INFO['exists']):?>
@@ -61,11 +68,13 @@ icke_sidebar();
                                 <?php if($INFO['user']): ?>
                                     <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
                                 <?php else: ?>
-                                    <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : 'Ursprungsversion'); ?></span>
+                                    <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : tpl_getLang('current version')); ?></span>
                                 <?php endif ?>
                             <?php endif ?>
 
                             <?php
+
+
                                 $starred =& plugin_load('action','starred');
                                 if ($starred !== null) {
                                     $starred->tpl_starred();
@@ -78,6 +87,7 @@ icke_sidebar();
                                 }
                             ?>
                         </p>
+
                     <?php endif?>
 
                     <div class="page">
@@ -94,7 +104,7 @@ icke_sidebar();
                     <div class="footer_toolbar">
                         <p>
                         </p>
-                        <p class="copy">&copy; Copyright 2009–2011 <a href="http://www.ickewiki.de">ICKE</a></p>
+                        <p class="copy">&copy; Copyright 2009–2013 <a href="http://www.ickewiki.de">ICKE</a></p>
                     </div>
                 </div><!-- END icke__footer -->
             </div><!-- END icke__page -->

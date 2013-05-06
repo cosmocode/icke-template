@@ -3,7 +3,6 @@ function icke_header() {
     global $conf;
 ?>
 <body>
-    <?php html_msgarea() ?>
     <div id="icke__header" class="clearfix">
         <a class="logo" href="<?php echo wl()?>">
           <?php if (tpl_getConf('logo') && file_exists(mediaFN(tpl_getConf('logo')))) {?>
@@ -12,17 +11,23 @@ function icke_header() {
         </a>
         <h5>
             <?php echo $conf['title']?><br />
-            <span><?php echo tpl_getConf('tagline')?></span>
+            <span><?php echo $conf['tagline']?></span>
         </h5>
         <a class="branding" href="http://www.ickewiki.de">ICKE - Integrated Collaboration &amp; Knowledge Environment</a>
     </div><!-- END icke__header -->
+
+    <div id="icke__toolbar">
+        <?php tpl_actiondropdown() ?>
+        <?php tpl_searchform() ?>
+    </div>
 <?php
 }
 
 function icke_sidebar() {
     global $USERINFO;
+    global $ACT;
 ?>
-    <div id="icke__wrapper" class="dokuwiki">
+    <div id="icke__wrapper" class="dokuwiki act_<?php echo $ACT ?>">
         <ul id="icke__quicknav">
         <?php icke_tplSidebar(); ?>
         </ul><!-- END icke__quicknav -->
@@ -73,15 +78,15 @@ function icke_sidebar() {
                         if ($labeled !== null) {
                             $labels = $labeled->tpl_labels();
                             if ($labels) {
-                                echo '<h3 class="labeled">Labels zu dieser Seite</h3>';
+                                echo '<h3 class="labeled">'.tpl_getLang('labeled').'</h3>';
                                 echo $labels;
                             }
-                            
+
                         }
 
                         $tags = plugin_load('helper','tagging');
                         if ($tags !== null) {
-                            echo '<h3>Tags zu dieser Seite</h3>';
+                            echo '<h3>'.tpl_getLang('tagging').'</h3>';
                             $tags->tpl_tags();
                         }
                     }

@@ -442,7 +442,7 @@ a {text-decoration: none;}
     position: relative;
 }
 
-#icke__sidebar .table_of_contents div.tocheader {
+#dw__toc h3.toggle {
     display: none;
 }
 
@@ -588,12 +588,12 @@ div.insitu-footnote {
     font-size: 1.0em;
 }
 
-div.success, div.error, div.info {
+div.success, div.error, div.info, div.notify {
         line-height: 22px;
-        background-position: 10% center;
+        background-position: 7px center;
         font-family: verdana, sans-serif;
         border: none;
-        padding: 3px 3px 3px 15%;
+        padding: 3px 3px 3px 30px;
         font-size: 12px;
         border: none;
 }
@@ -608,4 +608,23 @@ div.clearer {
 
 #icke__page del {
         text-decoration: line-through;
+}
+
+div.pagenav-prev {
+    float: left;
+}
+div.pagenav-next {
+    float: right;
+}
+
+/* disabled sidebar */
+div.act_media #icke__sidebar {
+    display: none;
+}
+div.act_media #icke__page {
+    margin: 0;
+}
+
+#icke__page .search_results {
+    font-size: 130%;
 }
