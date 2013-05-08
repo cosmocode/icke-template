@@ -69,6 +69,7 @@ class IckeNavigation {
             }
 
             $link = $this->translateId($link);
+            $link = cleanID($link);
 
             $this->navigation[] = new IckeNavigationItem($id, $link, $isNamespace);
         }
