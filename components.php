@@ -18,7 +18,7 @@ function icke_header() {
 
     <div id="icke__toolbar">
         <?php tpl_actiondropdown() ?>
-        <?php tpl_searchform() ?>
+        <?php /* tpl_searchform()  FIXME this breaks the other search*/ ?>
     </div>
 <?php
 }
