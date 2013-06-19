@@ -1,62 +1,71 @@
 .search_result {
-	margin-bottom: 10px;
-	padding: 0 10px 0 30px;
+    margin-bottom: 10px;
+    padding: 0 10px 0 30px;
 }
 
 .search_result a.wikilink1 {
-	font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .search_result .search_snippet {
-	color: __search_snip__;
-	font-size: 12px;
-	margin-left: 20px;
-        margin-top:5px;
+    color: __search_snip__;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 
 .search_result strong.search_hit {
-	font-weight: normal;
+    font-weight: normal;
 }
 
 .search_result .search_hit {
-	background-color: __search_hit__;
-	color: __text__;
+    background-color: __search_hit__;
+    color: __text__;
 }
 
 ul.search_quickhits {
-/*	clear: both;*/
-	padding-bottom: 10px;
+    /*	clear: both;*/
+    padding-bottom: 10px;
 
 }
 
 ul.search_quickhits li {
-	float: left;
-	min-width: 10em;
-	width: 30%;
-	padding-bottom: 6px;
-        list-style-type: none;
-        background:url(images/bullet.png) 4px 9px no-repeat;
-        padding-left:14px;
-}
-.search_quickresult {
-        border-bottom:1px dashed __text__;
-        margin-bottom:1em;
+    float: left;
+    min-width: 10em;
+    width: 30%;
+    padding-bottom: 6px;
+    list-style-type: none;
+    background: url(images/bullet.png) 4px 9px no-repeat;
+    padding-left: 14px;
 }
 
+.search_quickresult {
+    border-bottom: 1px dashed __text__;
+    margin-bottom: 1em;
+}
+
+/* AJAX quick search */
+
 div.ajax_qsearch {
-        font-size: 12px;
-        line-height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+
+    margin-top: 5px;
+    padding-bottom: 10px;
+
+    position: relative;
 }
 
 div.ajax_qsearch ul li a.wikilink1 {
-        text-decoration: none;
+    text-decoration: none;
 }
 
 div.ajax_qsearch ul li:hover a {
-        color: __background__;
+    color: __background__;
 }
 
 div.ajax_qsearch ul li:hover {
-        background-color: __color_tag__;
-        font-weight: bold;
+    background-color: __color_tag__;
+    font-weight: bold;
 }
+
