@@ -326,6 +326,13 @@ a {text-decoration: none;}
     width: 18px;
 }
 
+#icke__sidebar .logon .login {
+    background: transparent url(images/icons/login.png) center left no-repeat;
+    font-size: 200%;
+    padding-left: 25px;
+    color: __mediumgray__;
+}
+
 #icke__sidebar .logon .icke__noopentasks,
 #icke__sidebar .logon .icke__opentasks,
 #icke__sidebar .logon .icke__opentask {
