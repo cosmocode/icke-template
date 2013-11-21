@@ -66,6 +66,12 @@
 
 #icke__page table {
     width: 100%;
+    margin-bottom: 0;
+}
+
+#icke__page div.table {
+    overflow: auto;
+    margin-bottom: 1em;
 }
 
 #icke__page .content a {
