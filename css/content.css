@@ -64,7 +64,7 @@
     padding: 0.5em 0.3em 0 0;
 }
 
-#icke__page table {
+#icke__page table.inline {
     width: 100%;
     margin-bottom: 0;
 }
