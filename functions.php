@@ -69,9 +69,19 @@ function icke_toolbox(){
     foreach($types as $type){
         $tools .= tpl_actionlink($type,'<li><div class="li">','</div></li>','',$return=true);
     }
+    $tools .= icke_toolbox_renderer('export_pdf', 'PDF Export', 'dw2pdf', 'action');
+    $tools .= icke_toolbox_renderer('export_odt', 'ODT Export', 'odt', 'action');
     return $tools;
-    $tools .= '</ul>';
-    $tools .= '</div>';
+}
+
+function icke_toolbox_renderer($action, $text, $pluginName, $pluginType) {
+    if (plugin_load($pluginType, $pluginName) === null) {
+        return '';
+    }
+    global $ID;
+    $link = sprintf('<a href="%s"  class="action admin" rel="nofollow" title="%s">', wl($ID, array('do' => $action)), $text);
+    $link .= sprintf('<li><div class="li">%s</div></li></a>', $text);
+    return $link;
 }
 
 /**
