@@ -36,10 +36,6 @@
     line-height: 14px;
 }
 
-div.dokuwiki .tagging_cloud {
-    font-size: 1.3em;
-}
-
 #tagging_edit {
     font-size: 1.2em;
 }
@@ -62,6 +58,10 @@ div.dokuwiki .tagging_cloud li a:hover {
     text-decoration: underline;
 }
 
-#icke__sidebar .sideclip .tagging_cloud div.li {
-    padding-bottom: 0;
+#icke__sidebar .sideclip ul.tagging_cloud {
+    text-align: left;
+}
+
+#icke__sidebar .sideclip ul.tagging_cloud div.li {
+    display: inline-block;
 }
