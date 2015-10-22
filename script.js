@@ -15,10 +15,17 @@ jQuery(function(){
         }
     }
 
-    jQuery(".popup_content li.node").mouseenter(
-        function() {
-            jQuery(this).children('ul').slideDown(500);
-        }
-    );
+    while (jQuery('.popup_content ul').children('li.node').length) {
+        console.log('foo');
+        var $currentNode = jQuery('.popup_content ul').children('li.node').first();
+        var $newPopout = $currentNode.closest('div.sec_level').clone();
+        $newPopout.find('div.popup_content').html('');
+        $newPopout.css("left","30px").css("top","-20px");
+        var newZIndex = $currentNode.closest('div.sec_level').find('span.b').first().zIndex() + 1;
+        $newPopout.css("z-index", newZIndex);
+        $currentNode.children('ul').first().appendTo($newPopout.find('div.popup_content'));
+        $newPopout.appendTo($currentNode);
+        $currentNode.removeClass('node');
+    }
 
 });
