@@ -15,4 +15,10 @@ jQuery(function(){
         }
     }
 
+    jQuery(".popup_content li.node").mouseenter(
+        function() {
+            jQuery(this).children('ul').slideDown(500);
+        }
+    );
+
 });
