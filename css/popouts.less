@@ -14,8 +14,8 @@
     width: 60px;
 }
 
-#icke__quicknav li:hover div.sec_level,
-#icke__quicknav li.hover div.sec_level {
+#icke__quicknav li:hover > div.sec_level,
+#icke__quicknav li.hover > div.sec_level {
     display: block;
     z-index: 50;
 }
@@ -88,6 +88,23 @@
 
 #icke__quicknav div.sec_level ul {
     padding-top: 5px;
+}
+
+#icke__quicknav div.sec_level div.sec_level {
+    top: -20px;
+    background: __background__;
+    border: __border__ solid 1px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #BBBBBB;
+    padding: 5px;
+}
+
+#icke__quicknav div.sec_level div.sec_level ul {
+    margin-bottom: 5px;
+}
+
+#icke__quicknav div.sec_level div.sec_level li {
+    margin-right: 0;
 }
 
 #icke__quicknav div.sec_level h1,

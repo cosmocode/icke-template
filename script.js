@@ -15,4 +15,19 @@ jQuery(function(){
         }
     }
 
+    while (jQuery('.popup_content ul').children('li.node').length) {
+        console.log('foo');
+        var $currentNode = jQuery('.popup_content ul').children('li.node').first();
+        var $newPopout = $currentNode.closest('div.sec_level').clone();
+        $newPopout.html('');
+        var newZIndex = $currentNode.closest('div.sec_level').first().zIndex() + 5;
+        var newCSS = {
+            'z-index': newZIndex
+        };
+        $newPopout.css(newCSS);
+        $currentNode.children('ul').first().appendTo($newPopout);
+        $newPopout.appendTo($currentNode);
+        $currentNode.removeClass('node');
+    }
+
 });
