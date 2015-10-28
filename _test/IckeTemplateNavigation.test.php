@@ -2,6 +2,10 @@
 
 require_once dirname(__FILE__) . '/../IckeNavigation.php';
 
+/**
+ * @group template_icke-template
+ * @group templates
+ */
 class IckeTemplateNavigationTest extends DokuWikiTest {
 
     public function testLoadNavigation() {
