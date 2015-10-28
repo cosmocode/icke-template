@@ -15,19 +15,40 @@ jQuery(function(){
         }
     }
 
+    getULwidth = function getULwidth($ul) {
+        var width = 0;
+        var $li = $ul.children('li');
+        $li.each(function() {
+            var $div = jQuery(this).children('div.li').first();
+            var content = $div.html();
+            $div.html('<span id="widthMeasure">' + content + '</span>');
+            if (width < jQuery('#widthMeasure').width()) {
+                width = jQuery('#widthMeasure').width();
+            }
+            $div.html(content);
+        });
+        return parseInt(width);
+    };
+
+    jQuery('div.sec_level').css('display','inline');
     while (jQuery('.popup_content ul').children('li.node').length) {
-        console.log('foo');
         var $currentNode = jQuery('.popup_content ul').children('li.node').first();
         var $newPopout = $currentNode.closest('div.sec_level').clone();
         $newPopout.html('');
+
         var newZIndex = $currentNode.closest('div.sec_level').first().zIndex() + 5;
+        var parentWidth = getULwidth($currentNode.closest('ul'));
+        var parentPaddingLeft = parseInt($currentNode.css('padding-left').replace("px", ""));
+        var parentPaddingRight = parseInt($currentNode.css('padding-right').replace("px", ""));
         var newCSS = {
-            'z-index': newZIndex
+            'z-index': newZIndex,
+            'left' : parentPaddingLeft + parentWidth + parentPaddingRight + 'px'
         };
         $newPopout.css(newCSS);
         $currentNode.children('ul').first().appendTo($newPopout);
         $newPopout.appendTo($currentNode);
         $currentNode.removeClass('node');
     }
+    jQuery('div.sec_level').css('display','');
 
 });
