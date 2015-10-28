@@ -48,6 +48,7 @@ jQuery(function(){
         $currentNode.children('ul').first().appendTo($newPopout);
         $newPopout.appendTo($currentNode);
         $currentNode.removeClass('node');
+        $currentNode.addClass('navNode');
     }
     jQuery('div.sec_level').css('display','');
 
