@@ -1,6 +1,6 @@
 /* toolbar */
 
-button.toolbutton {
+#tool__bar button.toolbutton {
   background-color: __background__;
   padding: 0px;
   margin: 0 1px 0 0;
@@ -9,7 +9,7 @@ button.toolbutton {
 }
 
 /* nice alphatransparency background except for IE <7 */
-html>body button.toolbutton {
+#tool__bar button.toolbutton {
   background:  __background__ url(images/buttonshadow.png) repeat-x bottom;
 }
 

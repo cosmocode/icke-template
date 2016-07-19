@@ -28,12 +28,12 @@ div.dokuwiki table.inline td {
  * Edit button; keep this synced to css/plugin_data.css
  **/
 
-div.dokuwiki div.editbutton_table form input.button:hover {
+div.dokuwiki div.editbutton_table form button:hover {
     color: __mediumgray__;
 }
 
-div.dokuwiki div.editbutton_table form input.button,
-div.dokuwiki div.editbutton_table form input.button:hover {
+div.dokuwiki div.editbutton_table form button,
+div.dokuwiki div.editbutton_table form button:hover {
     border: 1px solid __border__;
     background:transparent url(images/icons/stift_klein.png) no-repeat scroll right top;
     border-top: none;
@@ -65,13 +65,13 @@ div.dokuwiki div.editbutton_table {
     margin-bottom: 1.2em;
 }
 
-*:first-child+html div.dokuwiki div.editbutton_table form input.button {
+*:first-child+html div.dokuwiki div.editbutton_table form button {
     width: auto;
     font-size: 10px;
     line-height: 1.2em;
 }
 
-*:first-child+html div.dokuwiki div.editbutton_table form input.button:hover {
+*:first-child+html div.dokuwiki div.editbutton_table form button:hover {
     font-size: 10px;
     line-height: 1.2em;
 }

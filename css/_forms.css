@@ -89,7 +89,7 @@ div.dokuwiki textarea.edit[disabled],
 div.dokuwiki textarea.edit[readonly],
 div.dokuwiki input.edit[disabled],
 div.dokuwiki input.edit[readonly],
-div.dokuwiki input.button[disabled],
+div.dokuwiki button[disabled],
 div.dokuwiki select.edit[disabled] {
   background-color: __background_neu__!important;
   color: __text_neu__!important;
@@ -97,8 +97,7 @@ div.dokuwiki select.edit[disabled] {
 
 /* --------- buttons ------------------- */
 
-div.dokuwiki input.button,
-div.dokuwiki button.button {
+div.dokuwiki button {
   border: 1px solid __border__;
   color: __text__;
   background-color: __background__;
@@ -111,13 +110,11 @@ div.dokuwiki button.button {
 }
 
 /* nice alphatransparency background except for IE <7 */
-html>body div.dokuwiki input.button,
-html>body div.dokuwiki button.button {
+html>body div.dokuwiki button {
   background:  __background__ url(images/buttonshadow.png) repeat-x bottom;
 }
 
-* html div.dokuwiki input.button,
-* html div.dokuwiki button.button {
+* html div.dokuwiki button {
   height: 1.8em;
 }
 
@@ -129,7 +126,7 @@ html>body div.dokuwiki button.button {
 
 /***** submit button *****/
 
-html > body div.dokuwiki input.button, html > body div.dokuwiki button.button {
+html > body div.dokuwiki button {
     background: __button_background__ url(images/buttonbshadow.png) repeat-x scroll center bottom;
     color: __lighter_gray__;
     margin-right: 4%;
@@ -137,11 +134,11 @@ html > body div.dokuwiki input.button, html > body div.dokuwiki button.button {
     padding: 2px 8px;
 }
 
-div.dokuwiki fieldset input.button {
+div.dokuwiki fieldset button {
     float: left;
 }
 
-div.dokuwiki input.button[disabled] {
+div.dokuwiki button[disabled] {
     background: __button_background__ url(images/buttonshadow.png) repeat-x scroll center bottom;
     cursor: not-allowed;
 }

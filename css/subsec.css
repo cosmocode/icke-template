@@ -1,4 +1,4 @@
-div.dokuwiki div.secedit input.button {
+div.dokuwiki div.secedit button {
     background: transparent url(images/icons/stift_klein.png) center right no-repeat;
     border: none;
     color: __edit_lnk__;
@@ -15,7 +15,7 @@ div.dokuwiki div.secedit input.button {
 }
 
 
-div.dokuwiki div.secedit input.button:hover {
+div.dokuwiki div.secedit button:hover {
     text-indent: 0px;
     background-color: white;
     -moz-border-radius: 10px;
@@ -24,13 +24,13 @@ div.dokuwiki div.secedit input.button:hover {
     border-radius: 10px;
 }
 
-*:first-child+html div.dokuwiki div.secedit input.button {
+*:first-child+html div.dokuwiki div.secedit button {
     width: 42px;
     font-size: 0;
     line-height: 0;
 }
 
-*:first-child+html div.dokuwiki div.secedit input.button:hover {
+*:first-child+html div.dokuwiki div.secedit button:hover {
     width: auto;
     font-size: 12px;
     line-height: 14px;
