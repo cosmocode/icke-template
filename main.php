@@ -104,7 +104,9 @@ icke_sidebar();
                     <div class="footer_toolbar">
                         <p>
                         </p>
+                        <?php if (!include('footer.php')): ?>
                         <p class="copy">&copy; Copyright 2009–2013 <a href="http://www.ickewiki.de">ICKE</a></p>
+                        <?php endif ?>
                     </div>
                 </div><!-- END icke__footer -->
             </div><!-- END icke__page -->
