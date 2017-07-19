@@ -1,14 +1,4 @@
 jQuery(function () {
-    /** hover effect for ie6 **/
-    jQuery('#icke__quicknav li').hover(
-        function () {
-            jQuery(this).addClass('hover');
-        },
-        function () {
-            jQuery(this).removeClass('hover');
-        }
-    );
-
     if (jQuery(window).width() <= 600) {
         for (i = 2; i < 6; i++) {
             jQuery('#icke__page div.level' + i).hide();
