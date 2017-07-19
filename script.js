@@ -1,12 +1,22 @@
-jQuery(function () {
-    if (jQuery(window).width() <= 600) {
-        for (i = 2; i < 6; i++) {
-            jQuery('#icke__page div.level' + i).hide();
-            jQuery('#icke__page h' + i).click(function () {
-                jQuery(this).next('div').toggle();
-            });
+jQuery(function intializeTemplateJS() {
+    'use strict';
+
+    (function toggleSubsectionsOnMobile() {
+        var MOBILE_WIDTH = 600;
+        var SHALLOWST_SECTION_TO_HIDE = 2;
+        var DEEPEST_SECTION_TO_HIDE = 6;
+        var i;
+        var $page;
+        if (jQuery(window).width() <= MOBILE_WIDTH) {
+            $page = jQuery('#icke__page');
+            for (i = SHALLOWST_SECTION_TO_HIDE; i < DEEPEST_SECTION_TO_HIDE; i += 1) {
+                $page.find('div.level' + i).hide();
+                $page.find('h' + i).click(function toggleSection() {
+                    jQuery(this).next('div').toggle();
+                });
+            }
         }
-    }
+    }());
 
     getULwidth = function getULwidth($ul) {
         var width = 0;
