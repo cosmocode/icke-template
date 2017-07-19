@@ -33,25 +33,31 @@ jQuery(function intializeTemplateJS() {
         }
     }());
 
-    jQuery('div.sec_level').css('display', 'inline');
-    while (jQuery('.popup_content ul').children('li.node').length) {
-        var $currentNode = jQuery('.popup_content ul').children('li.node').first();
-        var $newPopout = $currentNode.closest('div.sec_level').clone();
-        $newPopout.html('');
-
-        var newZIndex = $currentNode.closest('div.sec_level').first().zIndex() + 5;
-        var parentWidth = getULwidth($currentNode.closest('ul'));
-        var parentPaddingLeft = parseInt($currentNode.css('padding-left').replace('px', ''));
-        var parentPaddingRight = parseInt($currentNode.css('padding-right').replace('px', ''));
-        var newCSS = {
-            'z-index': newZIndex,
-            left: parentPaddingLeft + parentWidth + parentPaddingRight + 'px',
-        };
-        $newPopout.css(newCSS);
-        $currentNode.children('ul').first().appendTo($newPopout);
-        $newPopout.appendTo($currentNode);
-        $currentNode.removeClass('node');
-        $currentNode.addClass('navNode');
-    }
-    jQuery('div.sec_level').css('display', '');
+    (function buildNestedQuickNav() {
+        // noinspection JSJQueryEfficiency
+        jQuery('div.sec_level').css('display', 'inline');
+        jQuery('.popup_content ul').children('li.node').each(function detachLiIntoBubble($index, element) {
+            var ZINDEX_STEP = 5;
+            var $currentNode = jQuery(element);
+            var $newPopout = $currentNode.closest('div.sec_level').clone();
+            var currentZIndex = parseInt($currentNode.closest('div.sec_level').first().css('z-index'), 10);
+            var newZIndex = currentZIndex + ZINDEX_STEP;
+            var parentWidth = getULwidth($currentNode.closest('ul'));
+            var parentPaddingLeft = parseInt($currentNode.css('padding-left').replace('px', ''), 10);
+            var parentPaddingRight = parseInt($currentNode.css('padding-right').replace('px', ''), 10);
+            var newCSS = {
+                'z-index': newZIndex,
+                left: parentPaddingLeft + parentWidth + parentPaddingRight + 'px',
+            };
+            $newPopout.html('');
+            $newPopout.css(newCSS);
+            $currentNode.children('ul').first().appendTo($newPopout);
+            $newPopout.appendTo($currentNode);
+            $currentNode.removeClass('node');
+            $currentNode.addClass('navNode');
+        });
+        // we need to duplicate the selector since we just changed the selected elements
+        // noinspection JSJQueryEfficiency
+        jQuery('div.sec_level').css('display', '');
+    }());
 });
