@@ -1,6 +1,21 @@
 jQuery(function intializeTemplateJS() {
     'use strict';
 
+    var getULwidth = function getULwidth($ul) {
+        var widestLiWidth = 0;
+        var $li = $ul.children('li');
+        $li.each(function getInlineLiWidth() {
+            var $div = jQuery(this).children('div.li').first();
+            var content = $div.html();
+            var currentLiWidth;
+            $div.html('<span id="widthMeasure">' + content + '</span>');
+            currentLiWidth = jQuery('#widthMeasure').width();
+            $div.html(content);
+            widestLiWidth = Math.max(widestLiWidth, currentLiWidth);
+        });
+        return parseInt(widestLiWidth, 10);
+    };
+
     (function toggleSubsectionsOnMobile() {
         var MOBILE_WIDTH = 600;
         var SHALLOWST_SECTION_TO_HIDE = 2;
@@ -17,21 +32,6 @@ jQuery(function intializeTemplateJS() {
             }
         }
     }());
-
-    getULwidth = function getULwidth($ul) {
-        var width = 0;
-        var $li = $ul.children('li');
-        $li.each(function () {
-            var $div = jQuery(this).children('div.li').first();
-            var content = $div.html();
-            $div.html('<span id="widthMeasure">' + content + '</span>');
-            if (width < jQuery('#widthMeasure').width()) {
-                width = jQuery('#widthMeasure').width();
-            }
-            $div.html(content);
-        });
-        return parseInt(width);
-    };
 
     jQuery('div.sec_level').css('display', 'inline');
     while (jQuery('.popup_content ul').children('li.node').length) {
