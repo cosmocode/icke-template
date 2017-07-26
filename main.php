@@ -68,7 +68,7 @@ icke_sidebar();
                                 <?php endif ?>
 
                                 <?php if($INFO['user']): ?>
-                                    <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'])?></a>
+                                    <a class="author" href="<?php echo wl(tpl_getConf('user_ns').$INFO['user'] . ':')?>"><?php echo editorinfo($INFO['editor'], true)?></a>
                                 <?php else: ?>
                                     <span class="author"><?php echo hsc($INFO['editor'] ? $INFO['editor'] : tpl_getLang('current version')); ?></span>
                                 <?php endif ?>
