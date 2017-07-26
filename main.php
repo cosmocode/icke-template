@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <?php
+if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 require_once DOKU_TPLINC.'functions.php';
 require_once DOKU_TPLINC.'components.php';
+global $conf;
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="<?php echo $conf['lang'] ?>"  xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
