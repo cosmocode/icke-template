@@ -67,10 +67,12 @@ function icke_toolbox(){
     $tools .= '<div class="level2">';
     $tools .= '<ul>';
     foreach($types as $type){
-        $tools .= tpl_actionlink($type,'<li><div class="li">','</div></li>','',$return=true);
+        $link = tpl_actionlink($type, '', '', '', $return = true);
+        $tools .= '<li><div class="li">' . $link . '</div></li>';
     }
     $tools .= icke_toolbox_renderer('export_pdf', 'PDF Export', 'dw2pdf', 'action');
     $tools .= icke_toolbox_renderer('export_odt', 'ODT Export', 'odt', 'action');
+    $tools .= '</ul></div>';
     return $tools;
 }
 
@@ -79,8 +81,10 @@ function icke_toolbox_renderer($action, $text, $pluginName, $pluginType) {
         return '';
     }
     global $ID;
-    $link = sprintf('<a href="%s"  class="action admin" rel="nofollow" title="%s">', wl($ID, array('do' => $action)), $text);
-    $link .= sprintf('<li><div class="li">%s</div></li></a>', $text);
+    $url = wl($ID, array('do' => $action));
+    $link =  '<li><div class="li">';
+    $link .= "<a href=\"$url\" class=\"action admin\" rel=\"nofollow\" title=\"$text\">$text</a>";
+    $link .= '</div></li>';
     return $link;
 }
 
