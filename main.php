@@ -28,18 +28,19 @@ icke_sidebar();
                 <div id="icke__drophead" class="closed clearfix">
                     <?php
 
-                    $translation =& plugin_load('helper','translation');
+                    /** @var helper_plugin_translation $translation */
+                    $translation = plugin_load('helper','translation');
                     if ($translation !== null) {
                         echo $translation->showTranslations();
                     }
 
-                    //Do Plugin
+                    /** @var helper_plugin_do $doplugin */
                     $doplugin = plugin_load('helper','do');
                     if ($doplugin !== null) {
                         $doplugin->tpl_pageTasks();
                     }
 
-                    //Quality Control
+                    /** @var helper_plugin_qc $qc */
                     $qc = plugin_load('helper','qc');
                     if ($qc !== null) {
                         $qc->tpl();
@@ -77,12 +78,14 @@ icke_sidebar();
                             <?php
 
 
-                                $starred =& plugin_load('action','starred');
+                                /** @var action_plugin_starred $starred */
+                                $starred = plugin_load('action','starred');
                                 if ($starred !== null) {
                                     $starred->tpl_starred();
                                     echo '&nbsp;&nbsp;';
                                 }
 
+                                /** @var helper_plugin_quicksubscribe $quicksubscribe */
                                 $quicksubscribe = plugin_load('helper', 'quicksubscribe');
                                 if ($quicksubscribe !== null) {
                                     $quicksubscribe->tpl_subscribe();

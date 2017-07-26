@@ -35,11 +35,12 @@ function icke_sidebar() {
             <ul id="icke__sidebar">
                 <li class="logon">
                     <?php
-                        if($_SERVER['REMOTE_USER']){
+                        if (!empty($_SERVER['REMOTE_USER'])) {
                             echo '<a class="profile" href="'.wl(tpl_getConf('user_ns').$_SERVER['REMOTE_USER'].':') . '">'.hsc($USERINFO['name']).'</a>';
                         }
                         tpl_actionlink('login');
 
+                        /** @var helper_plugin_do $doplugin */
                         $doplugin = plugin_load('helper','do');
                         if ($doplugin !== null && isset($_SERVER['REMOTE_USER'])) {
                             $tasks = $doplugin->loadTasks(array('status' => array('undone'),

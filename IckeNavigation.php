@@ -81,7 +81,7 @@ class IckeNavigation {
             return $id;
         }
 
-        if(!$_SERVER['REMOTE_USER']) {
+        if(empty($_SERVER['REMOTE_USER'])) {
             return false;
         }
 
@@ -125,7 +125,7 @@ class IckeNavigation {
                 $popup  = p_wiki_xhtml($this->getLocalizedPopup($namespace.':quick'),'',false);
                 $translationNs = preg_quote($this->getCurrentTranslation().':', '/');
                 $active = (bool) preg_match('/^('.$translationNs.')?'.preg_quote($namespace,'/').':/',$ID);
-                $class = 'qnav_'.array_shift(explode(':',$item->class)); // first ns part
+                $class = 'qnav_'.explode(':',$item->class)[0]; // first ns part
                 icke_navi($item->link, '', $class, $popup, $active, $separator);
 
                 $separator = false;
