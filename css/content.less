@@ -1,0 +1,98 @@
+/* content format */
+
+.content {
+
+    .page {
+        color: __mediumgray__;
+    }
+
+    p,
+    blockquote,
+    table,
+    pre {
+        font-size: 1.2em;
+        line-height: 1.4em;
+        margin: 0 0 1em;
+    }
+
+    p p,
+    blockquote blockquote,
+    table blockquote,
+    table table,
+    pre pre {
+        font-size: 1em;
+        line-height: 1em;
+    }
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+        color: __mediumgray__;
+    }
+
+    pre {
+        border: 1px dashed __border__;
+        color: __text__;
+        font-size: 150%;
+        overflow: auto;
+        padding: 0.5em;
+
+        &.file {
+            background-color: __background_alt__;
+        }
+    }
+
+    code,
+    samp {
+        font-size: 1.2em;
+    }
+
+    pre.code {
+        background-color: __background_other__;
+        width: 95%;
+    }
+
+    img.mediaright {
+        padding: 0 0 0.5em 0.3em;
+    }
+
+    img.medialeft {
+        padding: 0.5em 0.3em 0 0;
+    }
+
+    table.inline {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    div.table {
+        overflow: auto;
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: __link__;
+    }
+
+    a:visited {
+        color: __link_visited__;
+    }
+
+    blockquote {
+        border-left: 2px solid __border__;
+        padding-left: 3px;
+    }
+
+    div.footnotes {
+        border-top: 1px solid __border__;
+        clear: both;
+        margin-top: 2em;
+        padding-top: 0.5em;
+        padding-left: 1em;
+        font-style: italic;
+        line-height: 1.4em;
+    }
+}
