@@ -27,7 +27,7 @@ function icke_sidebar() {
     global $USERINFO;
     global $ACT;
 ?>
-    <div id="icke__wrapper" class="dokuwiki act_<?php echo $ACT ?>">
+    <div id="icke__wrapper" class="dokuwiki act_<?php echo act_clean($ACT) ?>">
         <ul id="icke__quicknav">
         <?php icke_tplSidebar(); ?>
         </ul><!-- END icke__quicknav -->
@@ -74,6 +74,7 @@ function icke_sidebar() {
                     <?php
                     echo $toc;
                     if ($ACT == 'show') {
+                        /** @var helper_plugin_labeled $labeled */
                         $labeled = plugin_load('helper','labeled');
                         if ($labeled !== null) {
                             $labels = $labeled->tpl_labels();
@@ -84,6 +85,7 @@ function icke_sidebar() {
 
                         }
 
+                        /** @var helper_plugin_tagging $tags */
                         $tags = plugin_load('helper','tagging');
                         if ($tags !== null) {
                             echo '<h3>'.tpl_getLang('tagging').'</h3>';
