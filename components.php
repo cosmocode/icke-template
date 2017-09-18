@@ -3,7 +3,7 @@ function icke_header() {
     global $conf;
 ?>
 <body>
-    <div id="icke__header" class="clearfix">
+    <div id="icke__header">
         <a class="logo" href="<?php echo wl()?>">
           <?php if (tpl_getConf('logo') && file_exists(mediaFN(tpl_getConf('logo')))) {?>
             <img src="<?php echo ml(tpl_getConf('logo'),array('w'=>95,'h'=>95))?>" alt="" />
@@ -61,7 +61,6 @@ function icke_sidebar() {
                                  sprintf(tpl_getLang($class), count($tasks)) . '</a>';
                         }
                     ?>
-                    <div class="clearfix"></div>
                 </li>
                 <li class="search">
                     <?php icke_tplSearch(); ?>
@@ -71,7 +70,7 @@ function icke_sidebar() {
                 global $ACT;
                 if ($toc || $ACT == 'show') {
                 ?>
-                <li class="table_of_contents sideclip clearfix">
+                <li class="table_of_contents sideclip">
                     <?php
                     echo $toc;
                     if ($ACT == 'show') {

@@ -5,7 +5,7 @@ require_once DOKU_TPLINC.'functions.php';
 require_once DOKU_TPLINC.'components.php';
 global $conf;
 ?>
-<html lang="<?php echo $conf['lang'] ?>"  xmlns="http://www.w3.org/1999/xhtml">
+<html lang="<?php echo $conf['lang'] ?>">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
@@ -25,7 +25,7 @@ icke_header();
 icke_sidebar();
 ?>
             <div id="icke__page">
-                <div id="icke__drophead" class="closed clearfix">
+                <div id="icke__drophead" class="closed">
                     <?php
 
                     /** @var helper_plugin_translation $translation */
@@ -49,7 +49,7 @@ icke_sidebar();
                     ?>
                 </div>
                 <?php html_msgarea() ?>
-                <div class="content clearfix">
+                <div class="content">
                     <?php if ($ACT === 'show'): ?>
                         <div class="bc"><?php tpl_youarehere(); ?></div>
                         <p class="meta">

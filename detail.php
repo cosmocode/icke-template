@@ -8,7 +8,7 @@ require_once DOKU_TPLINC.'components.php';
 
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang']?>" lang="<?php echo $conf['lang']?>" dir="ltr">
+<html lang="<?php echo $conf['lang']?>" dir="ltr">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>
@@ -24,7 +24,7 @@ icke_header();
 icke_sidebar();
 ?>
   <div id="icke__page">
-                <div id="icke__drophead" class="closed clearfix">
+                <div id="icke__drophead" class="closed">
                 </div>
 
   <div id="detail__page" class="dokuwiki content page">

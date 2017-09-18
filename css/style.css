@@ -305,12 +305,14 @@ a {text-decoration: none;}
     border-bottom-left-radius: 10px;
     margin: 0 0 0 1em;
     padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #icke__sidebar .logon .profile {
     color: __mediumgray__;
     display: block;
-    float: left;
     font-size: 1.2em;
     font-weight: bold;
     line-height: 1.3em;
@@ -319,7 +321,6 @@ a {text-decoration: none;}
 
 #icke__sidebar .logon .logout {
     background: transparent url(images/icons/logout.png) top left no-repeat;
-    float: right;
     display: block;
     height: 18px;
     text-indent: -9999px;
@@ -341,6 +342,7 @@ a {text-decoration: none;}
     font-size: 1.2em;
     display: block;
     text-align: center;
+    flex-basis: 100%;
 }
 
 #icke__sidebar .logon .icke__opentasks,
