@@ -1,6 +1,11 @@
 /* content format */
 
 div.dokuwiki .content {
+    background-color: @ini_content_bg;
+    padding: 10px 70px 20px 30px;
+    font-size: 1.1em; /* Check cryptsign and do inline icons with line height */
+    min-height: 500px;
+    overflow: hidden;
 
     .page {
         color: __mediumgray__;
@@ -86,6 +91,17 @@ div.dokuwiki .content {
         padding-left: 3px;
     }
 
+    sup a {
+        font-size: 9px;
+        padding-left: 2px;
+        text-decoration: none;
+
+        p {
+            font-size: 9px;
+            padding-left: 2px;
+        }
+    }
+
     div.footnotes {
         border-top: 1px solid __border__;
         clear: both;
@@ -94,5 +110,21 @@ div.dokuwiki .content {
         padding-left: 1em;
         font-style: italic;
         line-height: 1.4em;
+
+        .fn {
+            font-size: 1.32rem;
+            font-style: normal;
+
+            sup a {
+                font-weight: bold;
+                font-size: 1.06rem;
+            }
+
+            .content {
+                display: inline;
+                padding: 0;
+
+            }
+        }
     }
 }
