@@ -60,18 +60,12 @@ function icke_tplProjectSteps(){
  * Return the toolbox popup
  */
 function icke_toolbox(){
-    $types = explode(' ','recent index media subscribe admin profile');
-
     $tools  = '';
     $tools .= '<h1 class="empty"></h1>';
     $tools .= '<div class="level2">';
     $tools .= '<ul>';
-    foreach($types as $type){
-        $link = tpl_actionlink($type, '', '', '', $return = true);
-        $tools .= '<li><div class="li">' . $link . '</div></li>';
-    }
-    $tools .= icke_toolbox_renderer('export_pdf', 'PDF Export', 'dw2pdf', 'action');
-    $tools .= icke_toolbox_renderer('export_odt', 'ODT Export', 'odt', 'action');
+    $tools .= (new \dokuwiki\Menu\SiteMenu())->getListItems('dw-menu-item ');
+    $tools .= (new \dokuwiki\Menu\UserMenu())->getListItems('dw-menu-item ');
     $tools .= '</ul></div>';
     return $tools;
 }

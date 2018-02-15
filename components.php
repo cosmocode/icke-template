@@ -17,7 +17,7 @@ function icke_header() {
     </div><!-- END icke__header -->
 
     <div id="icke__toolbar">
-        <?php tpl_actiondropdown() ?>
+        <?php echo (new \dokuwiki\Menu\MobileMenu())->getDropdown(); ?>
         <?php /* tpl_searchform()  FIXME this breaks the other search*/ ?>
     </div>
 <?php
@@ -38,7 +38,7 @@ function icke_sidebar() {
                         if (!empty($_SERVER['REMOTE_USER'])) {
                             echo '<a class="profile" href="'.wl(tpl_getConf('user_ns').$_SERVER['REMOTE_USER'].':') . '">'.hsc($USERINFO['name']).'</a>';
                         }
-                        tpl_actionlink('login');
+                        echo (new dokuwiki\Menu\Item\Login())->asHtmlLink(null, false);
 
                         /** @var helper_plugin_do $doplugin */
                         $doplugin = plugin_load('helper','do');
