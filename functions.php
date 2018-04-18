@@ -99,14 +99,17 @@ function icke_navi($link,$name='',$class='',$popup='',$active=false,$sep=false){
     if($link) $link = ' href="'.wl($link).'"';
 
     // output the item
-    echo '<li'.$liclass.'>';
-    echo '<a class="qnav_item '.$class.'" '.$link.'>'.hsc($name).'</a>';
+    $liHTML  = '<li'.$liclass.'>';
+    $liHTML .= '<a class="qnav_item '.$class.'" '.$link.'>'.hsc($name).'</a>';
     if($popup){
-        echo '<div class="sec_level"><span class="a"></span><span class="b"></span><div class="popup_content">';
-        echo $popup;
-        echo '</div><span class="c"></span><span class="d"></span></div>';
+        $liHTML .= '<div class="sec_level">';
+        $liHTML .= '<div class="popup_content">';
+        $liHTML .= $popup;
+        $liHTML .= '</div>';
+        $liHTML .= '</div>';
     }
-    echo '</li>';
+    $liHTML .= '</li>';
+    echo $liHTML;
 }
 
 /**
