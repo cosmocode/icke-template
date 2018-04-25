@@ -1,7 +1,7 @@
 base     icke-template
 author   CosmoCode
 email    dokuwiki@cosmocode.de
-date     2018-02-15
+date     2018-04-18
 name     ICKE template
 desc     The ICKE template is a two-sidebar, variable-width template integrating various plugins.
 url      https://www.dokuwiki.org/template:icke
